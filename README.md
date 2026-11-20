@@ -73,7 +73,47 @@ type de défi sans temps limite…) empêche l'application de démarrer, avec un
 
 ## Base de données (EF Core)
 
+Base `WorldQuizRaceDb` sur LocalDB. **Au démarrage, l'application applique les migrations en attente puis
+synchronise les données initiales** (tranches d'âge, catégories, badges, routes et défis) : rien à faire à la main
+pour jouer. Ce comportement se désactive avec `"Database": { "InitializeOnStartup": false }`.
+
+`dotnet-ef` est un outil **local** (version figée dans `dotnet-tools.json`) : lancer `dotnet tool restore` une fois après clonage.
+Toutes les commandes se lancent depuis la racine du dépôt :
+
 ```bash
-dotnet ef migrations add <Nom> --project src/WorldQuizRace.Infrastructure --startup-project src/WorldQuizRace.Web
-dotnet ef database update      --project src/WorldQuizRace.Infrastructure --startup-project src/WorldQuizRace.Web
+# Créer une migration après une modification du modèle (Domain / Configurations)
+dotnet ef migrations add <Nom> --project src/WorldQuizRace.Infrastructure --startup-project src/WorldQuizRace.Web --output-dir Persistence/Migrations
+
+# Appliquer les migrations sans lancer l'application
+dotnet ef database update --project src/WorldQuizRace.Infrastructure --startup-project src/WorldQuizRace.Web
+
+# Voir le SQL généré / lister les migrations
+dotnet ef migrations script --project src/WorldQuizRace.Infrastructure --startup-project src/WorldQuizRace.Web
+dotnet ef migrations list   --project src/WorldQuizRace.Infrastructure --startup-project src/WorldQuizRace.Web
+
+# Repartir d'une base vide (elle sera recréée et ré-alimentée au prochain démarrage)
+dotnet ef database drop --force --project src/WorldQuizRace.Infrastructure --startup-project src/WorldQuizRace.Web
 ```
+
+Dans Visual Studio, l'équivalent se fait dans la *Console du Gestionnaire de package* (projet par défaut :
+WorldQuizRace.Infrastructure) : `Add-Migration <Nom> -OutputDir Persistence/Migrations`, puis `Update-Database`.
+
+> Arrêter l'application avant de lancer `dotnet ef` ou `dotnet build` : sinon le build échoue sur des DLL verrouillées.
+
+## Données initiales et défis
+
+- `src/WorldQuizRace.Infrastructure/Seed/challenges.json` : 180 défis (4 tranches × 3 difficultés × 15), 14 types.
+- `src/WorldQuizRace.Infrastructure/Seed/routes.json` : 2 routes de 15 étapes et la destination commune (Le Caire).
+- Ces fichiers sont **embarqués dans la DLL** (fonctionnent après publication). Pour ajouter ou corriger un défi :
+  modifier le JSON puis relancer l'application ; la synchronisation est idempotente (clé : `code`).
+  Un défi retiré du fichier est désactivé, jamais supprimé.
+- Le format JSON de chaque type de défi est décrit dans [docs/CHALLENGE_FORMATS.md](docs/CHALLENGE_FORMATS.md) ;
+  `dotnet test` vérifie chaque défi (format, labyrinthes résolubles, résultats des calculs).
+
+## Tests
+
+```bash
+dotnet test WorldQuizRace.slnx
+```
+
+Les tests d'intégration créent une base LocalDB temporaire (`WorldQuizRaceDb_Tests_<guid>`) et la suppriment à la fin.

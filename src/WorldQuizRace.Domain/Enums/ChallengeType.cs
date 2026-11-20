@@ -19,5 +19,5 @@ public enum ChallengeType
     Maze = 11,
     OrderingClassification = 12,
     MathMiniGame = 13,
-    InteractiveVisual = 14
+    VisualChallenge = 14
 }

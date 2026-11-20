@@ -1,0 +1,5753 @@
+[
+  {
+    "code": "G1-E-01",
+    "minAge": 5,
+    "difficulty": "Easy",
+    "category": "Formes et couleurs",
+    "type": "MultipleChoice",
+    "title": "La couleur de la banane",
+    "content": {
+      "prompt": "De quelle couleur est une banane bien mûre ?",
+      "visual": "🍌",
+      "options": [
+        {
+          "id": "a",
+          "text": "Rouge"
+        },
+        {
+          "id": "b",
+          "text": "Jaune"
+        },
+        {
+          "id": "c",
+          "text": "Bleue"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "optionId": "b"
+    },
+    "explanation": "Une banane bien mûre est jaune."
+  },
+  {
+    "code": "G1-E-02",
+    "minAge": 5,
+    "difficulty": "Easy",
+    "category": "Mathématiques",
+    "type": "NumericAnswer",
+    "title": "Compte les pommes",
+    "content": {
+      "prompt": "Combien y a-t-il de pommes ?",
+      "visual": "🍎🍎🍎"
+    },
+    "correctAnswer": {
+      "value": 3,
+      "tolerance": 0
+    },
+    "explanation": "Il y a 3 pommes : 1, 2, 3."
+  },
+  {
+    "code": "G1-E-03",
+    "minAge": 5,
+    "difficulty": "Easy",
+    "category": "Animaux et nature",
+    "type": "TrueFalse",
+    "title": "Le poisson",
+    "content": {
+      "prompt": "Le poisson vit dans l'eau.",
+      "visual": "🐟"
+    },
+    "correctAnswer": {
+      "value": true
+    },
+    "explanation": "Oui ! Le poisson vit dans l'eau et respire avec ses branchies."
+  },
+  {
+    "code": "G1-E-04",
+    "minAge": 5,
+    "difficulty": "Easy",
+    "category": "Formes et couleurs",
+    "type": "ShapeSorting",
+    "title": "Ronds et carrés",
+    "content": {
+      "prompt": "Range chaque forme dans la bonne boîte.",
+      "shapes": [
+        {
+          "id": "s1",
+          "shape": "circle",
+          "color": "red"
+        },
+        {
+          "id": "s2",
+          "shape": "square",
+          "color": "blue"
+        },
+        {
+          "id": "s3",
+          "shape": "circle",
+          "color": "green"
+        },
+        {
+          "id": "s4",
+          "shape": "square",
+          "color": "yellow"
+        }
+      ],
+      "bins": [
+        {
+          "id": "b1",
+          "text": "Les ronds"
+        },
+        {
+          "id": "b2",
+          "text": "Les carrés"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "mapping": {
+        "s1": "b1",
+        "s2": "b2",
+        "s3": "b1",
+        "s4": "b2"
+      }
+    },
+    "explanation": "Un rond n'a pas de coin ; un carré a 4 coins."
+  },
+  {
+    "code": "G1-E-05",
+    "minAge": 5,
+    "difficulty": "Easy",
+    "category": "Animaux et nature",
+    "type": "MultipleChoice",
+    "title": "Qui fait « meuh » ?",
+    "content": {
+      "prompt": "Quel animal fait « meuh » ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "🐶 Le chien"
+        },
+        {
+          "id": "b",
+          "text": "🐄 La vache"
+        },
+        {
+          "id": "c",
+          "text": "🐱 Le chat"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "optionId": "b"
+    },
+    "explanation": "La vache meugle : « meuh » !"
+  },
+  {
+    "code": "G1-E-06",
+    "minAge": 5,
+    "difficulty": "Easy",
+    "category": "Animaux et nature",
+    "type": "ImageMatching",
+    "title": "Le bon repas",
+    "content": {
+      "prompt": "Relie chaque animal à ce qu'il aime manger.",
+      "left": [
+        {
+          "id": "l1",
+          "text": "🐰 Le lapin"
+        },
+        {
+          "id": "l2",
+          "text": "🐒 Le singe"
+        },
+        {
+          "id": "l3",
+          "text": "🐝 L'abeille"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "🍌 La banane"
+        },
+        {
+          "id": "r2",
+          "text": "🌸 La fleur"
+        },
+        {
+          "id": "r3",
+          "text": "🥕 La carotte"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "pairs": {
+        "l1": "r3",
+        "l2": "r1",
+        "l3": "r2"
+      }
+    },
+    "explanation": "Le lapin croque des carottes, le singe adore les bananes et l'abeille butine les fleurs."
+  },
+  {
+    "code": "G1-E-07",
+    "minAge": 5,
+    "difficulty": "Easy",
+    "category": "Mémoire",
+    "type": "MemoryCards",
+    "title": "Chiens et chats",
+    "content": {
+      "prompt": "Retourne les cartes et retrouve les paires.",
+      "previewSeconds": 3,
+      "cards": [
+        {
+          "id": "c1",
+          "face": "🐶"
+        },
+        {
+          "id": "c2",
+          "face": "🐱"
+        },
+        {
+          "id": "c3",
+          "face": "🐶"
+        },
+        {
+          "id": "c4",
+          "face": "🐱"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "pairs": [
+        [
+          "c1",
+          "c3"
+        ],
+        [
+          "c2",
+          "c4"
+        ]
+      ]
+    },
+    "explanation": "Bravo, tu as retrouvé les deux paires !"
+  },
+  {
+    "code": "G1-E-08",
+    "minAge": 5,
+    "difficulty": "Easy",
+    "category": "Formes et couleurs",
+    "type": "VisualChallenge",
+    "title": "Trouve le triangle",
+    "content": {
+      "prompt": "Touche le triangle.",
+      "selection": "single",
+      "cells": [
+        {
+          "id": "v1",
+          "text": "🔵"
+        },
+        {
+          "id": "v2",
+          "text": "🔺"
+        },
+        {
+          "id": "v3",
+          "text": "🟩"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "selectedIds": [
+        "v2"
+      ]
+    },
+    "explanation": "Le triangle a 3 côtés et 3 pointes."
+  },
+  {
+    "code": "G1-E-09",
+    "minAge": 5,
+    "difficulty": "Easy",
+    "category": "Formes et couleurs",
+    "type": "TrueFalse",
+    "title": "Le carré",
+    "content": {
+      "prompt": "Un carré a 4 côtés.",
+      "visual": "🟦"
+    },
+    "correctAnswer": {
+      "value": true
+    },
+    "explanation": "Oui ! Un carré a 4 côtés de la même longueur."
+  },
+  {
+    "code": "G1-E-10",
+    "minAge": 5,
+    "difficulty": "Easy",
+    "category": "Mathématiques",
+    "type": "NumericAnswer",
+    "title": "Compte les étoiles",
+    "content": {
+      "prompt": "Combien d'étoiles vois-tu ?",
+      "visual": "⭐⭐⭐⭐⭐"
+    },
+    "correctAnswer": {
+      "value": 5,
+      "tolerance": 0
+    },
+    "explanation": "Il y a 5 étoiles, autant que de doigts sur une main."
+  },
+  {
+    "code": "G1-E-11",
+    "minAge": 5,
+    "difficulty": "Easy",
+    "category": "Animaux et nature",
+    "type": "MultipleChoice",
+    "title": "L'ours polaire",
+    "content": {
+      "prompt": "Où vit l'ours polaire ?",
+      "visual": "🐻‍❄️",
+      "options": [
+        {
+          "id": "a",
+          "text": "❄️ Sur la banquise"
+        },
+        {
+          "id": "b",
+          "text": "🏜️ Dans le désert"
+        },
+        {
+          "id": "c",
+          "text": "🌴 Dans la jungle"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "optionId": "a"
+    },
+    "explanation": "L'ours polaire vit sur la banquise, là où il fait très froid."
+  },
+  {
+    "code": "G1-E-12",
+    "minAge": 5,
+    "difficulty": "Easy",
+    "category": "Logique",
+    "type": "SequenceCompletion",
+    "title": "Rouge, bleu, rouge…",
+    "content": {
+      "prompt": "Qu'est-ce qui vient ensuite ?",
+      "sequence": [
+        "🔴",
+        "🔵",
+        "🔴",
+        "🔵",
+        null
+      ],
+      "options": [
+        "🔴",
+        "🔵",
+        "🟢"
+      ]
+    },
+    "correctAnswer": {
+      "values": [
+        "🔴"
+      ]
+    },
+    "explanation": "Les couleurs alternent : rouge, bleu, rouge, bleu… puis rouge !"
+  },
+  {
+    "code": "G1-E-13",
+    "minAge": 5,
+    "difficulty": "Easy",
+    "category": "Animaux et nature",
+    "type": "DragAndDrop",
+    "title": "Chacun sa maison",
+    "content": {
+      "prompt": "Fais glisser chaque animal vers sa maison.",
+      "items": [
+        {
+          "id": "i1",
+          "text": "🐟 Le poisson"
+        },
+        {
+          "id": "i2",
+          "text": "🐦 L'oiseau"
+        },
+        {
+          "id": "i3",
+          "text": "🐄 La vache"
+        }
+      ],
+      "targets": [
+        {
+          "id": "t1",
+          "text": "🏡 La ferme"
+        },
+        {
+          "id": "t2",
+          "text": "🌊 La mer"
+        },
+        {
+          "id": "t3",
+          "text": "🌳 Le nid dans l'arbre"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "mapping": {
+        "i1": "t2",
+        "i2": "t3",
+        "i3": "t1"
+      }
+    },
+    "explanation": "Le poisson nage dans la mer, l'oiseau fait son nid dans l'arbre et la vache vit à la ferme."
+  },
+  {
+    "code": "G1-E-14",
+    "minAge": 5,
+    "difficulty": "Easy",
+    "category": "Formes et couleurs",
+    "type": "MultipleChoice",
+    "title": "Le fruit rouge",
+    "content": {
+      "prompt": "Quel fruit est rouge ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "🍌 La banane"
+        },
+        {
+          "id": "b",
+          "text": "🍓 La fraise"
+        },
+        {
+          "id": "c",
+          "text": "🍐 La poire"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "optionId": "b"
+    },
+    "explanation": "La fraise est rouge et sucrée."
+  },
+  {
+    "code": "G1-E-15",
+    "minAge": 5,
+    "difficulty": "Easy",
+    "category": "Animaux et nature",
+    "type": "TextAnswer",
+    "title": "Qui fait « miaou » ?",
+    "content": {
+      "prompt": "Quel animal fait « miaou » ?",
+      "maxLength": 20
+    },
+    "correctAnswer": {
+      "acceptedAnswers": [
+        "chat",
+        "le chat",
+        "un chat",
+        "chaton",
+        "le chaton",
+        "un chaton"
+      ]
+    },
+    "explanation": "C'est le chat qui miaule : « miaou » !"
+  },
+  {
+    "code": "G1-M-01",
+    "minAge": 5,
+    "difficulty": "Medium",
+    "category": "Mathématiques",
+    "type": "NumericAnswer",
+    "title": "Des bonbons",
+    "content": {
+      "prompt": "Combien font 2 + 3 ?",
+      "visual": "🍬🍬 + 🍬🍬🍬"
+    },
+    "correctAnswer": {
+      "value": 5,
+      "tolerance": 0
+    },
+    "explanation": "2 bonbons plus 3 bonbons, cela fait 5 bonbons."
+  },
+  {
+    "code": "G1-M-02",
+    "minAge": 5,
+    "difficulty": "Medium",
+    "category": "Formes et couleurs",
+    "type": "MultipleChoice",
+    "title": "Les côtés du triangle",
+    "content": {
+      "prompt": "Combien de côtés a un triangle ?",
+      "visual": "🔺",
+      "options": [
+        {
+          "id": "a",
+          "text": "2"
+        },
+        {
+          "id": "b",
+          "text": "3"
+        },
+        {
+          "id": "c",
+          "text": "4"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "optionId": "b"
+    },
+    "explanation": "« Tri » veut dire trois : le triangle a 3 côtés."
+  },
+  {
+    "code": "G1-M-03",
+    "minAge": 5,
+    "difficulty": "Medium",
+    "category": "Formes et couleurs",
+    "type": "ShapeSorting",
+    "title": "Rouge ou bleu ?",
+    "content": {
+      "prompt": "Range les formes selon leur couleur.",
+      "shapes": [
+        {
+          "id": "s1",
+          "shape": "triangle",
+          "color": "red"
+        },
+        {
+          "id": "s2",
+          "shape": "circle",
+          "color": "red"
+        },
+        {
+          "id": "s3",
+          "shape": "star",
+          "color": "blue"
+        },
+        {
+          "id": "s4",
+          "shape": "square",
+          "color": "blue"
+        },
+        {
+          "id": "s5",
+          "shape": "circle",
+          "color": "blue"
+        }
+      ],
+      "bins": [
+        {
+          "id": "b1",
+          "text": "Rouge"
+        },
+        {
+          "id": "b2",
+          "text": "Bleu"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "mapping": {
+        "s1": "b1",
+        "s2": "b1",
+        "s3": "b2",
+        "s4": "b2",
+        "s5": "b2"
+      }
+    },
+    "explanation": "Ici, on trie par couleur, pas par forme !"
+  },
+  {
+    "code": "G1-M-04",
+    "minAge": 5,
+    "difficulty": "Medium",
+    "category": "Mémoire",
+    "type": "MemoryCards",
+    "title": "Les animaux de la jungle",
+    "content": {
+      "prompt": "Retrouve les 3 paires d'animaux.",
+      "previewSeconds": 3,
+      "cards": [
+        {
+          "id": "c1",
+          "face": "🦁"
+        },
+        {
+          "id": "c2",
+          "face": "🐸"
+        },
+        {
+          "id": "c3",
+          "face": "🐵"
+        },
+        {
+          "id": "c4",
+          "face": "🐸"
+        },
+        {
+          "id": "c5",
+          "face": "🦁"
+        },
+        {
+          "id": "c6",
+          "face": "🐵"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "pairs": [
+        [
+          "c1",
+          "c5"
+        ],
+        [
+          "c2",
+          "c4"
+        ],
+        [
+          "c3",
+          "c6"
+        ]
+      ]
+    },
+    "explanation": "Super mémoire : lion, grenouille et singe sont réunis !"
+  },
+  {
+    "code": "G1-M-05",
+    "minAge": 5,
+    "difficulty": "Medium",
+    "category": "Animaux et nature",
+    "type": "TrueFalse",
+    "title": "La baleine",
+    "content": {
+      "prompt": "La baleine est un poisson.",
+      "visual": "🐋"
+    },
+    "correctAnswer": {
+      "value": false
+    },
+    "explanation": "La baleine n'est pas un poisson : c'est un mammifère qui remonte respirer de l'air."
+  },
+  {
+    "code": "G1-M-06",
+    "minAge": 5,
+    "difficulty": "Medium",
+    "category": "Animaux et nature",
+    "type": "OrderingClassification",
+    "title": "Du plus petit au plus grand",
+    "content": {
+      "prompt": "Range les animaux du plus petit au plus grand.",
+      "mode": "order",
+      "items": [
+        {
+          "id": "i1",
+          "text": "🐘 L'éléphant"
+        },
+        {
+          "id": "i2",
+          "text": "🐭 La souris"
+        },
+        {
+          "id": "i3",
+          "text": "🐕 Le chien"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "order": [
+        "i2",
+        "i3",
+        "i1"
+      ]
+    },
+    "explanation": "La souris est minuscule, le chien est moyen et l'éléphant est géant."
+  },
+  {
+    "code": "G1-M-07",
+    "minAge": 5,
+    "difficulty": "Medium",
+    "category": "Mathématiques",
+    "type": "SequenceCompletion",
+    "title": "Le nombre caché",
+    "content": {
+      "prompt": "Quel nombre manque ?",
+      "sequence": [
+        "1",
+        "2",
+        "3",
+        null,
+        "5"
+      ],
+      "options": [
+        "4",
+        "6",
+        "7"
+      ]
+    },
+    "correctAnswer": {
+      "values": [
+        "4"
+      ]
+    },
+    "explanation": "On compte : 1, 2, 3, 4, 5."
+  },
+  {
+    "code": "G1-M-08",
+    "minAge": 5,
+    "difficulty": "Medium",
+    "category": "Animaux et nature",
+    "type": "VisualChallenge",
+    "title": "Ceux qui volent",
+    "content": {
+      "prompt": "Touche tous les animaux qui volent.",
+      "selection": "multiple",
+      "cells": [
+        {
+          "id": "v1",
+          "text": "🐦"
+        },
+        {
+          "id": "v2",
+          "text": "🐟"
+        },
+        {
+          "id": "v3",
+          "text": "🦋"
+        },
+        {
+          "id": "v4",
+          "text": "🐢"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "selectedIds": [
+        "v1",
+        "v3"
+      ]
+    },
+    "explanation": "L'oiseau et le papillon ont des ailes pour voler."
+  },
+  {
+    "code": "G1-M-09",
+    "minAge": 5,
+    "difficulty": "Medium",
+    "category": "Culture générale",
+    "type": "MultipleChoice",
+    "title": "Il pleut !",
+    "content": {
+      "prompt": "Que prends-tu quand il pleut ?",
+      "visual": "🌧️",
+      "options": [
+        {
+          "id": "a",
+          "text": "☂️ Un parapluie"
+        },
+        {
+          "id": "b",
+          "text": "🕶️ Des lunettes de soleil"
+        },
+        {
+          "id": "c",
+          "text": "🩳 Un short"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "optionId": "a"
+    },
+    "explanation": "Le parapluie te protège de la pluie."
+  },
+  {
+    "code": "G1-M-10",
+    "minAge": 5,
+    "difficulty": "Medium",
+    "category": "Mathématiques",
+    "type": "NumericAnswer",
+    "title": "Les ballons envolés",
+    "content": {
+      "prompt": "Il y a 5 ballons. 2 ballons s'envolent. Combien en reste-t-il ?",
+      "visual": "🎈🎈🎈🎈🎈"
+    },
+    "correctAnswer": {
+      "value": 3,
+      "tolerance": 0
+    },
+    "explanation": "5 moins 2, cela fait 3 ballons."
+  },
+  {
+    "code": "G1-M-11",
+    "minAge": 5,
+    "difficulty": "Medium",
+    "category": "Formes et couleurs",
+    "type": "ImageMatching",
+    "title": "Fruits et couleurs",
+    "content": {
+      "prompt": "Relie chaque fruit à sa couleur.",
+      "left": [
+        {
+          "id": "l1",
+          "text": "🍓 La fraise"
+        },
+        {
+          "id": "l2",
+          "text": "🍋 Le citron"
+        },
+        {
+          "id": "l3",
+          "text": "🍊 L'orange"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "🟡 Jaune"
+        },
+        {
+          "id": "r2",
+          "text": "🔴 Rouge"
+        },
+        {
+          "id": "r3",
+          "text": "🟠 Orange"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "pairs": {
+        "l1": "r2",
+        "l2": "r1",
+        "l3": "r3"
+      }
+    },
+    "explanation": "La fraise est rouge, le citron jaune et l'orange… orange !"
+  },
+  {
+    "code": "G1-M-12",
+    "minAge": 5,
+    "difficulty": "Medium",
+    "category": "Culture générale",
+    "type": "DragAndDrop",
+    "title": "Été ou hiver ?",
+    "content": {
+      "prompt": "Fais glisser chaque image vers la bonne saison.",
+      "items": [
+        {
+          "id": "i1",
+          "text": "🧣 L'écharpe"
+        },
+        {
+          "id": "i2",
+          "text": "🕶️ Les lunettes de soleil"
+        },
+        {
+          "id": "i3",
+          "text": "⛄ Le bonhomme de neige"
+        },
+        {
+          "id": "i4",
+          "text": "🍦 La glace à l'eau"
+        }
+      ],
+      "targets": [
+        {
+          "id": "t1",
+          "text": "☀️ L'été"
+        },
+        {
+          "id": "t2",
+          "text": "❄️ L'hiver"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "mapping": {
+        "i1": "t2",
+        "i2": "t1",
+        "i3": "t2",
+        "i4": "t1"
+      }
+    },
+    "explanation": "En hiver il fait froid (écharpe, neige) ; en été il fait chaud (soleil, glace)."
+  },
+  {
+    "code": "G1-M-13",
+    "minAge": 5,
+    "difficulty": "Medium",
+    "category": "Animaux et nature",
+    "type": "MultipleChoice",
+    "title": "La plante qui pousse",
+    "content": {
+      "prompt": "De quoi une plante a-t-elle besoin pour pousser ?",
+      "visual": "🌱",
+      "options": [
+        {
+          "id": "a",
+          "text": "💧☀️ D'eau et de soleil"
+        },
+        {
+          "id": "b",
+          "text": "🍫 De chocolat"
+        },
+        {
+          "id": "c",
+          "text": "🧸 D'un doudou"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "optionId": "a"
+    },
+    "explanation": "Une plante a besoin d'eau et de lumière pour grandir."
+  },
+  {
+    "code": "G1-M-14",
+    "minAge": 5,
+    "difficulty": "Medium",
+    "category": "Animaux et nature",
+    "type": "OrderingClassification",
+    "title": "Ferme ou forêt ?",
+    "content": {
+      "prompt": "Range chaque animal : vit-il à la ferme ou dans la forêt ?",
+      "mode": "classify",
+      "items": [
+        {
+          "id": "i1",
+          "text": "🐷 Le cochon"
+        },
+        {
+          "id": "i2",
+          "text": "🦊 Le renard"
+        },
+        {
+          "id": "i3",
+          "text": "🐑 Le mouton"
+        },
+        {
+          "id": "i4",
+          "text": "🦉 Le hibou"
+        }
+      ],
+      "groups": [
+        {
+          "id": "g1",
+          "text": "🏡 La ferme"
+        },
+        {
+          "id": "g2",
+          "text": "🌲 La forêt"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "mapping": {
+        "i1": "g1",
+        "i2": "g2",
+        "i3": "g1",
+        "i4": "g2"
+      }
+    },
+    "explanation": "Le cochon et le mouton vivent à la ferme ; le renard et le hibou dans la forêt."
+  },
+  {
+    "code": "G1-M-15",
+    "minAge": 5,
+    "difficulty": "Medium",
+    "category": "Logique",
+    "type": "LogicPuzzle",
+    "title": "Qui en a le moins ?",
+    "content": {
+      "prompt": "Léa a plus de bonbons que Tom. Qui a le moins de bonbons ?",
+      "answerType": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Léa"
+        },
+        {
+          "id": "b",
+          "text": "Tom"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "optionId": "b"
+    },
+    "explanation": "Si Léa en a plus, alors Tom en a moins."
+  },
+  {
+    "code": "G1-H-01",
+    "minAge": 5,
+    "difficulty": "Hard",
+    "category": "Mathématiques",
+    "type": "MathMiniGame",
+    "title": "Petits calculs",
+    "content": {
+      "prompt": "Réponds aux 3 calculs.",
+      "problems": [
+        {
+          "id": "p1",
+          "expression": "6 + 4"
+        },
+        {
+          "id": "p2",
+          "expression": "3 + 5"
+        },
+        {
+          "id": "p3",
+          "expression": "7 - 2"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "answers": {
+        "p1": 10,
+        "p2": 8,
+        "p3": 5
+      }
+    },
+    "explanation": "6 + 4 = 10, 3 + 5 = 8 et 7 - 2 = 5."
+  },
+  {
+    "code": "G1-H-02",
+    "minAge": 5,
+    "difficulty": "Hard",
+    "category": "Logique",
+    "type": "SequenceCompletion",
+    "title": "La suite de formes",
+    "content": {
+      "prompt": "Qu'est-ce qui vient ensuite ?",
+      "sequence": [
+        "🔺",
+        "🟦",
+        "🟦",
+        "🔺",
+        "🟦",
+        "🟦",
+        null
+      ],
+      "options": [
+        "🔺",
+        "🟦"
+      ]
+    },
+    "correctAnswer": {
+      "values": [
+        "🔺"
+      ]
+    },
+    "explanation": "Le motif est : 1 triangle, 2 carrés. Après 2 carrés vient un triangle."
+  },
+  {
+    "code": "G1-H-03",
+    "minAge": 5,
+    "difficulty": "Hard",
+    "category": "Mémoire",
+    "type": "MemoryCards",
+    "title": "Le panier de fruits",
+    "content": {
+      "prompt": "Retrouve les 4 paires de fruits.",
+      "previewSeconds": 4,
+      "cards": [
+        {
+          "id": "c1",
+          "face": "🍇"
+        },
+        {
+          "id": "c2",
+          "face": "🍎"
+        },
+        {
+          "id": "c3",
+          "face": "🍓"
+        },
+        {
+          "id": "c4",
+          "face": "🍌"
+        },
+        {
+          "id": "c5",
+          "face": "🍎"
+        },
+        {
+          "id": "c6",
+          "face": "🍇"
+        },
+        {
+          "id": "c7",
+          "face": "🍌"
+        },
+        {
+          "id": "c8",
+          "face": "🍓"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "pairs": [
+        [
+          "c1",
+          "c6"
+        ],
+        [
+          "c2",
+          "c5"
+        ],
+        [
+          "c3",
+          "c8"
+        ],
+        [
+          "c4",
+          "c7"
+        ]
+      ]
+    },
+    "explanation": "Quelle mémoire ! Les 4 paires sont retrouvées."
+  },
+  {
+    "code": "G1-H-04",
+    "minAge": 5,
+    "difficulty": "Hard",
+    "category": "Logique",
+    "type": "Maze",
+    "title": "Le petit labyrinthe",
+    "content": {
+      "prompt": "Aide l'explorateur à aller de S jusqu'à la sortie E.",
+      "grid": [
+        "S.#.",
+        "#..#",
+        "#.#.",
+        "#..E"
+      ]
+    },
+    "correctAnswer": {
+      "shortestPathLength": 6
+    },
+    "explanation": "Il fallait descendre par le couloir du milieu puis tourner à droite."
+  },
+  {
+    "code": "G1-H-05",
+    "minAge": 5,
+    "difficulty": "Hard",
+    "category": "Sciences",
+    "type": "TrueFalse",
+    "title": "Le Soleil",
+    "content": {
+      "prompt": "Le Soleil est une étoile.",
+      "visual": "☀️"
+    },
+    "correctAnswer": {
+      "value": true
+    },
+    "explanation": "Oui ! Le Soleil est une étoile, la plus proche de la Terre."
+  },
+  {
+    "code": "G1-H-06",
+    "minAge": 5,
+    "difficulty": "Hard",
+    "category": "Mathématiques",
+    "type": "MultipleChoice",
+    "title": "Le plus grand nombre",
+    "content": {
+      "prompt": "Quel nombre est le plus grand ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "7"
+        },
+        {
+          "id": "b",
+          "text": "12"
+        },
+        {
+          "id": "c",
+          "text": "9"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "optionId": "b"
+    },
+    "explanation": "12 est plus grand que 9 et que 7."
+  },
+  {
+    "code": "G1-H-07",
+    "minAge": 5,
+    "difficulty": "Hard",
+    "category": "Formes et couleurs",
+    "type": "ShapeSorting",
+    "title": "Trois boîtes",
+    "content": {
+      "prompt": "Range chaque forme dans la bonne boîte, quelle que soit sa couleur.",
+      "shapes": [
+        {
+          "id": "s1",
+          "shape": "star",
+          "color": "yellow"
+        },
+        {
+          "id": "s2",
+          "shape": "triangle",
+          "color": "green"
+        },
+        {
+          "id": "s3",
+          "shape": "circle",
+          "color": "red"
+        },
+        {
+          "id": "s4",
+          "shape": "triangle",
+          "color": "blue"
+        },
+        {
+          "id": "s5",
+          "shape": "star",
+          "color": "red"
+        },
+        {
+          "id": "s6",
+          "shape": "circle",
+          "color": "yellow"
+        }
+      ],
+      "bins": [
+        {
+          "id": "b1",
+          "text": "Les étoiles"
+        },
+        {
+          "id": "b2",
+          "text": "Les triangles"
+        },
+        {
+          "id": "b3",
+          "text": "Les ronds"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "mapping": {
+        "s1": "b1",
+        "s2": "b2",
+        "s3": "b3",
+        "s4": "b2",
+        "s5": "b1",
+        "s6": "b3"
+      }
+    },
+    "explanation": "On regarde la forme, pas la couleur : étoiles, triangles et ronds."
+  },
+  {
+    "code": "G1-H-08",
+    "minAge": 5,
+    "difficulty": "Hard",
+    "category": "Logique",
+    "type": "VisualChallenge",
+    "title": "L'intrus",
+    "content": {
+      "prompt": "Touche l'intrus.",
+      "selection": "single",
+      "cells": [
+        {
+          "id": "v1",
+          "text": "🍎"
+        },
+        {
+          "id": "v2",
+          "text": "🍌"
+        },
+        {
+          "id": "v3",
+          "text": "🚗"
+        },
+        {
+          "id": "v4",
+          "text": "🍇"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "selectedIds": [
+        "v3"
+      ]
+    },
+    "explanation": "La voiture n'est pas un fruit : c'est l'intrus !"
+  },
+  {
+    "code": "G1-H-09",
+    "minAge": 5,
+    "difficulty": "Hard",
+    "category": "Animaux et nature",
+    "type": "NumericAnswer",
+    "title": "Les pattes de l'araignée",
+    "content": {
+      "prompt": "Combien de pattes a une araignée ?",
+      "visual": "🕷️"
+    },
+    "correctAnswer": {
+      "value": 8,
+      "tolerance": 0
+    },
+    "explanation": "L'araignée a 8 pattes : ce n'est pas un insecte."
+  },
+  {
+    "code": "G1-H-10",
+    "minAge": 5,
+    "difficulty": "Hard",
+    "category": "Culture générale",
+    "type": "OrderingClassification",
+    "title": "Ma journée",
+    "content": {
+      "prompt": "Range les moments de la journée dans l'ordre.",
+      "mode": "order",
+      "items": [
+        {
+          "id": "i1",
+          "text": "🌙 Aller au lit"
+        },
+        {
+          "id": "i2",
+          "text": "🍽️ Déjeuner à midi"
+        },
+        {
+          "id": "i3",
+          "text": "⏰ Se réveiller"
+        },
+        {
+          "id": "i4",
+          "text": "🍪 Prendre le goûter"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "order": [
+        "i3",
+        "i2",
+        "i4",
+        "i1"
+      ]
+    },
+    "explanation": "On se réveille, on déjeune à midi, on goûte l'après-midi et on va au lit le soir."
+  },
+  {
+    "code": "G1-H-11",
+    "minAge": 5,
+    "difficulty": "Hard",
+    "category": "Animaux et nature",
+    "type": "ImageMatching",
+    "title": "Les bébés animaux",
+    "content": {
+      "prompt": "Relie chaque animal à son petit.",
+      "left": [
+        {
+          "id": "l1",
+          "text": "🐔 La poule"
+        },
+        {
+          "id": "l2",
+          "text": "🐄 La vache"
+        },
+        {
+          "id": "l3",
+          "text": "🐑 La brebis"
+        },
+        {
+          "id": "l4",
+          "text": "🐴 La jument"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "Le veau"
+        },
+        {
+          "id": "r2",
+          "text": "Le poulain"
+        },
+        {
+          "id": "r3",
+          "text": "🐣 Le poussin"
+        },
+        {
+          "id": "r4",
+          "text": "L'agneau"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "pairs": {
+        "l1": "r3",
+        "l2": "r1",
+        "l3": "r4",
+        "l4": "r2"
+      }
+    },
+    "explanation": "Poule → poussin, vache → veau, brebis → agneau, jument → poulain."
+  },
+  {
+    "code": "G1-H-12",
+    "minAge": 5,
+    "difficulty": "Hard",
+    "category": "Animaux et nature",
+    "type": "DragAndDrop",
+    "title": "Le tri des déchets",
+    "content": {
+      "prompt": "Mets chaque déchet dans la bonne poubelle.",
+      "items": [
+        {
+          "id": "i1",
+          "text": "📰 Le journal"
+        },
+        {
+          "id": "i2",
+          "text": "🍾 La bouteille en verre"
+        },
+        {
+          "id": "i3",
+          "text": "📦 Le carton"
+        },
+        {
+          "id": "i4",
+          "text": "Le pot de confiture en verre"
+        }
+      ],
+      "targets": [
+        {
+          "id": "t1",
+          "text": "Papiers et cartons"
+        },
+        {
+          "id": "t2",
+          "text": "Verre"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "mapping": {
+        "i1": "t1",
+        "i2": "t2",
+        "i3": "t1",
+        "i4": "t2"
+      }
+    },
+    "explanation": "Le papier et le carton vont ensemble ; le verre a sa propre poubelle pour être recyclé."
+  },
+  {
+    "code": "G1-H-13",
+    "minAge": 5,
+    "difficulty": "Hard",
+    "category": "Géographie",
+    "type": "MultipleChoice",
+    "title": "Le pays des kangourous",
+    "content": {
+      "prompt": "Dans quel pays vivent les kangourous en liberté ?",
+      "visual": "🦘",
+      "options": [
+        {
+          "id": "a",
+          "text": "En France"
+        },
+        {
+          "id": "b",
+          "text": "En Australie"
+        },
+        {
+          "id": "c",
+          "text": "Au Canada"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "optionId": "b"
+    },
+    "explanation": "Les kangourous vivent en liberté en Australie."
+  },
+  {
+    "code": "G1-H-14",
+    "minAge": 5,
+    "difficulty": "Hard",
+    "category": "Logique",
+    "type": "LogicPuzzle",
+    "title": "Les pattes des chats",
+    "content": {
+      "prompt": "Un chat a 4 pattes. Combien de pattes ont 2 chats ?",
+      "visual": "🐱🐱",
+      "answerType": "number"
+    },
+    "correctAnswer": {
+      "value": 8,
+      "tolerance": 0
+    },
+    "explanation": "4 pattes + 4 pattes = 8 pattes."
+  },
+  {
+    "code": "G1-H-15",
+    "minAge": 5,
+    "difficulty": "Hard",
+    "category": "Formes et couleurs",
+    "type": "TextAnswer",
+    "title": "Le mélange de couleurs",
+    "content": {
+      "prompt": "Quelle couleur obtient-on en mélangeant du bleu et du jaune ?",
+      "visual": "🔵 + 🟡 = ?",
+      "maxLength": 20
+    },
+    "correctAnswer": {
+      "acceptedAnswers": [
+        "vert",
+        "le vert",
+        "verte"
+      ]
+    },
+    "explanation": "Bleu + jaune = vert !"
+  },
+  {
+    "code": "G2-E-01",
+    "minAge": 8,
+    "difficulty": "Easy",
+    "category": "Mathématiques",
+    "type": "MathMiniGame",
+    "title": "Calcul éclair",
+    "content": {
+      "prompt": "Résous les 3 calculs le plus vite possible.",
+      "problems": [
+        {
+          "id": "p1",
+          "expression": "7 + 8"
+        },
+        {
+          "id": "p2",
+          "expression": "12 - 5"
+        },
+        {
+          "id": "p3",
+          "expression": "3 × 4"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "answers": {
+        "p1": 15,
+        "p2": 7,
+        "p3": 12
+      }
+    },
+    "explanation": "7 + 8 = 15, 12 - 5 = 7 et 3 × 4 = 12."
+  },
+  {
+    "code": "G2-E-02",
+    "minAge": 8,
+    "difficulty": "Easy",
+    "category": "Mathématiques",
+    "type": "NumericAnswer",
+    "title": "Le double de 9",
+    "content": {
+      "prompt": "Combien font 9 × 2 ?"
+    },
+    "correctAnswer": {
+      "value": 18,
+      "tolerance": 0
+    },
+    "explanation": "9 × 2, c'est le double de 9 : 18."
+  },
+  {
+    "code": "G2-E-03",
+    "minAge": 8,
+    "difficulty": "Easy",
+    "category": "Géographie",
+    "type": "MultipleChoice",
+    "title": "La capitale de la France",
+    "content": {
+      "prompt": "Quelle est la capitale de la France ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Lyon"
+        },
+        {
+          "id": "b",
+          "text": "Paris"
+        },
+        {
+          "id": "c",
+          "text": "Marseille"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "optionId": "b"
+    },
+    "explanation": "Paris est la capitale de la France."
+  },
+  {
+    "code": "G2-E-04",
+    "minAge": 8,
+    "difficulty": "Easy",
+    "category": "Sciences",
+    "type": "TrueFalse",
+    "title": "L'eau qui gèle",
+    "content": {
+      "prompt": "L'eau pure gèle à 0 °C.",
+      "visual": "🧊"
+    },
+    "correctAnswer": {
+      "value": true
+    },
+    "explanation": "À 0 °C, l'eau pure se transforme en glace."
+  },
+  {
+    "code": "G2-E-05",
+    "minAge": 8,
+    "difficulty": "Easy",
+    "category": "Mathématiques",
+    "type": "SequenceCompletion",
+    "title": "De 2 en 2",
+    "content": {
+      "prompt": "Quel nombre manque ?",
+      "sequence": [
+        "2",
+        "4",
+        "6",
+        null,
+        "10"
+      ]
+    },
+    "correctAnswer": {
+      "values": [
+        "8"
+      ]
+    },
+    "explanation": "On ajoute 2 à chaque fois : 6 + 2 = 8."
+  },
+  {
+    "code": "G2-E-06",
+    "minAge": 8,
+    "difficulty": "Easy",
+    "category": "Animaux et nature",
+    "type": "MultipleChoice",
+    "title": "Le mammifère marin",
+    "content": {
+      "prompt": "Lequel de ces animaux est un mammifère ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "🦈 Le requin"
+        },
+        {
+          "id": "b",
+          "text": "🐬 Le dauphin"
+        },
+        {
+          "id": "c",
+          "text": "🐢 La tortue"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "optionId": "b"
+    },
+    "explanation": "Le dauphin est un mammifère : il respire de l'air et allaite ses petits."
+  },
+  {
+    "code": "G2-E-07",
+    "minAge": 8,
+    "difficulty": "Easy",
+    "category": "Sciences",
+    "type": "TextAnswer",
+    "title": "Notre planète",
+    "content": {
+      "prompt": "Comment s'appelle la planète sur laquelle nous vivons ?",
+      "visual": "🌍",
+      "maxLength": 20
+    },
+    "correctAnswer": {
+      "acceptedAnswers": [
+        "terre",
+        "la terre"
+      ]
+    },
+    "explanation": "Nous vivons sur la Terre, la troisième planète à partir du Soleil."
+  },
+  {
+    "code": "G2-E-08",
+    "minAge": 8,
+    "difficulty": "Easy",
+    "category": "Logique",
+    "type": "LogicPuzzle",
+    "title": "La devinette des trous",
+    "content": {
+      "prompt": "Je suis plein de trous, mais je peux retenir l'eau. Qui suis-je ?",
+      "answerType": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une éponge"
+        },
+        {
+          "id": "b",
+          "text": "Un seau"
+        },
+        {
+          "id": "c",
+          "text": "Un verre"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "optionId": "a"
+    },
+    "explanation": "L'éponge est pleine de petits trous qui gardent l'eau."
+  },
+  {
+    "code": "G2-E-09",
+    "minAge": 8,
+    "difficulty": "Easy",
+    "category": "Mathématiques",
+    "type": "OrderingClassification",
+    "title": "Dans l'ordre croissant",
+    "content": {
+      "prompt": "Range ces nombres du plus petit au plus grand.",
+      "mode": "order",
+      "items": [
+        {
+          "id": "i1",
+          "text": "45"
+        },
+        {
+          "id": "i2",
+          "text": "12"
+        },
+        {
+          "id": "i3",
+          "text": "78"
+        },
+        {
+          "id": "i4",
+          "text": "30"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "order": [
+        "i2",
+        "i4",
+        "i1",
+        "i3"
+      ]
+    },
+    "explanation": "12 < 30 < 45 < 78."
+  },
+  {
+    "code": "G2-E-10",
+    "minAge": 8,
+    "difficulty": "Easy",
+    "category": "Géographie",
+    "type": "TrueFalse",
+    "title": "L'Afrique",
+    "content": {
+      "prompt": "L'Afrique est un pays.",
+      "visual": "🌍"
+    },
+    "correctAnswer": {
+      "value": false
+    },
+    "explanation": "L'Afrique est un continent qui compte plus de 50 pays."
+  },
+  {
+    "code": "G2-E-11",
+    "minAge": 8,
+    "difficulty": "Easy",
+    "category": "Géographie",
+    "type": "ImageMatching",
+    "title": "Monuments du monde",
+    "content": {
+      "prompt": "Relie chaque monument à son pays.",
+      "left": [
+        {
+          "id": "l1",
+          "text": "🗼 La tour Eiffel"
+        },
+        {
+          "id": "l2",
+          "text": "🗽 La statue de la Liberté"
+        },
+        {
+          "id": "l3",
+          "text": "🏟️ Le Colisée"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "Italie"
+        },
+        {
+          "id": "r2",
+          "text": "France"
+        },
+        {
+          "id": "r3",
+          "text": "États-Unis"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "pairs": {
+        "l1": "r2",
+        "l2": "r3",
+        "l3": "r1"
+      }
+    },
+    "explanation": "La tour Eiffel est à Paris, la statue de la Liberté à New York et le Colisée à Rome."
+  },
+  {
+    "code": "G2-E-12",
+    "minAge": 8,
+    "difficulty": "Easy",
+    "category": "Culture générale",
+    "type": "NumericAnswer",
+    "title": "Une heure",
+    "content": {
+      "prompt": "Combien de minutes y a-t-il dans une heure ?",
+      "visual": "⏰",
+      "unit": "minutes"
+    },
+    "correctAnswer": {
+      "value": 60,
+      "tolerance": 0
+    },
+    "explanation": "Une heure dure 60 minutes."
+  },
+  {
+    "code": "G2-E-13",
+    "minAge": 8,
+    "difficulty": "Easy",
+    "category": "Mémoire",
+    "type": "MemoryCards",
+    "title": "Les paires de calculs",
+    "content": {
+      "prompt": "Associe chaque calcul à son résultat.",
+      "previewSeconds": 4,
+      "cards": [
+        {
+          "id": "c1",
+          "face": "2 + 3"
+        },
+        {
+          "id": "c2",
+          "face": "6"
+        },
+        {
+          "id": "c3",
+          "face": "5"
+        },
+        {
+          "id": "c4",
+          "face": "4 + 4"
+        },
+        {
+          "id": "c5",
+          "face": "3 + 3"
+        },
+        {
+          "id": "c6",
+          "face": "8"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "pairs": [
+        [
+          "c1",
+          "c3"
+        ],
+        [
+          "c2",
+          "c5"
+        ],
+        [
+          "c4",
+          "c6"
+        ]
+      ]
+    },
+    "explanation": "2 + 3 = 5, 3 + 3 = 6 et 4 + 4 = 8."
+  },
+  {
+    "code": "G2-E-14",
+    "minAge": 8,
+    "difficulty": "Easy",
+    "category": "Sciences",
+    "type": "MultipleChoice",
+    "title": "La nourriture des plantes",
+    "content": {
+      "prompt": "De quoi les plantes ont-elles besoin pour fabriquer leur nourriture ?",
+      "visual": "🌿",
+      "options": [
+        {
+          "id": "a",
+          "text": "De la lumière du soleil"
+        },
+        {
+          "id": "b",
+          "text": "Du bruit"
+        },
+        {
+          "id": "c",
+          "text": "Du sel"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "optionId": "a"
+    },
+    "explanation": "Grâce à la lumière, les feuilles fabriquent la nourriture de la plante : c'est la photosynthèse."
+  },
+  {
+    "code": "G2-E-15",
+    "minAge": 8,
+    "difficulty": "Easy",
+    "category": "Animaux et nature",
+    "type": "VisualChallenge",
+    "title": "Les insectes",
+    "content": {
+      "prompt": "Touche tous les insectes.",
+      "selection": "multiple",
+      "cells": [
+        {
+          "id": "v1",
+          "text": "🐜 Fourmi"
+        },
+        {
+          "id": "v2",
+          "text": "🕷️ Araignée"
+        },
+        {
+          "id": "v3",
+          "text": "🐝 Abeille"
+        },
+        {
+          "id": "v4",
+          "text": "🐌 Escargot"
+        },
+        {
+          "id": "v5",
+          "text": "🦋 Papillon"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "selectedIds": [
+        "v1",
+        "v3",
+        "v5"
+      ]
+    },
+    "explanation": "Un insecte a 6 pattes. L'araignée en a 8 et l'escargot n'en a pas."
+  },
+  {
+    "code": "G2-M-01",
+    "minAge": 8,
+    "difficulty": "Medium",
+    "category": "Mathématiques",
+    "type": "MathMiniGame",
+    "title": "Tables de multiplication",
+    "content": {
+      "prompt": "Résous les 3 calculs.",
+      "problems": [
+        {
+          "id": "p1",
+          "expression": "6 × 7"
+        },
+        {
+          "id": "p2",
+          "expression": "56 ÷ 8"
+        },
+        {
+          "id": "p3",
+          "expression": "25 + 17"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "answers": {
+        "p1": 42,
+        "p2": 7,
+        "p3": 42
+      }
+    },
+    "explanation": "6 × 7 = 42, 56 ÷ 8 = 7 et 25 + 17 = 42."
+  },
+  {
+    "code": "G2-M-02",
+    "minAge": 8,
+    "difficulty": "Medium",
+    "category": "Mathématiques",
+    "type": "SequenceCompletion",
+    "title": "Toujours le double",
+    "content": {
+      "prompt": "Quel nombre manque ?",
+      "sequence": [
+        "3",
+        "6",
+        "12",
+        null,
+        "48"
+      ]
+    },
+    "correctAnswer": {
+      "values": [
+        "24"
+      ]
+    },
+    "explanation": "Chaque nombre est le double du précédent : 12 × 2 = 24."
+  },
+  {
+    "code": "G2-M-03",
+    "minAge": 8,
+    "difficulty": "Medium",
+    "category": "Géographie",
+    "type": "MultipleChoice",
+    "title": "Le plus grand océan",
+    "content": {
+      "prompt": "Quel est le plus grand océan du monde ?",
+      "visual": "🌊",
+      "options": [
+        {
+          "id": "a",
+          "text": "L'océan Atlantique"
+        },
+        {
+          "id": "b",
+          "text": "L'océan Pacifique"
+        },
+        {
+          "id": "c",
+          "text": "L'océan Indien"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "optionId": "b"
+    },
+    "explanation": "L'océan Pacifique est le plus grand : il couvre presque un tiers de la Terre."
+  },
+  {
+    "code": "G2-M-04",
+    "minAge": 8,
+    "difficulty": "Medium",
+    "category": "Mathématiques",
+    "type": "NumericAnswer",
+    "title": "Le partage des billes",
+    "content": {
+      "prompt": "Lucas a 24 billes. Il en donne la moitié à sa sœur. Combien lui en reste-t-il ?",
+      "unit": "billes"
+    },
+    "correctAnswer": {
+      "value": 12,
+      "tolerance": 0
+    },
+    "explanation": "La moitié de 24, c'est 12."
+  },
+  {
+    "code": "G2-M-05",
+    "minAge": 8,
+    "difficulty": "Medium",
+    "category": "Sciences",
+    "type": "TrueFalse",
+    "title": "La lumière de la Lune",
+    "content": {
+      "prompt": "La Lune produit sa propre lumière.",
+      "visual": "🌕"
+    },
+    "correctAnswer": {
+      "value": false
+    },
+    "explanation": "La Lune ne brille pas toute seule : elle renvoie la lumière du Soleil."
+  },
+  {
+    "code": "G2-M-06",
+    "minAge": 8,
+    "difficulty": "Medium",
+    "category": "Logique",
+    "type": "LogicPuzzle",
+    "title": "Les pattes de la ferme",
+    "content": {
+      "prompt": "Dans une ferme, il y a 3 poules et 2 lapins. Combien de pattes y a-t-il en tout ?",
+      "visual": "🐔🐔🐔🐰🐰",
+      "answerType": "number"
+    },
+    "correctAnswer": {
+      "value": 14,
+      "tolerance": 0
+    },
+    "explanation": "3 poules × 2 pattes = 6, 2 lapins × 4 pattes = 8, et 6 + 8 = 14."
+  },
+  {
+    "code": "G2-M-07",
+    "minAge": 8,
+    "difficulty": "Medium",
+    "category": "Sciences",
+    "type": "OrderingClassification",
+    "title": "Solide, liquide ou gaz ?",
+    "content": {
+      "prompt": "Classe chaque élément selon son état.",
+      "mode": "classify",
+      "items": [
+        {
+          "id": "i1",
+          "text": "🧊 Un glaçon"
+        },
+        {
+          "id": "i2",
+          "text": "🥛 Le lait"
+        },
+        {
+          "id": "i3",
+          "text": "💨 La vapeur d'eau"
+        },
+        {
+          "id": "i4",
+          "text": "Un caillou"
+        },
+        {
+          "id": "i5",
+          "text": "🧃 Le jus de pomme"
+        }
+      ],
+      "groups": [
+        {
+          "id": "g1",
+          "text": "Solide"
+        },
+        {
+          "id": "g2",
+          "text": "Liquide"
+        },
+        {
+          "id": "g3",
+          "text": "Gaz"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "mapping": {
+        "i1": "g1",
+        "i2": "g2",
+        "i3": "g3",
+        "i4": "g1",
+        "i5": "g2"
+      }
+    },
+    "explanation": "Le glaçon et le caillou sont solides, le lait et le jus sont liquides, la vapeur est un gaz."
+  },
+  {
+    "code": "G2-M-08",
+    "minAge": 8,
+    "difficulty": "Medium",
+    "category": "Géographie",
+    "type": "TextAnswer",
+    "title": "Le plus long fleuve de France",
+    "content": {
+      "prompt": "Quel est le plus long fleuve de France ?",
+      "maxLength": 30
+    },
+    "correctAnswer": {
+      "acceptedAnswers": [
+        "loire",
+        "la loire"
+      ]
+    },
+    "explanation": "La Loire mesure environ 1 000 km : c'est le plus long fleuve de France."
+  },
+  {
+    "code": "G2-M-09",
+    "minAge": 8,
+    "difficulty": "Medium",
+    "category": "Géographie",
+    "type": "DragAndDrop",
+    "title": "Animaux des continents",
+    "content": {
+      "prompt": "Place chaque animal sur le continent où il vit à l'état sauvage.",
+      "items": [
+        {
+          "id": "i1",
+          "text": "🦘 Le kangourou"
+        },
+        {
+          "id": "i2",
+          "text": "🐼 Le panda géant"
+        },
+        {
+          "id": "i3",
+          "text": "🦒 La girafe"
+        },
+        {
+          "id": "i4",
+          "text": "🦙 Le lama"
+        }
+      ],
+      "targets": [
+        {
+          "id": "t1",
+          "text": "Afrique"
+        },
+        {
+          "id": "t2",
+          "text": "Asie"
+        },
+        {
+          "id": "t3",
+          "text": "Océanie"
+        },
+        {
+          "id": "t4",
+          "text": "Amérique du Sud"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "mapping": {
+        "i1": "t3",
+        "i2": "t2",
+        "i3": "t1",
+        "i4": "t4"
+      }
+    },
+    "explanation": "Kangourou en Océanie, panda en Asie (Chine), girafe en Afrique et lama dans les Andes, en Amérique du Sud."
+  },
+  {
+    "code": "G2-M-10",
+    "minAge": 8,
+    "difficulty": "Medium",
+    "category": "Histoire",
+    "type": "MultipleChoice",
+    "title": "Les châteaux forts",
+    "content": {
+      "prompt": "Au Moyen Âge, qui vivait dans les châteaux forts ?",
+      "visual": "🏰",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les seigneurs et leurs chevaliers"
+        },
+        {
+          "id": "b",
+          "text": "Les dinosaures"
+        },
+        {
+          "id": "c",
+          "text": "Les astronautes"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "optionId": "a"
+    },
+    "explanation": "Le seigneur vivait dans son château fort, protégé par ses chevaliers."
+  },
+  {
+    "code": "G2-M-11",
+    "minAge": 8,
+    "difficulty": "Medium",
+    "category": "Mémoire",
+    "type": "MemoryCards",
+    "title": "Pays et capitales",
+    "content": {
+      "prompt": "Associe chaque pays à sa capitale.",
+      "previewSeconds": 4,
+      "cards": [
+        {
+          "id": "c1",
+          "face": "Espagne"
+        },
+        {
+          "id": "c2",
+          "face": "Rome"
+        },
+        {
+          "id": "c3",
+          "face": "Madrid"
+        },
+        {
+          "id": "c4",
+          "face": "Allemagne"
+        },
+        {
+          "id": "c5",
+          "face": "Italie"
+        },
+        {
+          "id": "c6",
+          "face": "Berlin"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "pairs": [
+        [
+          "c1",
+          "c3"
+        ],
+        [
+          "c4",
+          "c6"
+        ],
+        [
+          "c5",
+          "c2"
+        ]
+      ]
+    },
+    "explanation": "Madrid pour l'Espagne, Berlin pour l'Allemagne et Rome pour l'Italie."
+  },
+  {
+    "code": "G2-M-12",
+    "minAge": 8,
+    "difficulty": "Medium",
+    "category": "Mathématiques",
+    "type": "NumericAnswer",
+    "title": "Les côtés des triangles",
+    "content": {
+      "prompt": "Combien de côtés ont 3 triangles en tout ?",
+      "visual": "🔺🔺🔺"
+    },
+    "correctAnswer": {
+      "value": 9,
+      "tolerance": 0
+    },
+    "explanation": "Chaque triangle a 3 côtés : 3 × 3 = 9."
+  },
+  {
+    "code": "G2-M-13",
+    "minAge": 8,
+    "difficulty": "Medium",
+    "category": "Mathématiques",
+    "type": "VisualChallenge",
+    "title": "Les nombres pairs",
+    "content": {
+      "prompt": "Touche tous les nombres pairs.",
+      "selection": "multiple",
+      "cells": [
+        {
+          "id": "v1",
+          "text": "14"
+        },
+        {
+          "id": "v2",
+          "text": "7"
+        },
+        {
+          "id": "v3",
+          "text": "22"
+        },
+        {
+          "id": "v4",
+          "text": "35"
+        },
+        {
+          "id": "v5",
+          "text": "8"
+        },
+        {
+          "id": "v6",
+          "text": "19"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "selectedIds": [
+        "v1",
+        "v3",
+        "v5"
+      ]
+    },
+    "explanation": "Un nombre pair se termine par 0, 2, 4, 6 ou 8 : 14, 22 et 8."
+  },
+  {
+    "code": "G2-M-14",
+    "minAge": 8,
+    "difficulty": "Medium",
+    "category": "Sciences",
+    "type": "MultipleChoice",
+    "title": "La pompe du corps",
+    "content": {
+      "prompt": "Quel organe pompe le sang dans tout notre corps ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "❤️ Le cœur"
+        },
+        {
+          "id": "b",
+          "text": "🫁 Les poumons"
+        },
+        {
+          "id": "c",
+          "text": "L'estomac"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "optionId": "a"
+    },
+    "explanation": "Le cœur est un muscle qui pompe le sang sans jamais s'arrêter."
+  },
+  {
+    "code": "G2-M-15",
+    "minAge": 8,
+    "difficulty": "Medium",
+    "category": "Logique",
+    "type": "Maze",
+    "title": "Le labyrinthe du jardin",
+    "content": {
+      "prompt": "Trouve le chemin de S jusqu'à la sortie E.",
+      "grid": [
+        "S.#..",
+        ".##.#",
+        "...#.",
+        "#.#..",
+        "#...E"
+      ]
+    },
+    "correctAnswer": {
+      "shortestPathLength": 8
+    },
+    "explanation": "Il fallait descendre à gauche, puis longer le bas du labyrinthe."
+  },
+  {
+    "code": "G2-H-01",
+    "minAge": 8,
+    "difficulty": "Hard",
+    "category": "Mathématiques",
+    "type": "MathMiniGame",
+    "title": "Le défi des 4 calculs",
+    "content": {
+      "prompt": "Résous les 4 calculs.",
+      "problems": [
+        {
+          "id": "p1",
+          "expression": "8 × 9"
+        },
+        {
+          "id": "p2",
+          "expression": "100 - 37"
+        },
+        {
+          "id": "p3",
+          "expression": "81 ÷ 9"
+        },
+        {
+          "id": "p4",
+          "expression": "15 + 48"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "answers": {
+        "p1": 72,
+        "p2": 63,
+        "p3": 9,
+        "p4": 63
+      }
+    },
+    "explanation": "8 × 9 = 72, 100 - 37 = 63, 81 ÷ 9 = 9 et 15 + 48 = 63."
+  },
+  {
+    "code": "G2-H-02",
+    "minAge": 8,
+    "difficulty": "Hard",
+    "category": "Mathématiques",
+    "type": "SequenceCompletion",
+    "title": "La suite mystère",
+    "content": {
+      "prompt": "Quel nombre vient ensuite ?",
+      "sequence": [
+        "1",
+        "4",
+        "9",
+        "16",
+        null
+      ]
+    },
+    "correctAnswer": {
+      "values": [
+        "25"
+      ]
+    },
+    "explanation": "1 × 1, 2 × 2, 3 × 3, 4 × 4… puis 5 × 5 = 25."
+  },
+  {
+    "code": "G2-H-03",
+    "minAge": 8,
+    "difficulty": "Hard",
+    "category": "Mathématiques",
+    "type": "NumericAnswer",
+    "title": "Le livre de 120 pages",
+    "content": {
+      "prompt": "Un livre a 120 pages. Tu lis 15 pages par jour. En combien de jours auras-tu fini le livre ?",
+      "visual": "📖",
+      "unit": "jours"
+    },
+    "correctAnswer": {
+      "value": 8,
+      "tolerance": 0
+    },
+    "explanation": "120 ÷ 15 = 8 jours."
+  },
+  {
+    "code": "G2-H-04",
+    "minAge": 8,
+    "difficulty": "Hard",
+    "category": "Géographie",
+    "type": "MultipleChoice",
+    "title": "La capitale de l'Australie",
+    "content": {
+      "prompt": "Quelle est la capitale de l'Australie ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Sydney"
+        },
+        {
+          "id": "b",
+          "text": "Canberra"
+        },
+        {
+          "id": "c",
+          "text": "Melbourne"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "optionId": "b"
+    },
+    "explanation": "Piège ! Sydney est la plus grande ville, mais la capitale est Canberra."
+  },
+  {
+    "code": "G2-H-05",
+    "minAge": 8,
+    "difficulty": "Hard",
+    "category": "Histoire",
+    "type": "TrueFalse",
+    "title": "L'âge des pyramides",
+    "content": {
+      "prompt": "Les grandes pyramides de Gizeh, en Égypte, ont plus de 4 000 ans.",
+      "visual": "🔺"
+    },
+    "correctAnswer": {
+      "value": true
+    },
+    "explanation": "Elles ont été construites il y a environ 4 500 ans."
+  },
+  {
+    "code": "G2-H-06",
+    "minAge": 8,
+    "difficulty": "Hard",
+    "category": "Logique",
+    "type": "LogicPuzzle",
+    "title": "Le plus petit",
+    "content": {
+      "prompt": "Paul est plus grand que Marie. Marie est plus grande que Léo. Qui est le plus petit ?",
+      "answerType": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Paul"
+        },
+        {
+          "id": "b",
+          "text": "Marie"
+        },
+        {
+          "id": "c",
+          "text": "Léo"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "optionId": "c"
+    },
+    "explanation": "Paul > Marie > Léo : Léo est le plus petit."
+  },
+  {
+    "code": "G2-H-07",
+    "minAge": 8,
+    "difficulty": "Hard",
+    "category": "Sciences",
+    "type": "OrderingClassification",
+    "title": "Les planètes",
+    "content": {
+      "prompt": "Range ces planètes de la plus proche à la plus éloignée du Soleil.",
+      "mode": "order",
+      "items": [
+        {
+          "id": "i1",
+          "text": "Mars"
+        },
+        {
+          "id": "i2",
+          "text": "Mercure"
+        },
+        {
+          "id": "i3",
+          "text": "Terre"
+        },
+        {
+          "id": "i4",
+          "text": "Vénus"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "order": [
+        "i2",
+        "i4",
+        "i3",
+        "i1"
+      ]
+    },
+    "explanation": "Depuis le Soleil : Mercure, Vénus, la Terre, puis Mars."
+  },
+  {
+    "code": "G2-H-08",
+    "minAge": 8,
+    "difficulty": "Hard",
+    "category": "Animaux et nature",
+    "type": "TextAnswer",
+    "title": "Mangeur de plantes",
+    "content": {
+      "prompt": "Comment appelle-t-on un animal qui ne mange que des plantes ?",
+      "visual": "🐄🌿",
+      "maxLength": 30
+    },
+    "correctAnswer": {
+      "acceptedAnswers": [
+        "herbivore",
+        "un herbivore"
+      ]
+    },
+    "explanation": "Un herbivore se nourrit uniquement de plantes, comme la vache ou le lapin."
+  },
+  {
+    "code": "G2-H-09",
+    "minAge": 8,
+    "difficulty": "Hard",
+    "category": "Logique",
+    "type": "Maze",
+    "title": "Le grand labyrinthe",
+    "content": {
+      "prompt": "Trouve le chemin de S jusqu'à la sortie E.",
+      "grid": [
+        "S.#...",
+        ".##.#.",
+        "....#.",
+        "#.#...",
+        "..#.#.",
+        ".#...E"
+      ]
+    },
+    "correctAnswer": {
+      "shortestPathLength": 10
+    },
+    "explanation": "Il fallait passer par le couloir du milieu puis descendre vers la sortie."
+  },
+  {
+    "code": "G2-H-10",
+    "minAge": 8,
+    "difficulty": "Hard",
+    "category": "Culture générale",
+    "type": "MultipleChoice",
+    "title": "L'année bissextile",
+    "content": {
+      "prompt": "Combien de jours compte une année bissextile ?",
+      "visual": "📅",
+      "options": [
+        {
+          "id": "a",
+          "text": "365"
+        },
+        {
+          "id": "b",
+          "text": "366"
+        },
+        {
+          "id": "c",
+          "text": "364"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "optionId": "b"
+    },
+    "explanation": "Une année bissextile a un jour de plus : le 29 février. Elle compte 366 jours."
+  },
+  {
+    "code": "G2-H-11",
+    "minAge": 8,
+    "difficulty": "Hard",
+    "category": "Sciences",
+    "type": "ImageMatching",
+    "title": "Les instruments de mesure",
+    "content": {
+      "prompt": "Relie chaque instrument à ce qu'il mesure.",
+      "left": [
+        {
+          "id": "l1",
+          "text": "🌡️ Le thermomètre"
+        },
+        {
+          "id": "l2",
+          "text": "⚖️ La balance"
+        },
+        {
+          "id": "l3",
+          "text": "📏 La règle"
+        },
+        {
+          "id": "l4",
+          "text": "⏱️ Le chronomètre"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "La longueur"
+        },
+        {
+          "id": "r2",
+          "text": "La durée"
+        },
+        {
+          "id": "r3",
+          "text": "La température"
+        },
+        {
+          "id": "r4",
+          "text": "La masse"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "pairs": {
+        "l1": "r3",
+        "l2": "r4",
+        "l3": "r1",
+        "l4": "r2"
+      }
+    },
+    "explanation": "Thermomètre → température, balance → masse, règle → longueur, chronomètre → durée."
+  },
+  {
+    "code": "G2-H-12",
+    "minAge": 8,
+    "difficulty": "Hard",
+    "category": "Animaux et nature",
+    "type": "DragAndDrop",
+    "title": "Qui mange quoi ?",
+    "content": {
+      "prompt": "Classe chaque animal selon son régime alimentaire.",
+      "items": [
+        {
+          "id": "i1",
+          "text": "🦁 Le lion"
+        },
+        {
+          "id": "i2",
+          "text": "🐄 La vache"
+        },
+        {
+          "id": "i3",
+          "text": "🐻 L'ours brun"
+        },
+        {
+          "id": "i4",
+          "text": "🐰 Le lapin"
+        },
+        {
+          "id": "i5",
+          "text": "🦈 Le requin"
+        }
+      ],
+      "targets": [
+        {
+          "id": "t1",
+          "text": "Carnivore (viande)"
+        },
+        {
+          "id": "t2",
+          "text": "Herbivore (plantes)"
+        },
+        {
+          "id": "t3",
+          "text": "Omnivore (un peu de tout)"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "mapping": {
+        "i1": "t1",
+        "i2": "t2",
+        "i3": "t3",
+        "i4": "t2",
+        "i5": "t1"
+      }
+    },
+    "explanation": "Le lion et le requin mangent de la viande, la vache et le lapin des plantes, l'ours brun un peu de tout."
+  },
+  {
+    "code": "G2-H-13",
+    "minAge": 8,
+    "difficulty": "Hard",
+    "category": "Géographie",
+    "type": "VisualChallenge",
+    "title": "Les pays d'Europe",
+    "content": {
+      "prompt": "Touche tous les pays qui se trouvent en Europe.",
+      "selection": "multiple",
+      "cells": [
+        {
+          "id": "v1",
+          "text": "Portugal"
+        },
+        {
+          "id": "v2",
+          "text": "Brésil"
+        },
+        {
+          "id": "v3",
+          "text": "Suède"
+        },
+        {
+          "id": "v4",
+          "text": "Japon"
+        },
+        {
+          "id": "v5",
+          "text": "Grèce"
+        },
+        {
+          "id": "v6",
+          "text": "Canada"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "selectedIds": [
+        "v1",
+        "v3",
+        "v5"
+      ]
+    },
+    "explanation": "Le Portugal, la Suède et la Grèce sont en Europe ; le Brésil, le Japon et le Canada sont sur d'autres continents."
+  },
+  {
+    "code": "G2-H-14",
+    "minAge": 8,
+    "difficulty": "Hard",
+    "category": "Mémoire",
+    "type": "MemoryCards",
+    "title": "La mémoire des tables",
+    "content": {
+      "prompt": "Associe chaque multiplication à son résultat.",
+      "previewSeconds": 5,
+      "cards": [
+        {
+          "id": "c1",
+          "face": "7 × 3"
+        },
+        {
+          "id": "c2",
+          "face": "36"
+        },
+        {
+          "id": "c3",
+          "face": "21"
+        },
+        {
+          "id": "c4",
+          "face": "6 × 6"
+        },
+        {
+          "id": "c5",
+          "face": "40"
+        },
+        {
+          "id": "c6",
+          "face": "8 × 5"
+        },
+        {
+          "id": "c7",
+          "face": "9 × 2"
+        },
+        {
+          "id": "c8",
+          "face": "18"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "pairs": [
+        [
+          "c1",
+          "c3"
+        ],
+        [
+          "c4",
+          "c2"
+        ],
+        [
+          "c6",
+          "c5"
+        ],
+        [
+          "c7",
+          "c8"
+        ]
+      ]
+    },
+    "explanation": "7 × 3 = 21, 6 × 6 = 36, 8 × 5 = 40 et 9 × 2 = 18."
+  },
+  {
+    "code": "G2-H-15",
+    "minAge": 8,
+    "difficulty": "Hard",
+    "category": "Mathématiques",
+    "type": "NumericAnswer",
+    "title": "Des mètres aux centimètres",
+    "content": {
+      "prompt": "Combien de centimètres y a-t-il dans 3 mètres ?",
+      "visual": "📏",
+      "unit": "cm"
+    },
+    "correctAnswer": {
+      "value": 300,
+      "tolerance": 0
+    },
+    "explanation": "1 mètre = 100 centimètres, donc 3 mètres = 300 centimètres."
+  },
+  {
+    "code": "G3-E-01",
+    "minAge": 11,
+    "difficulty": "Easy",
+    "category": "Mathématiques",
+    "type": "MathMiniGame",
+    "title": "Échauffement",
+    "content": {
+      "prompt": "Résous les 3 calculs.",
+      "problems": [
+        {
+          "id": "p1",
+          "expression": "12 × 12"
+        },
+        {
+          "id": "p2",
+          "expression": "144 ÷ 12"
+        },
+        {
+          "id": "p3",
+          "expression": "250 + 375"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "answers": {
+        "p1": 144,
+        "p2": 12,
+        "p3": 625
+      }
+    },
+    "explanation": "12 × 12 = 144, 144 ÷ 12 = 12 et 250 + 375 = 625."
+  },
+  {
+    "code": "G3-E-02",
+    "minAge": 11,
+    "difficulty": "Easy",
+    "category": "Géographie",
+    "type": "MultipleChoice",
+    "title": "Le continent de l'Égypte",
+    "content": {
+      "prompt": "Sur quel continent se trouve l'Égypte ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "L'Asie"
+        },
+        {
+          "id": "b",
+          "text": "L'Afrique"
+        },
+        {
+          "id": "c",
+          "text": "L'Europe"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "optionId": "b"
+    },
+    "explanation": "L'Égypte est au nord-est de l'Afrique."
+  },
+  {
+    "code": "G3-E-03",
+    "minAge": 11,
+    "difficulty": "Easy",
+    "category": "Mathématiques",
+    "type": "NumericAnswer",
+    "title": "Le périmètre du carré",
+    "content": {
+      "prompt": "Quel est le périmètre d'un carré de 7 cm de côté ?",
+      "unit": "cm"
+    },
+    "correctAnswer": {
+      "value": 28,
+      "tolerance": 0
+    },
+    "explanation": "Le carré a 4 côtés égaux : 4 × 7 = 28 cm."
+  },
+  {
+    "code": "G3-E-04",
+    "minAge": 11,
+    "difficulty": "Easy",
+    "category": "Histoire",
+    "type": "TrueFalse",
+    "title": "Christophe Colomb",
+    "content": {
+      "prompt": "Christophe Colomb a atteint l'Amérique en 1492.",
+      "visual": "⛵"
+    },
+    "correctAnswer": {
+      "value": true
+    },
+    "explanation": "En 1492, les navires de Christophe Colomb ont atteint les îles des Caraïbes."
+  },
+  {
+    "code": "G3-E-05",
+    "minAge": 11,
+    "difficulty": "Easy",
+    "category": "Mathématiques",
+    "type": "SequenceCompletion",
+    "title": "Toujours plus",
+    "content": {
+      "prompt": "Quel nombre vient ensuite ?",
+      "sequence": [
+        "5",
+        "10",
+        "20",
+        "40",
+        null
+      ]
+    },
+    "correctAnswer": {
+      "values": [
+        "80"
+      ]
+    },
+    "explanation": "On multiplie par 2 à chaque fois : 40 × 2 = 80."
+  },
+  {
+    "code": "G3-E-06",
+    "minAge": 11,
+    "difficulty": "Easy",
+    "category": "Sciences",
+    "type": "OrderingClassification",
+    "title": "Vertébré ou invertébré ?",
+    "content": {
+      "prompt": "Classe chaque animal : a-t-il un squelette avec une colonne vertébrale ?",
+      "mode": "classify",
+      "items": [
+        {
+          "id": "i1",
+          "text": "Le chat"
+        },
+        {
+          "id": "i2",
+          "text": "L'escargot"
+        },
+        {
+          "id": "i3",
+          "text": "La grenouille"
+        },
+        {
+          "id": "i4",
+          "text": "La méduse"
+        },
+        {
+          "id": "i5",
+          "text": "L'aigle"
+        }
+      ],
+      "groups": [
+        {
+          "id": "g1",
+          "text": "Vertébrés"
+        },
+        {
+          "id": "g2",
+          "text": "Invertébrés"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "mapping": {
+        "i1": "g1",
+        "i2": "g2",
+        "i3": "g1",
+        "i4": "g2",
+        "i5": "g1"
+      }
+    },
+    "explanation": "Le chat, la grenouille et l'aigle ont une colonne vertébrale ; l'escargot et la méduse n'en ont pas."
+  },
+  {
+    "code": "G3-E-07",
+    "minAge": 11,
+    "difficulty": "Easy",
+    "category": "Géographie",
+    "type": "TextAnswer",
+    "title": "La capitale de l'Italie",
+    "content": {
+      "prompt": "Quelle est la capitale de l'Italie ?",
+      "maxLength": 30
+    },
+    "correctAnswer": {
+      "acceptedAnswers": [
+        "rome"
+      ]
+    },
+    "explanation": "Rome est la capitale de l'Italie."
+  },
+  {
+    "code": "G3-E-08",
+    "minAge": 11,
+    "difficulty": "Easy",
+    "category": "Sciences",
+    "type": "MultipleChoice",
+    "title": "La photosynthèse",
+    "content": {
+      "prompt": "Quel gaz les plantes rejettent-elles grâce à la photosynthèse ?",
+      "visual": "🌳",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le dioxygène (oxygène)"
+        },
+        {
+          "id": "b",
+          "text": "Le dioxyde de carbone"
+        },
+        {
+          "id": "c",
+          "text": "L'hélium"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "optionId": "a"
+    },
+    "explanation": "Les plantes absorbent du dioxyde de carbone et rejettent du dioxygène, que nous respirons."
+  },
+  {
+    "code": "G3-E-09",
+    "minAge": 11,
+    "difficulty": "Easy",
+    "category": "Logique",
+    "type": "LogicPuzzle",
+    "title": "Le prix des cahiers",
+    "content": {
+      "prompt": "3 cahiers coûtent 6 €. Combien coûtent 5 cahiers ?",
+      "answerType": "number",
+      "unit": "€"
+    },
+    "correctAnswer": {
+      "value": 10,
+      "tolerance": 0
+    },
+    "explanation": "Un cahier coûte 6 ÷ 3 = 2 €, donc 5 cahiers coûtent 5 × 2 = 10 €."
+  },
+  {
+    "code": "G3-E-10",
+    "minAge": 11,
+    "difficulty": "Easy",
+    "category": "Logique",
+    "type": "Maze",
+    "title": "Le labyrinthe du temple",
+    "content": {
+      "prompt": "Trouve le chemin de S jusqu'à la sortie E.",
+      "grid": [
+        "S#....",
+        ".#.##.",
+        "...#..",
+        "##...#",
+        "...#..",
+        ".#.#.E"
+      ]
+    },
+    "correctAnswer": {
+      "shortestPathLength": 10
+    },
+    "explanation": "Il fallait descendre, traverser le centre puis rejoindre le coin en bas à droite."
+  },
+  {
+    "code": "G3-E-11",
+    "minAge": 11,
+    "difficulty": "Easy",
+    "category": "Géographie",
+    "type": "ImageMatching",
+    "title": "Capitales d'Europe",
+    "content": {
+      "prompt": "Relie chaque pays à sa capitale.",
+      "left": [
+        {
+          "id": "l1",
+          "text": "Allemagne"
+        },
+        {
+          "id": "l2",
+          "text": "Portugal"
+        },
+        {
+          "id": "l3",
+          "text": "Belgique"
+        },
+        {
+          "id": "l4",
+          "text": "Royaume-Uni"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "Londres"
+        },
+        {
+          "id": "r2",
+          "text": "Berlin"
+        },
+        {
+          "id": "r3",
+          "text": "Bruxelles"
+        },
+        {
+          "id": "r4",
+          "text": "Lisbonne"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "pairs": {
+        "l1": "r2",
+        "l2": "r4",
+        "l3": "r3",
+        "l4": "r1"
+      }
+    },
+    "explanation": "Berlin, Lisbonne, Bruxelles et Londres."
+  },
+  {
+    "code": "G3-E-12",
+    "minAge": 11,
+    "difficulty": "Easy",
+    "category": "Mathématiques",
+    "type": "VisualChallenge",
+    "title": "Les multiples de 3",
+    "content": {
+      "prompt": "Touche tous les multiples de 3.",
+      "selection": "multiple",
+      "cells": [
+        {
+          "id": "v1",
+          "text": "9"
+        },
+        {
+          "id": "v2",
+          "text": "14"
+        },
+        {
+          "id": "v3",
+          "text": "21"
+        },
+        {
+          "id": "v4",
+          "text": "25"
+        },
+        {
+          "id": "v5",
+          "text": "27"
+        },
+        {
+          "id": "v6",
+          "text": "32"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "selectedIds": [
+        "v1",
+        "v3",
+        "v5"
+      ]
+    },
+    "explanation": "9 = 3 × 3, 21 = 3 × 7 et 27 = 3 × 9."
+  },
+  {
+    "code": "G3-E-13",
+    "minAge": 11,
+    "difficulty": "Easy",
+    "category": "Mathématiques",
+    "type": "NumericAnswer",
+    "title": "Cinq minutes",
+    "content": {
+      "prompt": "Combien de secondes y a-t-il dans 5 minutes ?",
+      "visual": "⏱️",
+      "unit": "secondes"
+    },
+    "correctAnswer": {
+      "value": 300,
+      "tolerance": 0
+    },
+    "explanation": "1 minute = 60 secondes, donc 5 × 60 = 300 secondes."
+  },
+  {
+    "code": "G3-E-14",
+    "minAge": 11,
+    "difficulty": "Easy",
+    "category": "Sciences",
+    "type": "TrueFalse",
+    "title": "Son ou lumière ?",
+    "content": {
+      "prompt": "Le son se déplace plus vite que la lumière.",
+      "visual": "⚡"
+    },
+    "correctAnswer": {
+      "value": false
+    },
+    "explanation": "La lumière est bien plus rapide : c'est pour cela qu'on voit l'éclair avant d'entendre le tonnerre."
+  },
+  {
+    "code": "G3-E-15",
+    "minAge": 11,
+    "difficulty": "Easy",
+    "category": "Géographie",
+    "type": "DragAndDrop",
+    "title": "Les grands fleuves",
+    "content": {
+      "prompt": "Place chaque fleuve sur son continent.",
+      "items": [
+        {
+          "id": "i1",
+          "text": "Le Nil"
+        },
+        {
+          "id": "i2",
+          "text": "L'Amazone"
+        },
+        {
+          "id": "i3",
+          "text": "Le Danube"
+        },
+        {
+          "id": "i4",
+          "text": "Le Gange"
+        }
+      ],
+      "targets": [
+        {
+          "id": "t1",
+          "text": "Europe"
+        },
+        {
+          "id": "t2",
+          "text": "Asie"
+        },
+        {
+          "id": "t3",
+          "text": "Afrique"
+        },
+        {
+          "id": "t4",
+          "text": "Amérique du Sud"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "mapping": {
+        "i1": "t3",
+        "i2": "t4",
+        "i3": "t1",
+        "i4": "t2"
+      }
+    },
+    "explanation": "Le Nil coule en Afrique, l'Amazone en Amérique du Sud, le Danube en Europe et le Gange en Asie (Inde)."
+  },
+  {
+    "code": "G3-M-01",
+    "minAge": 11,
+    "difficulty": "Medium",
+    "category": "Mathématiques",
+    "type": "MathMiniGame",
+    "title": "Calcul mental",
+    "content": {
+      "prompt": "Résous les 4 calculs.",
+      "problems": [
+        {
+          "id": "p1",
+          "expression": "15 × 4"
+        },
+        {
+          "id": "p2",
+          "expression": "3 × 25"
+        },
+        {
+          "id": "p3",
+          "expression": "1000 - 375"
+        },
+        {
+          "id": "p4",
+          "expression": "96 ÷ 4"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "answers": {
+        "p1": 60,
+        "p2": 75,
+        "p3": 625,
+        "p4": 24
+      }
+    },
+    "explanation": "15 × 4 = 60, 3 × 25 = 75, 1000 - 375 = 625 et 96 ÷ 4 = 24."
+  },
+  {
+    "code": "G3-M-02",
+    "minAge": 11,
+    "difficulty": "Medium",
+    "category": "Mathématiques",
+    "type": "NumericAnswer",
+    "title": "L'aire du rectangle",
+    "content": {
+      "prompt": "Quelle est l'aire d'un rectangle de 8 m de long et 5 m de large ?",
+      "unit": "m²"
+    },
+    "correctAnswer": {
+      "value": 40,
+      "tolerance": 0
+    },
+    "explanation": "Aire = longueur × largeur = 8 × 5 = 40 m²."
+  },
+  {
+    "code": "G3-M-03",
+    "minAge": 11,
+    "difficulty": "Medium",
+    "category": "Logique",
+    "type": "SequenceCompletion",
+    "title": "La suite de Fibonacci",
+    "content": {
+      "prompt": "Quel nombre vient ensuite ?",
+      "sequence": [
+        "1",
+        "1",
+        "2",
+        "3",
+        "5",
+        "8",
+        null
+      ]
+    },
+    "correctAnswer": {
+      "values": [
+        "13"
+      ]
+    },
+    "explanation": "Chaque nombre est la somme des deux précédents : 5 + 8 = 13."
+  },
+  {
+    "code": "G3-M-04",
+    "minAge": 11,
+    "difficulty": "Medium",
+    "category": "Histoire",
+    "type": "MultipleChoice",
+    "title": "Le Colisée",
+    "content": {
+      "prompt": "Quel peuple a construit le Colisée ?",
+      "visual": "🏟️",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les Grecs"
+        },
+        {
+          "id": "b",
+          "text": "Les Romains"
+        },
+        {
+          "id": "c",
+          "text": "Les Égyptiens"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "optionId": "b"
+    },
+    "explanation": "Le Colisée a été construit à Rome par les Romains, il y a près de 2 000 ans."
+  },
+  {
+    "code": "G3-M-05",
+    "minAge": 11,
+    "difficulty": "Medium",
+    "category": "Logique",
+    "type": "LogicPuzzle",
+    "title": "Trois amis, trois sports",
+    "content": {
+      "prompt": "Ana, Ben et Chloé pratiquent chacun un sport différent : foot, tennis ou natation. Ben fait du tennis. Ana ne fait pas de foot. Qui fait du foot ?",
+      "answerType": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ana"
+        },
+        {
+          "id": "b",
+          "text": "Ben"
+        },
+        {
+          "id": "c",
+          "text": "Chloé"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "optionId": "c"
+    },
+    "explanation": "Ben fait du tennis, Ana ne fait pas de foot donc elle nage : il reste Chloé pour le foot."
+  },
+  {
+    "code": "G3-M-06",
+    "minAge": 11,
+    "difficulty": "Medium",
+    "category": "Histoire",
+    "type": "ImageMatching",
+    "title": "Grandes inventions",
+    "content": {
+      "prompt": "Relie chaque inventeur à son invention.",
+      "left": [
+        {
+          "id": "l1",
+          "text": "Gutenberg"
+        },
+        {
+          "id": "l2",
+          "text": "Thomas Edison"
+        },
+        {
+          "id": "l3",
+          "text": "Les frères Lumière"
+        },
+        {
+          "id": "l4",
+          "text": "Louis Pasteur"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "Le vaccin contre la rage"
+        },
+        {
+          "id": "r2",
+          "text": "L'imprimerie à caractères mobiles en Europe"
+        },
+        {
+          "id": "r3",
+          "text": "Le cinématographe"
+        },
+        {
+          "id": "r4",
+          "text": "Le phonographe"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "pairs": {
+        "l1": "r2",
+        "l2": "r4",
+        "l3": "r3",
+        "l4": "r1"
+      }
+    },
+    "explanation": "Gutenberg → imprimerie, Edison → phonographe, frères Lumière → cinématographe, Pasteur → vaccin contre la rage."
+  },
+  {
+    "code": "G3-M-07",
+    "minAge": 11,
+    "difficulty": "Medium",
+    "category": "Sciences",
+    "type": "TextAnswer",
+    "title": "La formule de l'eau",
+    "content": {
+      "prompt": "Quelle est la formule chimique de l'eau ?",
+      "visual": "💧",
+      "maxLength": 10
+    },
+    "correctAnswer": {
+      "acceptedAnswers": [
+        "h2o"
+      ]
+    },
+    "explanation": "H₂O : deux atomes d'hydrogène et un atome d'oxygène."
+  },
+  {
+    "code": "G3-M-08",
+    "minAge": 11,
+    "difficulty": "Medium",
+    "category": "Histoire",
+    "type": "OrderingClassification",
+    "title": "Les grandes périodes",
+    "content": {
+      "prompt": "Range ces périodes de la plus ancienne à la plus récente.",
+      "mode": "order",
+      "items": [
+        {
+          "id": "i1",
+          "text": "Le Moyen Âge"
+        },
+        {
+          "id": "i2",
+          "text": "La Préhistoire"
+        },
+        {
+          "id": "i3",
+          "text": "L'Antiquité"
+        },
+        {
+          "id": "i4",
+          "text": "Les Temps modernes"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "order": [
+        "i2",
+        "i3",
+        "i1",
+        "i4"
+      ]
+    },
+    "explanation": "Préhistoire, Antiquité, Moyen Âge, puis Temps modernes."
+  },
+  {
+    "code": "G3-M-09",
+    "minAge": 11,
+    "difficulty": "Medium",
+    "category": "Géographie",
+    "type": "TrueFalse",
+    "title": "Le Sahara",
+    "content": {
+      "prompt": "Le Sahara est le plus grand désert chaud du monde.",
+      "visual": "🏜️"
+    },
+    "correctAnswer": {
+      "value": true
+    },
+    "explanation": "Le Sahara couvre une grande partie du nord de l'Afrique : c'est le plus grand désert chaud."
+  },
+  {
+    "code": "G3-M-10",
+    "minAge": 11,
+    "difficulty": "Medium",
+    "category": "Logique",
+    "type": "Maze",
+    "title": "Le labyrinthe de la pyramide",
+    "content": {
+      "prompt": "Trouve le chemin de S jusqu'à la sortie E.",
+      "grid": [
+        "S..#...",
+        "##.#.#.",
+        ".....#.",
+        ".###.#.",
+        "...#...",
+        "##.###.",
+        ".....#E"
+      ]
+    },
+    "correctAnswer": {
+      "shortestPathLength": 12
+    },
+    "explanation": "Le bon chemin descend en escalier vers la droite."
+  },
+  {
+    "code": "G3-M-11",
+    "minAge": 11,
+    "difficulty": "Medium",
+    "category": "Mathématiques",
+    "type": "MultipleChoice",
+    "title": "Pourcentage",
+    "content": {
+      "prompt": "Combien font 25 % de 80 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "20"
+        },
+        {
+          "id": "b",
+          "text": "25"
+        },
+        {
+          "id": "c",
+          "text": "40"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "optionId": "a"
+    },
+    "explanation": "25 %, c'est un quart : 80 ÷ 4 = 20."
+  },
+  {
+    "code": "G3-M-12",
+    "minAge": 11,
+    "difficulty": "Medium",
+    "category": "Sciences",
+    "type": "DragAndDrop",
+    "title": "Les organes du corps",
+    "content": {
+      "prompt": "Associe chaque organe à sa fonction principale.",
+      "items": [
+        {
+          "id": "i1",
+          "text": "🫁 Les poumons"
+        },
+        {
+          "id": "i2",
+          "text": "L'estomac"
+        },
+        {
+          "id": "i3",
+          "text": "🧠 Le cerveau"
+        },
+        {
+          "id": "i4",
+          "text": "❤️ Le cœur"
+        }
+      ],
+      "targets": [
+        {
+          "id": "t1",
+          "text": "Faire circuler le sang"
+        },
+        {
+          "id": "t2",
+          "text": "Respirer"
+        },
+        {
+          "id": "t3",
+          "text": "Digérer les aliments"
+        },
+        {
+          "id": "t4",
+          "text": "Penser et commander le corps"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "mapping": {
+        "i1": "t2",
+        "i2": "t3",
+        "i3": "t4",
+        "i4": "t1"
+      }
+    },
+    "explanation": "Poumons → respiration, estomac → digestion, cerveau → commande du corps, cœur → circulation du sang."
+  },
+  {
+    "code": "G3-M-13",
+    "minAge": 11,
+    "difficulty": "Medium",
+    "category": "Mathématiques",
+    "type": "VisualChallenge",
+    "title": "Les nombres premiers",
+    "content": {
+      "prompt": "Touche tous les nombres premiers (divisibles seulement par 1 et par eux-mêmes).",
+      "selection": "multiple",
+      "cells": [
+        {
+          "id": "v1",
+          "text": "2"
+        },
+        {
+          "id": "v2",
+          "text": "9"
+        },
+        {
+          "id": "v3",
+          "text": "13"
+        },
+        {
+          "id": "v4",
+          "text": "15"
+        },
+        {
+          "id": "v5",
+          "text": "17"
+        },
+        {
+          "id": "v6",
+          "text": "21"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "selectedIds": [
+        "v1",
+        "v3",
+        "v5"
+      ]
+    },
+    "explanation": "2, 13 et 17 sont premiers ; 9 = 3 × 3, 15 = 3 × 5 et 21 = 3 × 7."
+  },
+  {
+    "code": "G3-M-14",
+    "minAge": 11,
+    "difficulty": "Medium",
+    "category": "Logique",
+    "type": "NumericAnswer",
+    "title": "La durée du trajet",
+    "content": {
+      "prompt": "Un train part à 14 h 20 et arrive à 16 h 05. Combien de minutes dure le trajet ?",
+      "visual": "🚆",
+      "unit": "minutes"
+    },
+    "correctAnswer": {
+      "value": 105,
+      "tolerance": 0
+    },
+    "explanation": "De 14 h 20 à 16 h 20, il y a 120 minutes ; on retire 15 minutes : 105 minutes."
+  },
+  {
+    "code": "G3-M-15",
+    "minAge": 11,
+    "difficulty": "Medium",
+    "category": "Mémoire",
+    "type": "MemoryCards",
+    "title": "Dates célèbres",
+    "content": {
+      "prompt": "Associe chaque événement à sa date.",
+      "previewSeconds": 5,
+      "cards": [
+        {
+          "id": "c1",
+          "face": "1789"
+        },
+        {
+          "id": "c2",
+          "face": "Premiers pas sur la Lune"
+        },
+        {
+          "id": "c3",
+          "face": "Révolution française"
+        },
+        {
+          "id": "c4",
+          "face": "1969"
+        },
+        {
+          "id": "c5",
+          "face": "1492"
+        },
+        {
+          "id": "c6",
+          "face": "Colomb atteint l'Amérique"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "pairs": [
+        [
+          "c1",
+          "c3"
+        ],
+        [
+          "c2",
+          "c4"
+        ],
+        [
+          "c5",
+          "c6"
+        ]
+      ]
+    },
+    "explanation": "1492 : Colomb en Amérique ; 1789 : Révolution française ; 1969 : premiers pas sur la Lune."
+  },
+  {
+    "code": "G3-H-01",
+    "minAge": 11,
+    "difficulty": "Hard",
+    "category": "Mathématiques",
+    "type": "MathMiniGame",
+    "title": "Priorités opératoires",
+    "content": {
+      "prompt": "Résous les 4 calculs (attention aux priorités !).",
+      "problems": [
+        {
+          "id": "p1",
+          "expression": "17 × 6"
+        },
+        {
+          "id": "p2",
+          "expression": "3 × 3 × 3"
+        },
+        {
+          "id": "p3",
+          "expression": "625 ÷ 25"
+        },
+        {
+          "id": "p4",
+          "expression": "48 + 52 × 2"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "answers": {
+        "p1": 102,
+        "p2": 27,
+        "p3": 25,
+        "p4": 152
+      }
+    },
+    "explanation": "La multiplication passe avant l'addition : 48 + 104 = 152."
+  },
+  {
+    "code": "G3-H-02",
+    "minAge": 11,
+    "difficulty": "Hard",
+    "category": "Mathématiques",
+    "type": "SequenceCompletion",
+    "title": "Les nombres premiers",
+    "content": {
+      "prompt": "Complète les deux nombres manquants.",
+      "sequence": [
+        "2",
+        "3",
+        "5",
+        "7",
+        null,
+        "13",
+        null
+      ]
+    },
+    "correctAnswer": {
+      "values": [
+        "11",
+        "17"
+      ]
+    },
+    "explanation": "C'est la suite des nombres premiers : 2, 3, 5, 7, 11, 13, 17."
+  },
+  {
+    "code": "G3-H-03",
+    "minAge": 11,
+    "difficulty": "Hard",
+    "category": "Mathématiques",
+    "type": "NumericAnswer",
+    "title": "Les soldes",
+    "content": {
+      "prompt": "Un vélo coûte 240 €. Il est soldé à -25 %. Quel est son nouveau prix ?",
+      "visual": "🚲",
+      "unit": "€"
+    },
+    "correctAnswer": {
+      "value": 180,
+      "tolerance": 0
+    },
+    "explanation": "25 % de 240 = 60 €, donc 240 - 60 = 180 €."
+  },
+  {
+    "code": "G3-H-04",
+    "minAge": 11,
+    "difficulty": "Hard",
+    "category": "Logique",
+    "type": "LogicPuzzle",
+    "title": "L'énigme des âges",
+    "content": {
+      "prompt": "J'ai le double de l'âge de mon frère. Dans 4 ans, la somme de nos deux âges sera 20 ans. Quel âge ai-je aujourd'hui ?",
+      "answerType": "number",
+      "unit": "ans"
+    },
+    "correctAnswer": {
+      "value": 8,
+      "tolerance": 0
+    },
+    "explanation": "Frère = x, moi = 2x. Dans 4 ans : (2x + 4) + (x + 4) = 20, donc 3x = 12, x = 4 et j'ai 8 ans."
+  },
+  {
+    "code": "G3-H-05",
+    "minAge": 11,
+    "difficulty": "Hard",
+    "category": "Logique",
+    "type": "Maze",
+    "title": "Le labyrinthe piège",
+    "content": {
+      "prompt": "Trouve le chemin de S jusqu'à la sortie E. Attention aux impasses !",
+      "grid": [
+        "S...#.E",
+        "###.#.#",
+        "....#..",
+        ".#####.",
+        ".......",
+        ".######",
+        "......."
+      ]
+    },
+    "correctAnswer": {
+      "shortestPathLength": 22
+    },
+    "timeLimitSeconds": 150,
+    "explanation": "Il fallait faire un grand détour par le bas avant de remonter vers la sortie."
+  },
+  {
+    "code": "G3-H-06",
+    "minAge": 11,
+    "difficulty": "Hard",
+    "category": "Géographie",
+    "type": "MultipleChoice",
+    "title": "Le plus grand pays",
+    "content": {
+      "prompt": "Quel pays a la plus grande superficie au monde ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La Chine"
+        },
+        {
+          "id": "b",
+          "text": "Le Canada"
+        },
+        {
+          "id": "c",
+          "text": "La Russie"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "optionId": "c"
+    },
+    "explanation": "La Russie est de loin le plus grand pays du monde ; le Canada est deuxième."
+  },
+  {
+    "code": "G3-H-07",
+    "minAge": 11,
+    "difficulty": "Hard",
+    "category": "Histoire",
+    "type": "TextAnswer",
+    "title": "Le trésor du pharaon",
+    "content": {
+      "prompt": "Quel jeune pharaon est célèbre pour son tombeau rempli de trésors, découvert en 1922 ?",
+      "maxLength": 30
+    },
+    "correctAnswer": {
+      "acceptedAnswers": [
+        "toutankhamon",
+        "toutankhamun",
+        "tutankhamon",
+        "tutankhamun"
+      ]
+    },
+    "explanation": "Le tombeau de Toutânkhamon a été découvert en 1922 par Howard Carter."
+  },
+  {
+    "code": "G3-H-08",
+    "minAge": 11,
+    "difficulty": "Hard",
+    "category": "Mathématiques",
+    "type": "OrderingClassification",
+    "title": "Classer les fractions",
+    "content": {
+      "prompt": "Classe chaque fraction par rapport à 1.",
+      "mode": "classify",
+      "items": [
+        {
+          "id": "i1",
+          "text": "1/2"
+        },
+        {
+          "id": "i2",
+          "text": "3/2"
+        },
+        {
+          "id": "i3",
+          "text": "2/5"
+        },
+        {
+          "id": "i4",
+          "text": "7/4"
+        },
+        {
+          "id": "i5",
+          "text": "4/4"
+        }
+      ],
+      "groups": [
+        {
+          "id": "g1",
+          "text": "Plus petite que 1"
+        },
+        {
+          "id": "g2",
+          "text": "Égale à 1"
+        },
+        {
+          "id": "g3",
+          "text": "Plus grande que 1"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "mapping": {
+        "i1": "g1",
+        "i2": "g3",
+        "i3": "g1",
+        "i4": "g3",
+        "i5": "g2"
+      }
+    },
+    "explanation": "Si le numérateur est plus petit que le dénominateur, la fraction est plus petite que 1 ; s'ils sont égaux, elle vaut 1."
+  },
+  {
+    "code": "G3-H-09",
+    "minAge": 11,
+    "difficulty": "Hard",
+    "category": "Sciences",
+    "type": "TrueFalse",
+    "title": "L'année-lumière",
+    "content": {
+      "prompt": "Une année-lumière est une unité de temps.",
+      "visual": "✨"
+    },
+    "correctAnswer": {
+      "value": false
+    },
+    "explanation": "C'est une unité de distance : la distance parcourue par la lumière en un an."
+  },
+  {
+    "code": "G3-H-10",
+    "minAge": 11,
+    "difficulty": "Hard",
+    "category": "Géographie",
+    "type": "DragAndDrop",
+    "title": "Capitales du monde",
+    "content": {
+      "prompt": "Place chaque capitale dans son pays.",
+      "items": [
+        {
+          "id": "i1",
+          "text": "Ottawa"
+        },
+        {
+          "id": "i2",
+          "text": "Brasilia"
+        },
+        {
+          "id": "i3",
+          "text": "Nairobi"
+        },
+        {
+          "id": "i4",
+          "text": "Hanoï"
+        }
+      ],
+      "targets": [
+        {
+          "id": "t1",
+          "text": "Kenya"
+        },
+        {
+          "id": "t2",
+          "text": "Canada"
+        },
+        {
+          "id": "t3",
+          "text": "Viêt Nam"
+        },
+        {
+          "id": "t4",
+          "text": "Brésil"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "mapping": {
+        "i1": "t2",
+        "i2": "t4",
+        "i3": "t1",
+        "i4": "t3"
+      }
+    },
+    "explanation": "Ottawa (Canada), Brasilia (Brésil), Nairobi (Kenya) et Hanoï (Viêt Nam)."
+  },
+  {
+    "code": "G3-H-11",
+    "minAge": 11,
+    "difficulty": "Hard",
+    "category": "Formes et couleurs",
+    "type": "VisualChallenge",
+    "title": "Les quadrilatères",
+    "content": {
+      "prompt": "Touche toutes les figures qui ont exactement 4 côtés.",
+      "selection": "multiple",
+      "cells": [
+        {
+          "id": "v1",
+          "text": "Carré"
+        },
+        {
+          "id": "v2",
+          "text": "Triangle"
+        },
+        {
+          "id": "v3",
+          "text": "Losange"
+        },
+        {
+          "id": "v4",
+          "text": "Hexagone"
+        },
+        {
+          "id": "v5",
+          "text": "Trapèze"
+        },
+        {
+          "id": "v6",
+          "text": "Pentagone"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "selectedIds": [
+        "v1",
+        "v3",
+        "v5"
+      ]
+    },
+    "explanation": "Le carré, le losange et le trapèze sont des quadrilatères. Triangle : 3, pentagone : 5, hexagone : 6 côtés."
+  },
+  {
+    "code": "G3-H-12",
+    "minAge": 11,
+    "difficulty": "Hard",
+    "category": "Mathématiques",
+    "type": "NumericAnswer",
+    "title": "La moyenne",
+    "content": {
+      "prompt": "Quelle est la moyenne de 12, 15 et 18 ?"
+    },
+    "correctAnswer": {
+      "value": 15,
+      "tolerance": 0
+    },
+    "explanation": "(12 + 15 + 18) ÷ 3 = 45 ÷ 3 = 15."
+  },
+  {
+    "code": "G3-H-13",
+    "minAge": 11,
+    "difficulty": "Hard",
+    "category": "Logique",
+    "type": "LogicPuzzle",
+    "title": "Les zorbs",
+    "content": {
+      "prompt": "Tous les zorbs sont verts. Pip est un zorb. Que peut-on dire ?",
+      "answerType": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Pip est vert"
+        },
+        {
+          "id": "b",
+          "text": "Pip n'est pas vert"
+        },
+        {
+          "id": "c",
+          "text": "On ne peut pas savoir"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "optionId": "a"
+    },
+    "explanation": "Si tous les zorbs sont verts et que Pip est un zorb, alors Pip est forcément vert."
+  },
+  {
+    "code": "G3-H-14",
+    "minAge": 11,
+    "difficulty": "Hard",
+    "category": "Logique",
+    "type": "SequenceCompletion",
+    "title": "La suite de lettres",
+    "content": {
+      "prompt": "Quelle lettre vient ensuite ?",
+      "sequence": [
+        "A",
+        "C",
+        "E",
+        "G",
+        null
+      ]
+    },
+    "correctAnswer": {
+      "values": [
+        "I"
+      ]
+    },
+    "explanation": "On saute une lettre à chaque fois : A (b) C (d) E (f) G (h) I."
+  },
+  {
+    "code": "G3-H-15",
+    "minAge": 11,
+    "difficulty": "Hard",
+    "category": "Mémoire",
+    "type": "MemoryCards",
+    "title": "Les symboles chimiques",
+    "content": {
+      "prompt": "Associe chaque élément chimique à son symbole.",
+      "previewSeconds": 5,
+      "cards": [
+        {
+          "id": "c1",
+          "face": "Fe"
+        },
+        {
+          "id": "c2",
+          "face": "Oxygène"
+        },
+        {
+          "id": "c3",
+          "face": "Or"
+        },
+        {
+          "id": "c4",
+          "face": "O"
+        },
+        {
+          "id": "c5",
+          "face": "Au"
+        },
+        {
+          "id": "c6",
+          "face": "Fer"
+        },
+        {
+          "id": "c7",
+          "face": "Na"
+        },
+        {
+          "id": "c8",
+          "face": "Sodium"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "pairs": [
+        [
+          "c1",
+          "c6"
+        ],
+        [
+          "c2",
+          "c4"
+        ],
+        [
+          "c3",
+          "c5"
+        ],
+        [
+          "c7",
+          "c8"
+        ]
+      ]
+    },
+    "explanation": "Fe = fer, O = oxygène, Au = or (aurum en latin), Na = sodium (natrium)."
+  },
+  {
+    "code": "G4-E-01",
+    "minAge": 13,
+    "difficulty": "Easy",
+    "category": "Mathématiques",
+    "type": "MathMiniGame",
+    "title": "Échauffement",
+    "content": {
+      "prompt": "Résous les 3 calculs.",
+      "problems": [
+        {
+          "id": "p1",
+          "expression": "13 × 13"
+        },
+        {
+          "id": "p2",
+          "expression": "-7 + 12"
+        },
+        {
+          "id": "p3",
+          "expression": "(8 - 3) × 4"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "answers": {
+        "p1": 169,
+        "p2": 5,
+        "p3": 20
+      }
+    },
+    "explanation": "13 × 13 = 169, -7 + 12 = 5 et (8 - 3) × 4 = 5 × 4 = 20."
+  },
+  {
+    "code": "G4-E-02",
+    "minAge": 13,
+    "difficulty": "Easy",
+    "category": "Mathématiques",
+    "type": "NumericAnswer",
+    "title": "Première équation",
+    "content": {
+      "prompt": "Résous l'équation 3x + 5 = 20. Que vaut x ?"
+    },
+    "correctAnswer": {
+      "value": 5,
+      "tolerance": 0
+    },
+    "explanation": "3x = 20 - 5 = 15, donc x = 15 ÷ 3 = 5."
+  },
+  {
+    "code": "G4-E-03",
+    "minAge": 13,
+    "difficulty": "Easy",
+    "category": "Informatique",
+    "type": "MultipleChoice",
+    "title": "Le CPU",
+    "content": {
+      "prompt": "Dans un ordinateur, qu'est-ce que le CPU ?",
+      "visual": "💻",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le processeur, qui exécute les instructions"
+        },
+        {
+          "id": "b",
+          "text": "Le disque qui stocke les fichiers"
+        },
+        {
+          "id": "c",
+          "text": "L'écran"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "optionId": "a"
+    },
+    "explanation": "Le CPU (Central Processing Unit) est le processeur : le « cerveau » qui exécute les calculs."
+  },
+  {
+    "code": "G4-E-04",
+    "minAge": 13,
+    "difficulty": "Easy",
+    "category": "Informatique",
+    "type": "TrueFalse",
+    "title": "Le nombre 2 en binaire",
+    "content": {
+      "prompt": "En binaire, le nombre 2 s'écrit 10.",
+      "visual": "0️⃣1️⃣"
+    },
+    "correctAnswer": {
+      "value": true
+    },
+    "explanation": "En base 2 : 10 = 1 × 2 + 0 × 1 = 2."
+  },
+  {
+    "code": "G4-E-05",
+    "minAge": 13,
+    "difficulty": "Easy",
+    "category": "Informatique",
+    "type": "LogicPuzzle",
+    "title": "Lire du pseudo-code",
+    "content": {
+      "prompt": "Que vaut x à la fin de ce programme ?",
+      "code": "x ← 3\ny ← x × 2\nx ← y + 1",
+      "answerType": "number"
+    },
+    "correctAnswer": {
+      "value": 7,
+      "tolerance": 0
+    },
+    "explanation": "y = 3 × 2 = 6, puis x = 6 + 1 = 7."
+  },
+  {
+    "code": "G4-E-06",
+    "minAge": 13,
+    "difficulty": "Easy",
+    "category": "Mathématiques",
+    "type": "SequenceCompletion",
+    "title": "Les puissances de 2",
+    "content": {
+      "prompt": "Quel nombre vient ensuite ?",
+      "sequence": [
+        "1",
+        "2",
+        "4",
+        "8",
+        "16",
+        null
+      ]
+    },
+    "correctAnswer": {
+      "values": [
+        "32"
+      ]
+    },
+    "explanation": "Ce sont les puissances de 2 : 16 × 2 = 32."
+  },
+  {
+    "code": "G4-E-07",
+    "minAge": 13,
+    "difficulty": "Easy",
+    "category": "Sciences",
+    "type": "TextAnswer",
+    "title": "La planète rouge",
+    "content": {
+      "prompt": "Quelle planète du système solaire est surnommée « la planète rouge » ?",
+      "visual": "🔴",
+      "maxLength": 20
+    },
+    "correctAnswer": {
+      "acceptedAnswers": [
+        "mars",
+        "la planete mars",
+        "planete mars"
+      ]
+    },
+    "explanation": "Mars doit sa couleur rouge à l'oxyde de fer (la rouille) présent sur son sol."
+  },
+  {
+    "code": "G4-E-08",
+    "minAge": 13,
+    "difficulty": "Easy",
+    "category": "Sciences",
+    "type": "OrderingClassification",
+    "title": "De l'atome à l'organe",
+    "content": {
+      "prompt": "Range du plus petit au plus grand.",
+      "mode": "order",
+      "items": [
+        {
+          "id": "i1",
+          "text": "Cellule"
+        },
+        {
+          "id": "i2",
+          "text": "Atome"
+        },
+        {
+          "id": "i3",
+          "text": "Organe"
+        },
+        {
+          "id": "i4",
+          "text": "Molécule"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "order": [
+        "i2",
+        "i4",
+        "i1",
+        "i3"
+      ]
+    },
+    "explanation": "Les atomes forment des molécules, qui forment des cellules, qui forment des organes."
+  },
+  {
+    "code": "G4-E-09",
+    "minAge": 13,
+    "difficulty": "Easy",
+    "category": "Histoire",
+    "type": "MultipleChoice",
+    "title": "La Seconde Guerre mondiale",
+    "content": {
+      "prompt": "En quelle année a commencé la Seconde Guerre mondiale ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1914"
+        },
+        {
+          "id": "b",
+          "text": "1939"
+        },
+        {
+          "id": "c",
+          "text": "1945"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "optionId": "b"
+    },
+    "explanation": "Elle a commencé en 1939 et s'est terminée en 1945. 1914 est le début de la Première Guerre mondiale."
+  },
+  {
+    "code": "G4-E-10",
+    "minAge": 13,
+    "difficulty": "Easy",
+    "category": "Informatique",
+    "type": "DragAndDrop",
+    "title": "Entrée ou sortie ?",
+    "content": {
+      "prompt": "Classe chaque périphérique.",
+      "items": [
+        {
+          "id": "i1",
+          "text": "⌨️ Le clavier"
+        },
+        {
+          "id": "i2",
+          "text": "🖥️ L'écran"
+        },
+        {
+          "id": "i3",
+          "text": "🖱️ La souris"
+        },
+        {
+          "id": "i4",
+          "text": "🖨️ L'imprimante"
+        }
+      ],
+      "targets": [
+        {
+          "id": "t1",
+          "text": "Périphérique d'entrée"
+        },
+        {
+          "id": "t2",
+          "text": "Périphérique de sortie"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "mapping": {
+        "i1": "t1",
+        "i2": "t2",
+        "i3": "t1",
+        "i4": "t2"
+      }
+    },
+    "explanation": "Le clavier et la souris envoient des informations à l'ordinateur ; l'écran et l'imprimante en reçoivent."
+  },
+  {
+    "code": "G4-E-11",
+    "minAge": 13,
+    "difficulty": "Easy",
+    "category": "Mathématiques",
+    "type": "NumericAnswer",
+    "title": "Un pourcentage",
+    "content": {
+      "prompt": "Combien font 15 % de 200 ?"
+    },
+    "correctAnswer": {
+      "value": 30,
+      "tolerance": 0
+    },
+    "explanation": "15 % de 200 = 15 × 200 ÷ 100 = 30."
+  },
+  {
+    "code": "G4-E-12",
+    "minAge": 13,
+    "difficulty": "Easy",
+    "category": "Sciences",
+    "type": "ImageMatching",
+    "title": "Grands scientifiques",
+    "content": {
+      "prompt": "Relie chaque scientifique à sa découverte.",
+      "left": [
+        {
+          "id": "l1",
+          "text": "Isaac Newton"
+        },
+        {
+          "id": "l2",
+          "text": "Marie Curie"
+        },
+        {
+          "id": "l3",
+          "text": "Charles Darwin"
+        },
+        {
+          "id": "l4",
+          "text": "Galilée"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "L'évolution des espèces"
+        },
+        {
+          "id": "r2",
+          "text": "Quatre lunes de Jupiter"
+        },
+        {
+          "id": "r3",
+          "text": "La gravitation universelle"
+        },
+        {
+          "id": "r4",
+          "text": "Le polonium et le radium"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "pairs": {
+        "l1": "r3",
+        "l2": "r4",
+        "l3": "r1",
+        "l4": "r2"
+      }
+    },
+    "explanation": "Newton → gravitation, Marie Curie → polonium et radium, Darwin → évolution, Galilée → lunes de Jupiter (1610)."
+  },
+  {
+    "code": "G4-E-13",
+    "minAge": 13,
+    "difficulty": "Easy",
+    "category": "Informatique",
+    "type": "VisualChallenge",
+    "title": "Langages de programmation",
+    "content": {
+      "prompt": "Touche tous les langages de programmation.",
+      "selection": "multiple",
+      "cells": [
+        {
+          "id": "v1",
+          "text": "Python"
+        },
+        {
+          "id": "v2",
+          "text": "Excel"
+        },
+        {
+          "id": "v3",
+          "text": "Java"
+        },
+        {
+          "id": "v4",
+          "text": "Photoshop"
+        },
+        {
+          "id": "v5",
+          "text": "C#"
+        },
+        {
+          "id": "v6",
+          "text": "Windows"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "selectedIds": [
+        "v1",
+        "v3",
+        "v5"
+      ]
+    },
+    "explanation": "Python, Java et C# sont des langages ; Excel et Photoshop sont des logiciels, Windows un système d'exploitation."
+  },
+  {
+    "code": "G4-E-14",
+    "minAge": 13,
+    "difficulty": "Easy",
+    "category": "Sciences",
+    "type": "TrueFalse",
+    "title": "L'ADN",
+    "content": {
+      "prompt": "Chez les animaux, l'ADN se trouve principalement dans le noyau des cellules.",
+      "visual": "🧬"
+    },
+    "correctAnswer": {
+      "value": true
+    },
+    "explanation": "L'ADN, qui porte l'information génétique, est rangé dans le noyau de la cellule."
+  },
+  {
+    "code": "G4-E-15",
+    "minAge": 13,
+    "difficulty": "Easy",
+    "category": "Mémoire",
+    "type": "MemoryCards",
+    "title": "Racines et puissances",
+    "content": {
+      "prompt": "Associe chaque expression à sa valeur.",
+      "previewSeconds": 4,
+      "cards": [
+        {
+          "id": "c1",
+          "face": "√49"
+        },
+        {
+          "id": "c2",
+          "face": "3²"
+        },
+        {
+          "id": "c3",
+          "face": "7"
+        },
+        {
+          "id": "c4",
+          "face": "9"
+        },
+        {
+          "id": "c5",
+          "face": "2³"
+        },
+        {
+          "id": "c6",
+          "face": "8"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "pairs": [
+        [
+          "c1",
+          "c3"
+        ],
+        [
+          "c2",
+          "c4"
+        ],
+        [
+          "c5",
+          "c6"
+        ]
+      ]
+    },
+    "explanation": "√49 = 7, 3² = 9 et 2³ = 8."
+  },
+  {
+    "code": "G4-M-01",
+    "minAge": 13,
+    "difficulty": "Medium",
+    "category": "Mathématiques",
+    "type": "MathMiniGame",
+    "title": "Nombres relatifs",
+    "content": {
+      "prompt": "Résous les 3 calculs.",
+      "problems": [
+        {
+          "id": "p1",
+          "expression": "(-4) × (-6)"
+        },
+        {
+          "id": "p2",
+          "expression": "2 × (15 - 9) + 3"
+        },
+        {
+          "id": "p3",
+          "expression": "144 ÷ (3 × 4)"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "answers": {
+        "p1": 24,
+        "p2": 15,
+        "p3": 12
+      }
+    },
+    "explanation": "Moins par moins donne plus : 24. Puis 2 × 6 + 3 = 15 et 144 ÷ 12 = 12."
+  },
+  {
+    "code": "G4-M-02",
+    "minAge": 13,
+    "difficulty": "Medium",
+    "category": "Mathématiques",
+    "type": "NumericAnswer",
+    "title": "Pythagore",
+    "content": {
+      "prompt": "Dans un triangle rectangle, les deux côtés de l'angle droit mesurent 6 cm et 8 cm. Quelle est la longueur de l'hypoténuse ?",
+      "visual": "📐",
+      "unit": "cm"
+    },
+    "correctAnswer": {
+      "value": 10,
+      "tolerance": 0
+    },
+    "explanation": "6² + 8² = 36 + 64 = 100, et √100 = 10 cm."
+  },
+  {
+    "code": "G4-M-03",
+    "minAge": 13,
+    "difficulty": "Medium",
+    "category": "Informatique",
+    "type": "LogicPuzzle",
+    "title": "La boucle",
+    "content": {
+      "prompt": "Que vaut s à la fin de ce programme ?",
+      "code": "s ← 0\npour i de 1 à 5 :\n    s ← s + i",
+      "answerType": "number"
+    },
+    "correctAnswer": {
+      "value": 15,
+      "tolerance": 0
+    },
+    "explanation": "La boucle additionne 1 + 2 + 3 + 4 + 5 = 15."
+  },
+  {
+    "code": "G4-M-04",
+    "minAge": 13,
+    "difficulty": "Medium",
+    "category": "Informatique",
+    "type": "MultipleChoice",
+    "title": "L'octet",
+    "content": {
+      "prompt": "Combien de bits y a-t-il dans un octet ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "4"
+        },
+        {
+          "id": "b",
+          "text": "8"
+        },
+        {
+          "id": "c",
+          "text": "16"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "optionId": "b"
+    },
+    "explanation": "Un octet est composé de 8 bits."
+  },
+  {
+    "code": "G4-M-05",
+    "minAge": 13,
+    "difficulty": "Medium",
+    "category": "Mathématiques",
+    "type": "SequenceCompletion",
+    "title": "Suite géométrique",
+    "content": {
+      "prompt": "Quel nombre vient ensuite ?",
+      "sequence": [
+        "2",
+        "6",
+        "18",
+        "54",
+        null
+      ]
+    },
+    "correctAnswer": {
+      "values": [
+        "162"
+      ]
+    },
+    "explanation": "On multiplie par 3 à chaque fois : 54 × 3 = 162."
+  },
+  {
+    "code": "G4-M-06",
+    "minAge": 13,
+    "difficulty": "Medium",
+    "category": "Informatique",
+    "type": "TextAnswer",
+    "title": "Écrire en binaire",
+    "content": {
+      "prompt": "Écris le nombre 13 en binaire.",
+      "maxLength": 16
+    },
+    "correctAnswer": {
+      "acceptedAnswers": [
+        "1101",
+        "01101",
+        "00001101"
+      ]
+    },
+    "explanation": "13 = 8 + 4 + 1, donc 1101 en binaire."
+  },
+  {
+    "code": "G4-M-07",
+    "minAge": 13,
+    "difficulty": "Medium",
+    "category": "Mathématiques",
+    "type": "TrueFalse",
+    "title": "Le nombre π",
+    "content": {
+      "prompt": "Le nombre π est exactement égal à 3,14.",
+      "visual": "π"
+    },
+    "correctAnswer": {
+      "value": false
+    },
+    "explanation": "3,14 n'est qu'une valeur approchée : π = 3,14159… et ses décimales ne s'arrêtent jamais."
+  },
+  {
+    "code": "G4-M-08",
+    "minAge": 13,
+    "difficulty": "Medium",
+    "category": "Informatique",
+    "type": "OrderingClassification",
+    "title": "Les unités de stockage",
+    "content": {
+      "prompt": "Range ces unités de la plus petite à la plus grande.",
+      "mode": "order",
+      "items": [
+        {
+          "id": "i1",
+          "text": "Mégaoctet (Mo)"
+        },
+        {
+          "id": "i2",
+          "text": "Octet (o)"
+        },
+        {
+          "id": "i3",
+          "text": "Téraoctet (To)"
+        },
+        {
+          "id": "i4",
+          "text": "Kilooctet (ko)"
+        },
+        {
+          "id": "i5",
+          "text": "Gigaoctet (Go)"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "order": [
+        "i2",
+        "i4",
+        "i1",
+        "i5",
+        "i3"
+      ]
+    },
+    "explanation": "Octet < kilooctet < mégaoctet < gigaoctet < téraoctet."
+  },
+  {
+    "code": "G4-M-09",
+    "minAge": 13,
+    "difficulty": "Medium",
+    "category": "Logique",
+    "type": "Maze",
+    "title": "Le labyrinthe du serveur",
+    "content": {
+      "prompt": "Trouve le chemin de S jusqu'à la sortie E.",
+      "grid": [
+        "S..#....",
+        "##.#.##.",
+        ".....#..",
+        ".###.#.#",
+        "...#....",
+        "##.####.",
+        "......#.",
+        ".####..E"
+      ]
+    },
+    "correctAnswer": {
+      "shortestPathLength": 14
+    },
+    "explanation": "Le plus court chemin descend en escalier vers le coin en bas à droite."
+  },
+  {
+    "code": "G4-M-10",
+    "minAge": 13,
+    "difficulty": "Medium",
+    "category": "Histoire",
+    "type": "MultipleChoice",
+    "title": "La Révolution française",
+    "content": {
+      "prompt": "Quel événement est le symbole du début de la Révolution française ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La prise de la Bastille, en 1789"
+        },
+        {
+          "id": "b",
+          "text": "Le sacre de Napoléon, en 1804"
+        },
+        {
+          "id": "c",
+          "text": "La chute du mur de Berlin, en 1989"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "optionId": "a"
+    },
+    "explanation": "Le 14 juillet 1789, le peuple de Paris prend la Bastille : c'est le symbole du début de la Révolution."
+  },
+  {
+    "code": "G4-M-11",
+    "minAge": 13,
+    "difficulty": "Medium",
+    "category": "Mathématiques",
+    "type": "NumericAnswer",
+    "title": "Vitesse et distance",
+    "content": {
+      "prompt": "Une voiture roule à 90 km/h. Quelle distance parcourt-elle en 2 h 30 min ?",
+      "visual": "🚗",
+      "unit": "km"
+    },
+    "correctAnswer": {
+      "value": 225,
+      "tolerance": 0
+    },
+    "explanation": "Distance = vitesse × temps = 90 × 2,5 = 225 km."
+  },
+  {
+    "code": "G4-M-12",
+    "minAge": 13,
+    "difficulty": "Medium",
+    "category": "Sciences",
+    "type": "DragAndDrop",
+    "title": "Physique ou chimique ?",
+    "content": {
+      "prompt": "Classe chaque transformation.",
+      "items": [
+        {
+          "id": "i1",
+          "text": "🧊 La glace qui fond"
+        },
+        {
+          "id": "i2",
+          "text": "🔥 Le bois qui brûle"
+        },
+        {
+          "id": "i3",
+          "text": "Le fer qui rouille"
+        },
+        {
+          "id": "i4",
+          "text": "💧 L'eau qui s'évapore"
+        }
+      ],
+      "targets": [
+        {
+          "id": "t1",
+          "text": "Transformation physique"
+        },
+        {
+          "id": "t2",
+          "text": "Transformation chimique"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "mapping": {
+        "i1": "t1",
+        "i2": "t2",
+        "i3": "t2",
+        "i4": "t1"
+      }
+    },
+    "explanation": "Fondre ou s'évaporer change seulement l'état de l'eau ; brûler et rouiller créent de nouvelles substances."
+  },
+  {
+    "code": "G4-M-13",
+    "minAge": 13,
+    "difficulty": "Medium",
+    "category": "Mathématiques",
+    "type": "VisualChallenge",
+    "title": "Égal à 12",
+    "content": {
+      "prompt": "Touche toutes les expressions qui valent 12.",
+      "selection": "multiple",
+      "cells": [
+        {
+          "id": "v1",
+          "text": "3 × 4"
+        },
+        {
+          "id": "v2",
+          "text": "2³ + 4"
+        },
+        {
+          "id": "v3",
+          "text": "√144"
+        },
+        {
+          "id": "v4",
+          "text": "5 + 6"
+        },
+        {
+          "id": "v5",
+          "text": "48 ÷ 4"
+        },
+        {
+          "id": "v6",
+          "text": "2 × 5"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "selectedIds": [
+        "v1",
+        "v2",
+        "v3",
+        "v5"
+      ]
+    },
+    "explanation": "3 × 4 = 12, 2³ + 4 = 8 + 4 = 12, √144 = 12 et 48 ÷ 4 = 12. Mais 5 + 6 = 11 et 2 × 5 = 10."
+  },
+  {
+    "code": "G4-M-14",
+    "minAge": 13,
+    "difficulty": "Medium",
+    "category": "Informatique",
+    "type": "ImageMatching",
+    "title": "Le vocabulaire du code",
+    "content": {
+      "prompt": "Relie chaque mot à sa définition.",
+      "left": [
+        {
+          "id": "l1",
+          "text": "Algorithme"
+        },
+        {
+          "id": "l2",
+          "text": "Bug"
+        },
+        {
+          "id": "l3",
+          "text": "Variable"
+        },
+        {
+          "id": "l4",
+          "text": "Boucle"
+        }
+      ],
+      "right": [
+        {
+          "id": "r1",
+          "text": "Instructions répétées plusieurs fois"
+        },
+        {
+          "id": "r2",
+          "text": "Espace mémoire nommé qui contient une valeur"
+        },
+        {
+          "id": "r3",
+          "text": "Suite d'étapes pour résoudre un problème"
+        },
+        {
+          "id": "r4",
+          "text": "Erreur dans un programme"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "pairs": {
+        "l1": "r3",
+        "l2": "r4",
+        "l3": "r2",
+        "l4": "r1"
+      }
+    },
+    "explanation": "Algorithme = suite d'étapes, bug = erreur, variable = valeur nommée, boucle = répétition."
+  },
+  {
+    "code": "G4-M-15",
+    "minAge": 13,
+    "difficulty": "Medium",
+    "category": "Géographie",
+    "type": "TrueFalse",
+    "title": "L'équateur",
+    "content": {
+      "prompt": "L'équateur traverse le Brésil.",
+      "visual": "🌎"
+    },
+    "correctAnswer": {
+      "value": true
+    },
+    "explanation": "L'équateur traverse le nord du Brésil, près de l'embouchure de l'Amazone."
+  },
+  {
+    "code": "G4-H-01",
+    "minAge": 13,
+    "difficulty": "Hard",
+    "category": "Mathématiques",
+    "type": "MathMiniGame",
+    "title": "Le grand défi de calcul",
+    "content": {
+      "prompt": "Résous les 4 calculs.",
+      "problems": [
+        {
+          "id": "p1",
+          "expression": "(12 - 4) × (3 + 7)"
+        },
+        {
+          "id": "p2",
+          "expression": "-15 + 4 × 6"
+        },
+        {
+          "id": "p3",
+          "expression": "2 × 2 × 2 × 2 × 2 × 2"
+        },
+        {
+          "id": "p4",
+          "expression": "7 × 8 - 6 × 9"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "answers": {
+        "p1": 80,
+        "p2": 9,
+        "p3": 64,
+        "p4": 2
+      }
+    },
+    "explanation": "8 × 10 = 80 ; -15 + 24 = 9 ; 2⁶ = 64 ; 56 - 54 = 2."
+  },
+  {
+    "code": "G4-H-02",
+    "minAge": 13,
+    "difficulty": "Hard",
+    "category": "Mathématiques",
+    "type": "NumericAnswer",
+    "title": "Équation à deux membres",
+    "content": {
+      "prompt": "Résous l'équation 5x - 7 = 2x + 11. Que vaut x ?"
+    },
+    "correctAnswer": {
+      "value": 6,
+      "tolerance": 0
+    },
+    "explanation": "5x - 2x = 11 + 7, donc 3x = 18 et x = 6."
+  },
+  {
+    "code": "G4-H-03",
+    "minAge": 13,
+    "difficulty": "Hard",
+    "category": "Informatique",
+    "type": "LogicPuzzle",
+    "title": "Trace de programme",
+    "content": {
+      "prompt": "Que vaut b à la fin de ce programme ?",
+      "code": "a ← 1\nb ← 1\nrépéter 5 fois :\n    c ← a + b\n    a ← b\n    b ← c",
+      "answerType": "number"
+    },
+    "correctAnswer": {
+      "value": 13,
+      "tolerance": 0
+    },
+    "explanation": "b prend successivement les valeurs 2, 3, 5, 8 puis 13 : c'est la suite de Fibonacci."
+  },
+  {
+    "code": "G4-H-04",
+    "minAge": 13,
+    "difficulty": "Hard",
+    "category": "Sciences",
+    "type": "MultipleChoice",
+    "title": "Dans l'atome",
+    "content": {
+      "prompt": "Quelle particule de l'atome porte une charge électrique négative ?",
+      "visual": "⚛️",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le proton"
+        },
+        {
+          "id": "b",
+          "text": "Le neutron"
+        },
+        {
+          "id": "c",
+          "text": "L'électron"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "optionId": "c"
+    },
+    "explanation": "L'électron est négatif, le proton positif et le neutron neutre."
+  },
+  {
+    "code": "G4-H-05",
+    "minAge": 13,
+    "difficulty": "Hard",
+    "category": "Mathématiques",
+    "type": "SequenceCompletion",
+    "title": "Les nombres triangulaires",
+    "content": {
+      "prompt": "Quel nombre vient ensuite ?",
+      "sequence": [
+        "1",
+        "3",
+        "6",
+        "10",
+        "15",
+        null
+      ]
+    },
+    "correctAnswer": {
+      "values": [
+        "21"
+      ]
+    },
+    "explanation": "On ajoute 2, puis 3, 4, 5… puis 6 : 15 + 6 = 21."
+  },
+  {
+    "code": "G4-H-06",
+    "minAge": 13,
+    "difficulty": "Hard",
+    "category": "Informatique",
+    "type": "TextAnswer",
+    "title": "Python",
+    "content": {
+      "prompt": "Quel mot-clé utilise-t-on en Python pour définir une fonction ?",
+      "visual": "🐍",
+      "maxLength": 15
+    },
+    "correctAnswer": {
+      "acceptedAnswers": [
+        "def"
+      ]
+    },
+    "explanation": "En Python, on écrit par exemple : def saluer():"
+  },
+  {
+    "code": "G4-H-07",
+    "minAge": 13,
+    "difficulty": "Hard",
+    "category": "Informatique",
+    "type": "NumericAnswer",
+    "title": "Du binaire au décimal",
+    "content": {
+      "prompt": "Combien vaut le nombre binaire 101010 en décimal ?"
+    },
+    "correctAnswer": {
+      "value": 42,
+      "tolerance": 0
+    },
+    "explanation": "101010 = 32 + 8 + 2 = 42."
+  },
+  {
+    "code": "G4-H-08",
+    "minAge": 13,
+    "difficulty": "Hard",
+    "category": "Informatique",
+    "type": "OrderingClassification",
+    "title": "Trouver le maximum",
+    "content": {
+      "prompt": "Remets dans l'ordre les étapes de l'algorithme qui trouve le plus grand nombre d'une liste.",
+      "mode": "order",
+      "items": [
+        {
+          "id": "i1",
+          "text": "Afficher max"
+        },
+        {
+          "id": "i2",
+          "text": "max ← premier élément de la liste"
+        },
+        {
+          "id": "i3",
+          "text": "Pour chaque élément x de la liste : si x > max, alors max ← x"
+        },
+        {
+          "id": "i4",
+          "text": "Lire la liste de nombres"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "order": [
+        "i4",
+        "i2",
+        "i3",
+        "i1"
+      ]
+    },
+    "explanation": "On lit la liste, on initialise max, on parcourt la liste en mettant max à jour, puis on affiche le résultat."
+  },
+  {
+    "code": "G4-H-09",
+    "minAge": 13,
+    "difficulty": "Hard",
+    "category": "Mathématiques",
+    "type": "TrueFalse",
+    "title": "Premier et pair ?",
+    "content": {
+      "prompt": "Un nombre premier peut être pair."
+    },
+    "correctAnswer": {
+      "value": true
+    },
+    "explanation": "Le nombre 2 est premier et pair : c'est le seul nombre premier pair."
+  },
+  {
+    "code": "G4-H-10",
+    "minAge": 13,
+    "difficulty": "Hard",
+    "category": "Logique",
+    "type": "Maze",
+    "title": "Le labyrinthe infernal",
+    "content": {
+      "prompt": "Trouve le chemin de S jusqu'à la sortie E. Le chemin le plus direct n'est pas toujours le bon !",
+      "grid": [
+        "S.....#E",
+        "#####.#.",
+        "....#.#.",
+        ".##.#.#.",
+        ".#....#.",
+        ".#.####.",
+        "...#....",
+        "##...##."
+      ]
+    },
+    "correctAnswer": {
+      "shortestPathLength": 27
+    },
+    "timeLimitSeconds": 180,
+    "explanation": "Il fallait descendre au centre, faire le tour par le bas puis remonter toute la colonne de droite."
+  },
+  {
+    "code": "G4-H-11",
+    "minAge": 13,
+    "difficulty": "Hard",
+    "category": "Informatique",
+    "type": "MultipleChoice",
+    "title": "La recherche dichotomique",
+    "content": {
+      "prompt": "On cherche un nombre dans une liste triée de 1 000 éléments par dichotomie (en coupant la liste en deux à chaque étape). Combien de comparaisons faut-il au maximum ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Environ 10"
+        },
+        {
+          "id": "b",
+          "text": "Environ 100"
+        },
+        {
+          "id": "c",
+          "text": "Environ 1 000"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "optionId": "a"
+    },
+    "explanation": "À chaque étape on divise par 2 : 2¹⁰ = 1 024 ≥ 1 000, donc environ 10 comparaisons suffisent."
+  },
+  {
+    "code": "G4-H-12",
+    "minAge": 13,
+    "difficulty": "Hard",
+    "category": "Histoire",
+    "type": "DragAndDrop",
+    "title": "Les siècles",
+    "content": {
+      "prompt": "Place chaque événement dans son siècle.",
+      "items": [
+        {
+          "id": "i1",
+          "text": "La Révolution française"
+        },
+        {
+          "id": "i2",
+          "text": "Les premiers pas sur la Lune"
+        },
+        {
+          "id": "i3",
+          "text": "Colomb atteint l'Amérique"
+        },
+        {
+          "id": "i4",
+          "text": "Gutenberg met au point l'imprimerie"
+        }
+      ],
+      "targets": [
+        {
+          "id": "t1",
+          "text": "XVe siècle"
+        },
+        {
+          "id": "t2",
+          "text": "XVIIIe siècle"
+        },
+        {
+          "id": "t3",
+          "text": "XXe siècle"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "mapping": {
+        "i1": "t2",
+        "i2": "t3",
+        "i3": "t1",
+        "i4": "t1"
+      }
+    },
+    "explanation": "Imprimerie (vers 1450) et Colomb (1492) : XVe ; Révolution (1789) : XVIIIe ; Lune (1969) : XXe."
+  },
+  {
+    "code": "G4-H-13",
+    "minAge": 13,
+    "difficulty": "Hard",
+    "category": "Animaux et nature",
+    "type": "VisualChallenge",
+    "title": "Les mammifères surprenants",
+    "content": {
+      "prompt": "Touche tous les mammifères.",
+      "selection": "multiple",
+      "cells": [
+        {
+          "id": "v1",
+          "text": "🦇 Chauve-souris"
+        },
+        {
+          "id": "v2",
+          "text": "🐧 Manchot"
+        },
+        {
+          "id": "v3",
+          "text": "🐬 Dauphin"
+        },
+        {
+          "id": "v4",
+          "text": "🦈 Requin"
+        },
+        {
+          "id": "v5",
+          "text": "Ornithorynque"
+        },
+        {
+          "id": "v6",
+          "text": "🐊 Crocodile"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "selectedIds": [
+        "v1",
+        "v3",
+        "v5"
+      ]
+    },
+    "explanation": "La chauve-souris, le dauphin et l'ornithorynque (qui pond des œufs !) sont des mammifères. Le manchot est un oiseau, le requin un poisson, le crocodile un reptile."
+  },
+  {
+    "code": "G4-H-14",
+    "minAge": 13,
+    "difficulty": "Hard",
+    "category": "Logique",
+    "type": "LogicPuzzle",
+    "title": "Menteurs et honnêtes",
+    "content": {
+      "prompt": "Un menteur ment toujours, un honnête dit toujours la vérité. A dit : « B est un menteur. » B dit : « A et moi sommes honnêtes. » Qui est honnête ?",
+      "answerType": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "A seulement"
+        },
+        {
+          "id": "b",
+          "text": "B seulement"
+        },
+        {
+          "id": "c",
+          "text": "A et B"
+        },
+        {
+          "id": "d",
+          "text": "Aucun des deux"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "optionId": "a"
+    },
+    "explanation": "Si B était honnête, A le serait aussi… mais A dit que B ment : contradiction. Donc B ment, et A dit vrai."
+  },
+  {
+    "code": "G4-H-15",
+    "minAge": 13,
+    "difficulty": "Hard",
+    "category": "Informatique",
+    "type": "MemoryCards",
+    "title": "La mémoire binaire",
+    "content": {
+      "prompt": "Associe chaque nombre binaire à sa valeur décimale.",
+      "previewSeconds": 5,
+      "cards": [
+        {
+          "id": "c1",
+          "face": "101 (binaire)"
+        },
+        {
+          "id": "c2",
+          "face": "7"
+        },
+        {
+          "id": "c3",
+          "face": "5"
+        },
+        {
+          "id": "c4",
+          "face": "111 (binaire)"
+        },
+        {
+          "id": "c5",
+          "face": "1000 (binaire)"
+        },
+        {
+          "id": "c6",
+          "face": "8"
+        },
+        {
+          "id": "c7",
+          "face": "11 (binaire)"
+        },
+        {
+          "id": "c8",
+          "face": "3"
+        }
+      ]
+    },
+    "correctAnswer": {
+      "pairs": [
+        [
+          "c1",
+          "c3"
+        ],
+        [
+          "c4",
+          "c2"
+        ],
+        [
+          "c5",
+          "c6"
+        ],
+        [
+          "c7",
+          "c8"
+        ]
+      ]
+    },
+    "explanation": "101 = 5, 111 = 7, 1000 = 8 et 11 = 3."
+  }
+]

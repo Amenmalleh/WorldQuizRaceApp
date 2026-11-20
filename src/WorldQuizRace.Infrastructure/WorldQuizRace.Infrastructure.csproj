@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
     <ProjectReference Include="..\WorldQuizRace.Application\WorldQuizRace.Application.csproj" />
@@ -22,5 +22,14 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Données initiales embarquées dans la DLL : disponibles aussi après dotnet publish. -->
+    <EmbeddedResource Include="Seed\*.json" LogicalName="WorldQuizRace.Seed.%(Filename)%(Extension)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="WorldQuizRace.Tests" />
+  </ItemGroup>
 
 </Project>

@@ -1,0 +1,81 @@
+{
+  "destination": {
+    "name": "Le Caire",
+    "country": "Égypte",
+    "latitude": 30.04,
+    "longitude": 31.24,
+    "funFact": "Tout près du Caire se dressent les pyramides de Gizeh, construites il y a plus de 4 500 ans !"
+  },
+  "routes": [
+    {
+      "code": "WEST",
+      "name": "La route de l'Ouest",
+      "description": "Des Amériques à l'Europe, en traversant l'océan Atlantique, jusqu'au Caire.",
+      "checkpoints": [
+        { "position": 1, "name": "Anchorage", "country": "États-Unis", "latitude": 61.22, "longitude": -149.90,
+          "funFact": "En Alaska, au début de l'été, il fait jour presque toute la nuit !" },
+        { "position": 2, "name": "Vancouver", "country": "Canada", "latitude": 49.28, "longitude": -123.12,
+          "funFact": "Vancouver est entourée de montagnes et de mer : on peut y skier le matin et aller à la plage l'après-midi." },
+        { "position": 3, "name": "San Francisco", "country": "États-Unis", "latitude": 37.77, "longitude": -122.42,
+          "funFact": "Le pont du Golden Gate est peint en orange pour qu'on le voie bien dans le brouillard." },
+        { "position": 4, "name": "Mexico", "country": "Mexique", "latitude": 19.43, "longitude": -99.13,
+          "funFact": "Mexico est construite sur un ancien lac, là où se trouvait la grande cité aztèque de Tenochtitlan." },
+        { "position": 5, "name": "Lima", "country": "Pérou", "latitude": -12.05, "longitude": -77.04,
+          "funFact": "La pomme de terre vient du Pérou : on y cultive des milliers de variétés différentes !" },
+        { "position": 6, "name": "Buenos Aires", "country": "Argentine", "latitude": -34.60, "longitude": -58.38,
+          "funFact": "L'avenue du 9-Juillet, à Buenos Aires, est l'une des avenues les plus larges du monde." },
+        { "position": 7, "name": "Rio de Janeiro", "country": "Brésil", "latitude": -22.91, "longitude": -43.17,
+          "funFact": "La statue du Christ Rédempteur veille sur Rio du haut d'une montagne de plus de 700 mètres." },
+        { "position": 8, "name": "Dakar", "country": "Sénégal", "latitude": 14.72, "longitude": -17.47,
+          "funFact": "Dakar est la ville la plus à l'ouest de tout le continent africain." },
+        { "position": 9, "name": "Marrakech", "country": "Maroc", "latitude": 31.63, "longitude": -7.99,
+          "funFact": "Sur la grande place Jemaa el-Fna, on croise des conteurs, des musiciens et des charmeurs de serpents." },
+        { "position": 10, "name": "Madrid", "country": "Espagne", "latitude": 40.42, "longitude": -3.70,
+          "funFact": "Le palais royal de Madrid compte plus de 3 000 pièces !" },
+        { "position": 11, "name": "Paris", "country": "France", "latitude": 48.86, "longitude": 2.35,
+          "funFact": "En été, la tour Eiffel peut grandir d'environ 15 centimètres, car le métal se dilate avec la chaleur." },
+        { "position": 12, "name": "Rome", "country": "Italie", "latitude": 41.90, "longitude": 12.50,
+          "funFact": "Il y a près de 2 000 ans, plus de 50 000 spectateurs pouvaient s'asseoir dans le Colisée de Rome." },
+        { "position": 13, "name": "Athènes", "country": "Grèce", "latitude": 37.98, "longitude": 23.73,
+          "funFact": "Les premiers Jeux olympiques modernes ont eu lieu à Athènes, en 1896." },
+        { "position": 14, "name": "Istanbul", "country": "Turquie", "latitude": 41.01, "longitude": 28.98,
+          "funFact": "Istanbul est à cheval sur deux continents : l'Europe et l'Asie !" }
+      ]
+    },
+    {
+      "code": "EAST",
+      "name": "La route de l'Est",
+      "description": "De l'Océanie à l'Asie, en passant par le toit du monde, jusqu'au Caire.",
+      "checkpoints": [
+        { "position": 1, "name": "Auckland", "country": "Nouvelle-Zélande", "latitude": -36.85, "longitude": 174.76,
+          "funFact": "En Nouvelle-Zélande vit le kiwi, un oiseau qui ne sait pas voler." },
+        { "position": 2, "name": "Sydney", "country": "Australie", "latitude": -33.87, "longitude": 151.21,
+          "funFact": "Le toit de l'Opéra de Sydney ressemble à de grandes voiles de bateau." },
+        { "position": 3, "name": "Jakarta", "country": "Indonésie", "latitude": -6.21, "longitude": 106.85,
+          "funFact": "L'Indonésie est formée de plus de 17 000 îles !" },
+        { "position": 4, "name": "Manille", "country": "Philippines", "latitude": 14.60, "longitude": 120.98,
+          "funFact": "Les Philippines comptent plus de 7 000 îles." },
+        { "position": 5, "name": "Tokyo", "country": "Japon", "latitude": 35.68, "longitude": 139.69,
+          "funFact": "Tokyo est l'une des plus grandes villes du monde : plus de 37 millions de personnes vivent dans son agglomération." },
+        { "position": 6, "name": "Séoul", "country": "Corée du Sud", "latitude": 37.57, "longitude": 126.98,
+          "funFact": "L'alphabet coréen, le hangeul, a été inventé par un roi pour que tout le monde puisse apprendre à lire." },
+        { "position": 7, "name": "Pékin", "country": "Chine", "latitude": 39.90, "longitude": 116.40,
+          "funFact": "La Cité interdite de Pékin, ancien palais des empereurs, compte près de 1 000 bâtiments." },
+        { "position": 8, "name": "Oulan-Bator", "country": "Mongolie", "latitude": 47.89, "longitude": 106.91,
+          "funFact": "Oulan-Bator est la capitale la plus froide du monde." },
+        { "position": 9, "name": "Bangkok", "country": "Thaïlande", "latitude": 13.76, "longitude": 100.50,
+          "funFact": "Le nom complet de Bangkok en thaï est l'un des plus longs noms de ville du monde !" },
+        { "position": 10, "name": "Katmandou", "country": "Népal", "latitude": 27.72, "longitude": 85.32,
+          "funFact": "Le Népal abrite l'Everest, la plus haute montagne du monde : 8 849 mètres !" },
+        { "position": 11, "name": "New Delhi", "country": "Inde", "latitude": 28.61, "longitude": 77.21,
+          "funFact": "Non loin de Delhi, à Agra, se trouve le Taj Mahal, un magnifique monument de marbre blanc." },
+        { "position": 12, "name": "Bombay", "country": "Inde", "latitude": 19.08, "longitude": 72.88,
+          "funFact": "Bombay (Mumbai) est la capitale du cinéma indien, Bollywood, qui produit énormément de films chaque année." },
+        { "position": 13, "name": "Dubaï", "country": "Émirats arabes unis", "latitude": 25.20, "longitude": 55.27,
+          "funFact": "À Dubaï se dresse Burj Khalifa, la plus haute tour du monde : 828 mètres !" },
+        { "position": 14, "name": "Amman", "country": "Jordanie", "latitude": 31.95, "longitude": 35.93,
+          "funFact": "Non loin d'Amman, la cité antique de Pétra a été sculptée directement dans la roche rose." }
+      ]
+    }
+  ]
+}

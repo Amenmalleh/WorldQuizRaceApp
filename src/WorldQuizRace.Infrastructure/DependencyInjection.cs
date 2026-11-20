@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using WorldQuizRace.Infrastructure.Persistence;
+using WorldQuizRace.Infrastructure.Seed;
 
 namespace WorldQuizRace.Infrastructure;
 
@@ -18,6 +19,8 @@ public static class DependencyInjection
         services.AddDbContext<WorldQuizRaceDbContext>(options =>
             options.UseSqlServer(connectionString, sql =>
                 sql.MigrationsAssembly(typeof(WorldQuizRaceDbContext).Assembly.FullName)));
+
+        services.AddScoped<DatabaseSeeder>();
 
         return services;
     }
