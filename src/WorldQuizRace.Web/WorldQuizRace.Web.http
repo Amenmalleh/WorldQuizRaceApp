@@ -1,0 +1,81 @@
+# World Quiz Race — game API samples.
+# VS Code: install the "REST Client" extension, start the app (F5), then click "Send Request" above each block, in order.
+# Visual Studio 2026 also runs this file. Cookies (anti-forgery) are kept between requests.
+
+@host = http://localhost:5255
+
+### 1. Anti-forgery token (sets the cookie; the token goes in the X-CSRF-TOKEN header of every POST)
+# @name csrf
+GET {{host}}/api/game/antiforgery
+
+### 2. Register both players and create the match
+# @name create
+POST {{host}}/api/game/matches
+Content-Type: application/json
+X-CSRF-TOKEN: {{csrf.response.body.$.token}}
+
+{
+  "playerA": { "name": "Adam", "age": 9, "avatar": "fox" },
+  "playerB": { "name": "Lina", "age": 13, "avatar": "panda" }
+}
+
+@matchId = {{create.response.body.$.matchId}}
+@playerA = {{create.response.body.$.players[0].player.id}}
+@playerB = {{create.response.body.$.players[1].player.id}}
+
+### 3. Match state (positions, routes, checkpoints, whose turn it is)
+GET {{host}}/api/game/matches/{{matchId}}
+
+### 4. Current challenge of player A (calling it again returns the same attempt)
+# @name challengeA
+GET {{host}}/api/game/matches/{{matchId}}/players/{{playerA}}/challenge
+
+### 5. Cheating attempt: player B asks for a challenge during A's turn → 409 not_your_turn
+GET {{host}}/api/game/matches/{{matchId}}/players/{{playerB}}/challenge
+
+### 6. Answer of player A. Adapt "answer" to the challenge type (docs/CHALLENGE_FORMATS.md),
+###    e.g. {"optionId":"b"}, {"value":12}, {"text":"Paris"}, {"moves":"RDDR"}…
+POST {{host}}/api/game/matches/{{matchId}}/answers
+Content-Type: application/json
+X-CSRF-TOKEN: {{csrf.response.body.$.token}}
+
+{
+  "matchId": {{matchId}},
+  "playerChallengeId": {{challengeA.response.body.$.playerChallengeId}},
+  "answer": { "optionId": "b" }
+}
+
+### 7. Cheating attempt: the same answer replayed (double click) → 409 attempt_already_answered
+POST {{host}}/api/game/matches/{{matchId}}/answers
+Content-Type: application/json
+X-CSRF-TOKEN: {{csrf.response.body.$.token}}
+
+{
+  "matchId": {{matchId}},
+  "playerChallengeId": {{challengeA.response.body.$.playerChallengeId}},
+  "answer": { "optionId": "b" }
+}
+
+### 8. Now it is player B's turn
+# @name challengeB
+GET {{host}}/api/game/matches/{{matchId}}/players/{{playerB}}/challenge
+
+### 9. Answer of player B
+POST {{host}}/api/game/matches/{{matchId}}/answers
+Content-Type: application/json
+X-CSRF-TOKEN: {{csrf.response.body.$.token}}
+
+{
+  "matchId": {{matchId}},
+  "playerChallengeId": {{challengeB.response.body.$.playerChallengeId}},
+  "answer": { "value": 0 }
+}
+
+### 10. POST without the anti-forgery header → 400
+POST {{host}}/api/game/matches
+Content-Type: application/json
+
+{ "playerA": { "name": "Eve", "age": 9 }, "playerB": { "name": "Max", "age": 10 } }
+
+### 11. Results (409 match_not_finished until a player reaches the final checkpoint)
+GET {{host}}/api/game/matches/{{matchId}}/result

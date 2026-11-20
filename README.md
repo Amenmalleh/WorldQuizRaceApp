@@ -110,6 +110,26 @@ WorldQuizRace.Infrastructure) : `Add-Migration <Nom> -OutputDir Persistence/Migr
 - Le format JSON de chaque type de défi est décrit dans [docs/CHALLENGE_FORMATS.md](docs/CHALLENGE_FORMATS.md) ;
   `dotnet test` vérifie chaque défi (format, labyrinthes résolubles, résultats des calculs).
 
+## API de jeu (`/api/game`)
+
+Le moteur de jeu tourne entièrement côté serveur ; le JavaScript (phase 4) appellera ces endpoints.
+
+| Méthode | Route | Rôle |
+|---|---|---|
+| GET | `/api/game/antiforgery` | Pose le cookie anti-forgery et renvoie le jeton à mettre dans l'en-tête `X-CSRF-TOKEN` |
+| POST | `/api/game/matches` | Inscrit les deux joueurs et crée la partie (201) |
+| GET | `/api/game/matches/{matchId}` | État : joueurs, routes, checkpoints, positions, tour, statistiques |
+| GET | `/api/game/matches/{matchId}/players/{playerId}/challenge` | Défi courant du joueur dont c'est le tour (même défi si on recharge) |
+| POST | `/api/game/matches/{matchId}/answers` | Soumet la réponse ; renvoie correct/incorrect, explication, nouvelle position, récompenses, état |
+| GET | `/api/game/matches/{matchId}/result` | Résultats de fin de partie (409 tant qu'elle n'est pas terminée) |
+
+Les erreurs métier sont des `application/problem+json` avec un champ `code` stable
+(`not_your_turn`, `attempt_already_answered`, `match_not_in_progress`, `validation_failed`…) :
+400 = données invalides, 404 = introuvable, 409 = règle du jeu ou conflit. Les POST sans jeton anti-forgery reçoivent 400.
+
+Exemples prêts à l'emploi : `src/WorldQuizRace.Web/WorldQuizRace.Web.http` (extension **REST Client** de VS Code,
+ou directement dans Visual Studio). Lancer l'application, puis envoyer les requêtes dans l'ordre.
+
 ## Tests
 
 ```bash

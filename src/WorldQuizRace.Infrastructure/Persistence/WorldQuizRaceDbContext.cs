@@ -1,10 +1,11 @@
 using Microsoft.EntityFrameworkCore;
+using WorldQuizRace.Application.Abstractions;
 using WorldQuizRace.Domain.Entities;
 
 namespace WorldQuizRace.Infrastructure.Persistence;
 
 /// <summary>Application EF Core context. The mapping lives in Persistence/Configurations.</summary>
-public sealed class WorldQuizRaceDbContext(DbContextOptions<WorldQuizRaceDbContext> options) : DbContext(options)
+public sealed class WorldQuizRaceDbContext(DbContextOptions<WorldQuizRaceDbContext> options) : DbContext(options), IApplicationDbContext
 {
     public DbSet<AgeGroup> AgeGroups => Set<AgeGroup>();
 

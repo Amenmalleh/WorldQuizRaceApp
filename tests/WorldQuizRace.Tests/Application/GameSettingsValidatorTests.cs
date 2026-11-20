@@ -12,7 +12,8 @@ public class GameSettingsValidatorTests
     {
         CheckpointsPerRoute = 15,
         TurnMode = TurnMode.Alternating,
-        FirstPlayer = PlayerSlot.A,
+        FirstPlayer = FirstPlayerOption.A,
+        AllowedAvatars = ["fox"],
         DifficultyRules =
         [
             new() { FromPosition = 1, ToPosition = 5, Difficulty = Difficulty.Easy },

@@ -12,11 +12,26 @@ public sealed class GameSettings
 
     public TurnMode TurnMode { get; set; } = TurnMode.Alternating;
 
-    public PlayerSlot FirstPlayer { get; set; } = PlayerSlot.A;
+    /// <summary>Who plays first: A, B or Random.</summary>
+    public FirstPlayerOption FirstPlayer { get; set; } = FirstPlayerOption.A;
+
+    /// <summary>Route code assigned to player A (starts in the far west).</summary>
+    public string RouteForPlayerA { get; set; } = "WEST";
+
+    /// <summary>Route code assigned to player B (starts in the far east).</summary>
+    public string RouteForPlayerB { get; set; } = "EAST";
+
+    /// <summary>Network/latency tolerance added to every time limit before an answer is considered late.</summary>
+    public int AnswerGracePeriodSeconds { get; set; } = 2;
+
+    /// <summary>Avatar keys a player may choose (the avatar itself is optional).</summary>
+    public List<string> AllowedAvatars { get; set; } = [];
 
     /// <summary>Difficulty rules per position; they must cover 1..CheckpointsPerRoute with no gap and no overlap.</summary>
     public List<DifficultyRule> DifficultyRules { get; set; } = [];
 
     /// <summary>Default time limit, in seconds, for each challenge type.</summary>
     public Dictionary<ChallengeType, int> DefaultTimeLimitsSeconds { get; set; } = [];
+
+    public RewardSettings Rewards { get; set; } = new();
 }

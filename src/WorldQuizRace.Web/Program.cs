@@ -1,3 +1,4 @@
+using System.Text.Json.Serialization;
 using WorldQuizRace.Application;
 using WorldQuizRace.Infrastructure;
 using WorldQuizRace.Infrastructure.Persistence;
@@ -8,7 +9,19 @@ builder.Services
     .AddApplication()
     .AddInfrastructure(builder.Configuration);
 
-builder.Services.AddControllersWithViews();
+builder.Services
+    .AddControllersWithViews()
+    .AddJsonOptions(json => json.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
+builder.Services.AddProblemDetails();
+
+// The game API is called by same-origin JavaScript: the token travels in a header, the cookie is SameSite=Strict.
+builder.Services.AddAntiforgery(antiforgery =>
+{
+    antiforgery.HeaderName = "X-CSRF-TOKEN";
+    antiforgery.Cookie.Name = "WorldQuizRace.Antiforgery";
+    antiforgery.Cookie.SameSite = SameSiteMode.Strict;
+    antiforgery.Cookie.HttpOnly = true;
+});
 
 var app = builder.Build();
 

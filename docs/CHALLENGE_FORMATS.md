@@ -21,10 +21,14 @@ les validateurs de réponses (phase 3) et l'interface (phase 4). Il est vérifi�
   elle est stockée telle quelle dans `PlayerChallenge.Answer`.
 - **Ordre d'affichage** : l'ordre des listes dans `Content` ne doit pas révéler la réponse
   (vérifié par les tests pour le mode `order`). L'interface peut en plus mélanger l'affichage.
-- **Normalisation du texte** (`TextAnswer`, `LogicPuzzle` en mode `text`) : Unicode NFKD, suppression des accents,
-  minuscules, espaces de début/fin supprimés et espaces multiples réduits à un seul.
+- **Normalisation du texte** (`TextAnswer`, `LogicPuzzle` en mode `text`, valeurs non numériques de `SequenceCompletion`) :
+  Unicode NFKD, suppression des accents, minuscules, apostrophes typographiques unifiées, espaces de début/fin
+  supprimés, espaces multiples réduits à un seul, ponctuation autour de la réponse ignorée (`"La Loire !"` = `"la loire"`).
   Les valeurs de `acceptedAnswers` sont stockées **déjà normalisées**.
-- Nombres : JSON numérique (point décimal). `tolerance` absente = 0.
+- **Nombres** : dans le seed, JSON numérique (point décimal). `tolerance` absente = 0. Dans une **soumission**, un nombre
+  peut aussi être une chaîne : `"3,5"` = `"3.5"` = `3.5`, espaces de milliers ignorés (`"1 000"`).
+- **Réponse mal formée** (pas un objet, champ manquant ou d'un autre type, identifiants inconnus) = **mauvaise réponse**,
+  jamais une erreur serveur. Les validateurs sont dans `src/WorldQuizRace.Application/Answers/Validators` (une classe par type).
 
 ---
 
@@ -49,7 +53,7 @@ les validateurs de réponses (phase 3) et l'interface (phase 4). Il est vérifi�
 |---|---|
 | Content | `{ "prompt", "visual"? }` — `prompt` est l'affirmation à juger |
 | CorrectAnswer | `{ "value": false }` |
-| Soumission | `{ "value": true }` |
+| Soumission | `{ "value": true }` (les chaînes `"true"` / `"false"` sont acceptées) |
 | Validation | booléens égaux |
 
 ```json
@@ -192,7 +196,7 @@ Comme `DragAndDrop`, mais les éléments sont des formes dessinées en SVG par l
 |---|---|
 | Content | `{ "prompt", "grid": ["S.#.", "#..#", …] }` — grille rectangulaire : `S` départ, `E` sortie, `#` mur, `.` passage (exactement un `S` et un `E`) |
 | CorrectAnswer | `{ "shortestPathLength": 6 }` — longueur du plus court chemin (pour le score, vérifiée par BFS dans les tests) |
-| Soumission | `{ "moves": "RDDDRR" }` — `U`, `D`, `L`, `R` |
+| Soumission | `{ "moves": "RDDDRR" }` — `U`, `D`, `L`, `R` (un tableau `["R","D",…]` est accepté aussi) |
 | Validation | le serveur rejoue les déplacements depuis `S` : aucun mur ni sortie de grille, et la dernière case est `E`. Tout chemin valide est accepté ; un chemin optimal peut rapporter un bonus. |
 
 > La grille est publique (il faut bien l'afficher) : la difficulté vient de la recherche du chemin et du temps limite.
@@ -258,4 +262,6 @@ Grille d'éléments (emojis ou mots) à sélectionner : trouver l'intrus, toutes
 
 1. Ajouter la valeur à `ChallengeType` (Domain) et son temps limite dans `GameSettings:DefaultTimeLimitsSeconds`.
 2. Documenter son format ici.
-3. Ajouter la règle correspondante dans `ChallengeFormatRules` (tests), puis le validateur (phase 3) et le composant d'interface (phase 4).
+3. Ajouter une classe `IAnswerValidator` dans `Application/Answers/Validators` : elle est découverte automatiquement
+   (aucune autre modification ; un test vérifie que chaque type a exactement un validateur).
+4. Ajouter la règle de format dans `ChallengeFormatRules` (tests) et le composant d'interface (phase 4).

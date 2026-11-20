@@ -11,14 +11,14 @@ namespace WorldQuizRace.Tests.Infrastructure;
 /// </summary>
 public sealed class LocalDbFixture : IAsyncLifetime
 {
-    private readonly string _connectionString =
+    public string ConnectionString { get; } =
         $"Server=(localdb)\\MSSQLLocalDB;Database=WorldQuizRaceDb_Tests_{Guid.NewGuid():N};Trusted_Connection=True;TrustServerCertificate=True";
 
     /// <summary>Rows written by the first seed.</summary>
     public int FirstSeedRows { get; private set; }
 
     public WorldQuizRaceDbContext CreateContext() =>
-        new(new DbContextOptionsBuilder<WorldQuizRaceDbContext>().UseSqlServer(_connectionString).Options);
+        new(new DbContextOptionsBuilder<WorldQuizRaceDbContext>().UseSqlServer(ConnectionString).Options);
 
     public DatabaseSeeder CreateSeeder(WorldQuizRaceDbContext db) =>
         new(db, Microsoft.Extensions.Options.Options.Create(new GameSettings { CheckpointsPerRoute = 15 }), NullLogger<DatabaseSeeder>.Instance);

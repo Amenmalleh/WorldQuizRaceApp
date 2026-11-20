@@ -30,11 +30,28 @@ public sealed class GameSettingsValidator : IValidateOptions<GameSettings>
 
         if (!Enum.IsDefined(options.FirstPlayer))
         {
-            errors.Add($"FirstPlayer '{options.FirstPlayer}' must be A or B.");
+            errors.Add($"FirstPlayer '{options.FirstPlayer}' must be A, B or Random.");
+        }
+
+        if (string.IsNullOrWhiteSpace(options.RouteForPlayerA) || string.IsNullOrWhiteSpace(options.RouteForPlayerB)
+            || string.Equals(options.RouteForPlayerA, options.RouteForPlayerB, StringComparison.OrdinalIgnoreCase))
+        {
+            errors.Add("RouteForPlayerA and RouteForPlayerB must be two different route codes.");
+        }
+
+        if (options.AnswerGracePeriodSeconds is < 0 or > 30)
+        {
+            errors.Add($"AnswerGracePeriodSeconds must be between 0 and 30 (actual: {options.AnswerGracePeriodSeconds}).");
+        }
+
+        if (options.AllowedAvatars.Count == 0 || options.AllowedAvatars.Any(a => string.IsNullOrWhiteSpace(a) || a.Length > 32))
+        {
+            errors.Add("AllowedAvatars must contain at least one non-empty key of at most 32 characters.");
         }
 
         ValidateDifficultyRules(options, errors);
         ValidateTimeLimits(options, errors);
+        ValidateRewards(options.Rewards, errors);
 
         return errors.Count == 0 ? ValidateOptionsResult.Success : ValidateOptionsResult.Fail(errors);
     }
@@ -73,6 +90,25 @@ public sealed class GameSettingsValidator : IValidateOptions<GameSettings>
             {
                 errors.Add($"DifficultyRules: checkpoint position {position} is covered by {matches} rule(s); exactly 1 expected.");
             }
+        }
+    }
+
+    private static void ValidateRewards(RewardSettings rewards, List<string> errors)
+    {
+        int[] amounts =
+        [
+            rewards.PointsPerCorrectAnswer, rewards.SpeedBonusPoints, rewards.StarsPerCorrectAnswer,
+            rewards.SpeedBonusStars, rewards.CoinsPerCorrectAnswer, rewards.CoinsForReachingDestination
+        ];
+
+        if (amounts.Any(a => a < 0))
+        {
+            errors.Add("Rewards: amounts cannot be negative.");
+        }
+
+        if (rewards.SpeedBonusMaxTimeRatio is <= 0 or > 1)
+        {
+            errors.Add("Rewards: SpeedBonusMaxTimeRatio must be in ]0, 1].");
         }
     }
 

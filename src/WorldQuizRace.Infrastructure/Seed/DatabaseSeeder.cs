@@ -102,6 +102,15 @@ public sealed class DatabaseSeeder(
             entity.Icon = seed.Icon;
         }
 
+        // Badges removed from the reference data disappear, unless a player already earned them.
+        var seededCodes = ReferenceData.Badges.Select(b => b.Code).ToHashSet(StringComparer.Ordinal);
+        var obsolete = existing.Values.Where(b => !seededCodes.Contains(b.Code)).Select(b => b.Id).ToList();
+        if (obsolete.Count > 0)
+        {
+            var awarded = await db.PlayerBadges.Where(pb => obsolete.Contains(pb.BadgeId)).Select(pb => pb.BadgeId).Distinct().ToListAsync(ct);
+            db.Badges.RemoveRange(existing.Values.Where(b => obsolete.Contains(b.Id) && !awarded.Contains(b.Id)));
+        }
+
         return await db.SaveChangesAsync(ct);
     }
 

@@ -27,10 +27,10 @@ public static class ReferenceData
 
     public static IReadOnlyList<BadgeSeed> Badges { get; } =
     [
-        new("FIRST_VICTORY", "Première victoire", "Remporter sa première course.", "🏆"),
-        new("PERFECT_RUN", "Sans faute", "Atteindre l'arrivée sans aucune mauvaise réponse.", "🎯"),
+        new("FIRST_STEP", "Premier pas", "Réussir son tout premier défi.", "👣"),
+        new("STREAK_3", "3 sans faute", "Réussir 3 défis d'affilée.", "🔥"),
         new("HALFWAY", "Mi-parcours", "Atteindre le milieu de sa route.", "🧭"),
-        new("STREAK_5", "Série de 5", "Réussir 5 défis d'affilée.", "🔥"),
+        new("WORLD_EXPLORER", "Explorateur du monde", "Atteindre la destination finale.", "🌍"),
         new("BRAVE_LEARNER", "Apprenti courageux", "Terminer une partie, gagnée ou non.", "🌟")
     ];
 }

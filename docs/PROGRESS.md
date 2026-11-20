@@ -4,7 +4,7 @@
 |-------|---------|--------|
 | 1. Fondations | Solution, architecture, EF Core, options, layout, git | ✅ Terminée (2026-11-20) |
 | 2. Données | Entités, configurations EF, migrations, seed (âges, catégories, routes, défis) | ✅ Terminée (2026-11-20) |
-| 3. Moteur de jeu | Inscription, match, sélection de défis, validation, tours, progression, vainqueur | ⏳ À faire |
+| 3. Moteur de jeu | Inscription, match, sélection de défis, validation, tours, progression, vainqueur | ✅ Terminée (2026-11-20) |
 | 4. Interface | Inscription/avatars, carte SVG, écrans de défi, victoire | ⏳ À faire |
 | 5. Intégration & tests | Tests d'intégration, scénarios du §13 du cahier des charges | ⏳ À faire |
 
@@ -43,7 +43,8 @@
 - Bouton « Nouvelle partie » volontairement désactivé jusqu'à la phase 4.
 
 ### Points d'attention
-- `CLAUDE.md` à la racine est un **dossier vide**, pas un fichier (règle Git appliquée : message de commit seul, sans mention d'IA).
+- `CLAUDE.md` existe désormais (règles permanentes, ignoré par git) ; les commentaires du code des phases 1–2 ont été
+  traduits en anglais pour le respecter (commit `refactor: translate code comments to English`).
 
 ## Phase 2 — Données
 
@@ -107,3 +108,65 @@
   (voir docs/CHALLENGE_FORMATS.md).
 - Textes en français ; emojis uniquement (aucune image externe) ; pas d'emojis drapeaux (mal rendus sous Windows).
 - Quelques réponses texte acceptent des variantes raisonnables (« chat », « le chat », « chaton »…).
+
+## Phase 3 — Moteur de jeu
+
+### Réalisé
+- **DTOs** (records, `Application/Dtos`) : `RegisterPlayerRequest`, `CreateMatchRequest`, `PlayerDto`, `MatchStateDto`
+  (+ joueurs, routes, checkpoints), `ChallengeDto` (contenu public uniquement), `SubmitAnswerRequest`, `AnswerResultDto`,
+  `RewardDto`, `BadgeDto`, `MatchResultDto`, `PlayerResultDto`.
+- **Services** (interfaces + implémentations dans Application, une responsabilité chacun) : `IAgeGroupService`,
+  `IPlayerRegistrationService`, `IMatchService`, `IDifficultyPolicy`, `IChallengeSelectionService`,
+  `IAnswerValidationService` (+ 14 `IAnswerValidator`), `ITurnService` (+ `ITurnStrategy`), `IProgressionService`,
+  `IWinnerService`, `IRewardService` (+ `IBadgeRule`), `IMatchStateQuery`, `IMatchResultService`, `IGameService`.
+- **API** `GameApiController` (`/api/game/...`), filtre `GameExceptionFilter` (ProblemDetails 400/404/409 + `code`),
+  anti-forgery par en-tête `X-CSRF-TOKEN`, enums sérialisés en texte, fichier `WorldQuizRace.Web.http`.
+- **Tests** : 163 au total (122 nouveaux) — validateurs et règles en tests unitaires purs, moteur complet sur LocalDB jetable,
+  API via `WebApplicationFactory`.
+- Session de jeu réelle via `curl` (application lancée) avec tentatives de triche : voir le résumé de fin de phase.
+
+### Décisions
+- **Pas de modification du schéma** : le modèle de la phase 2 suffisait (pas de nouvelle migration).
+- **`IApplicationDbContext` dans Application** (implémenté par le DbContext d'Infrastructure) : les services métier
+  restent dans Application sans dépendre de SQL Server ; seul le package `Microsoft.EntityFrameworkCore` y est ajouté.
+- **Découverte automatique des stratégies** (`IAnswerValidator`, `IBadgeRule`, `ITurnStrategy`) par réflexion dans
+  `AddApplication()` : ajouter un type de défi, un badge ou un mode de tour = ajouter une classe.
+- **Intégrité des soumissions** : transaction explicite ; contrôles dans l'ordre partie existante → tentative de cette partie →
+  partie InProgress → tentative Pending → tour du joueur → tentative du tour courant. Une course entre deux requêtes
+  simultanées est arbitrée par les `RowVersion` (`Match` est toujours modifié par une soumission) et l'index unique filtré :
+  la perdante reçoit 409 `concurrent_update`. Testé en parallèle réel.
+- **Défi courant idempotent** : `GET …/challenge` renvoie la tentative Pending existante (même `ServedAt`, le chronomètre
+  ne repart pas). Deux GET simultanés : l'index filtré n'en garde qu'un, l'autre requête relit la tentative existante.
+- **Temps limite** : `ServedAt + TimeLimit + AnswerGracePeriodSeconds (2 s)`. Au-delà : `TimedOut`, mauvaise réponse,
+  pas d'avance, le tour passe. Le serveur ne fait pas expirer un défi « tout seul » : le client soumet à la fin du
+  chronomètre (ou au rechargement, `RemainingSeconds` vaut alors 0).
+- **Sélection des défis** : tranche d'âge du joueur, difficulté de la position visée (`CurrentPosition + 1`), `IsActive`,
+  jamais un défi déjà vu dans la partie. **Repli** : difficulté voisine la plus proche (à égalité, la plus facile
+  d'abord : Medium → Easy → Hard), puis, tout étant épuisé, le défi vu il y a le plus longtemps (difficulté cible d'abord).
+  **Équité** : la difficulté dépend uniquement de la position, pour les deux joueurs, chacun dans sa propre tranche.
+- **Validation des réponses** : réponse mal formée = mauvaise réponse (jamais de 500) ; texte insensible à la casse,
+  aux accents, aux espaces et à la ponctuation autour ; nombres tolérants (`"3,5"` = `3.5`) ; ordre exact pour suites et
+  classements ; ensembles pour paires, mémoire et sélections ; labyrinthe rejoué case par case (tout chemin valide accepté).
+- **Récompenses** (configurables, `GameSettings:Rewards`) : bonne réponse = 100 pts, 1 ⭐, 10 pièces ; bonus rapidité
+  (réponse dans la première moitié du temps) = +50 pts, +1 ⭐ ; arrivée = +50 pièces. Badges : « Premier pas »,
+  « 3 sans faute », « Mi-parcours », « Explorateur du monde », « Apprenti courageux » (fin de partie, gagnant ou non).
+  Les anciens badges de la phase 2 jamais attribués sont retirés par le seeder.
+- **Anti-forgery** conservé malgré l'absence d'authentification : il empêche un site tiers de piloter la partie
+  ouverte sur `localhost` ; cookie `SameSite=Strict`, `HttpOnly`.
+- **Premier joueur** : `GameSettings:FirstPlayer` = `A`, `B` ou `Random` (hasard injectable).
+- **Messages** au joueur (erreurs, résultats) en français et bienveillants ; code et identifiants en anglais.
+
+### Hypothèses
+- « Défis complétés » = défis réussis ; « défis tentés » = toutes les réponses (y compris hors délai). Les deux sont exposés.
+- « Temps total » d'un joueur = somme des durées de réponse (`AnsweredAt - ServedAt`) ; durée de partie = `EndDate - StartDate`.
+- Un joueur ne peut pas être dans deux parties en cours (`player_already_in_match`) ; les joueurs sont recréés à chaque
+  nouvelle partie (pseudo + âge, aucune donnée persistante superflue).
+- Pseudo : 2 à 20 caractères après nettoyage des espaces ; lettres, chiffres, espaces et `- _ ' .` uniquement.
+- Avatars autorisés : liste configurable `GameSettings:AllowedAvatars` (fox, panda, lion, owl, turtle, penguin, rabbit,
+  koala, dolphin, unicorn) ; l'avatar reste facultatif.
+- Résultats disponibles uniquement pour une partie terminée (`match_not_finished` sinon).
+
+### Problèmes connus
+- Pas d'expiration côté serveur d'un défi abandonné (fermeture de l'onglet) : il sera résolu en `TimedOut` à la prochaine
+  soumission du client. Un endpoint « passer son tour » pourra être ajouté en phase 4 si nécessaire.
+- Le statut `Abandoned` existe mais aucun cas d'usage ne l'utilise encore.

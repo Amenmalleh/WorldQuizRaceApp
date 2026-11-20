@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using WorldQuizRace.Application.Abstractions;
 using WorldQuizRace.Infrastructure.Persistence;
 using WorldQuizRace.Infrastructure.Seed;
 
@@ -20,6 +21,7 @@ public static class DependencyInjection
             options.UseSqlServer(connectionString, sql =>
                 sql.MigrationsAssembly(typeof(WorldQuizRaceDbContext).Assembly.FullName)));
 
+        services.AddScoped<IApplicationDbContext>(sp => sp.GetRequiredService<WorldQuizRaceDbContext>());
         services.AddScoped<DatabaseSeeder>();
 
         return services;
