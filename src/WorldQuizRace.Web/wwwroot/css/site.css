@@ -1,0 +1,177 @@
+/* ==========================================================================
+   World Quiz Race — thème global
+   Toutes les couleurs du jeu passent par ces variables : les modifier ici
+   suffit à re-thémer l'application (carte, marqueurs, retours de réponse…).
+   ========================================================================== */
+:root {
+    /* Joueurs et destination */
+    --wqr-player-a: #ff6b4a;        /* corail */
+    --wqr-player-a-soft: #ffe1d9;
+    --wqr-player-b: #3a86ff;        /* bleu vif */
+    --wqr-player-b-soft: #dbe8ff;
+    --wqr-destination: #ffbe0b;     /* or */
+
+    /* Retours de réponse */
+    --wqr-success: #2ec27e;
+    --wqr-error: #e5484d;
+
+    /* Fond et texte */
+    --wqr-bg: #fff8ec;
+    --wqr-bg-accent: #e6f6ff;
+    --wqr-surface: #ffffff;
+    --wqr-text: #2b2d42;
+    --wqr-text-muted: #6c6f85;
+
+    /* Formes */
+    --wqr-radius: 1.25rem;
+    --wqr-radius-pill: 999px;
+    --wqr-shadow: 0 0.5rem 1.5rem rgba(43, 45, 66, 0.12);
+
+    /* Typographie : polices arrondies avec repli sur la police système */
+    --wqr-font-body: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --wqr-font-display: "Baloo 2", "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+    /* Alignement de Bootstrap sur la palette */
+    --bs-body-font-family: var(--wqr-font-body);
+    --bs-body-color: var(--wqr-text);
+    --bs-body-bg: var(--wqr-bg);
+}
+
+html {
+    font-size: 16px;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: radial-gradient(circle at 15% 10%, var(--wqr-bg-accent) 0, transparent 45%),
+                radial-gradient(circle at 85% 90%, var(--wqr-player-a-soft) 0, transparent 40%),
+                var(--wqr-bg);
+    font-family: var(--wqr-font-body);
+    color: var(--wqr-text);
+}
+
+h1, h2, h3, .wqr-title, .wqr-brand {
+    font-family: var(--wqr-font-display);
+    font-weight: 800;
+}
+
+/* ---------- En-tête / pied de page ---------- */
+.wqr-header {
+    padding: 0.75rem 0;
+}
+
+.wqr-brand {
+    font-size: 1.5rem;
+    color: var(--wqr-text);
+}
+
+.wqr-brand:hover {
+    color: var(--wqr-player-b);
+}
+
+.wqr-main {
+    flex: 1;
+    padding-block: 2rem;
+}
+
+.wqr-footer {
+    padding: 1rem 0;
+    color: var(--wqr-text-muted);
+    font-size: 0.9rem;
+}
+
+/* ---------- Accueil ---------- */
+.wqr-hero {
+    max-width: 44rem;
+    margin: 2rem auto;
+    padding: 3rem 2rem;
+    background: var(--wqr-surface);
+    border-radius: calc(var(--wqr-radius) * 1.5);
+    box-shadow: var(--wqr-shadow);
+}
+
+.wqr-title {
+    font-size: clamp(2.5rem, 7vw, 4rem);
+    line-height: 1.1;
+    background: linear-gradient(90deg, var(--wqr-player-a), var(--wqr-destination), var(--wqr-player-b));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.wqr-subtitle {
+    font-size: 1.2rem;
+    color: var(--wqr-text-muted);
+    margin: 1rem auto 2rem;
+    max-width: 32rem;
+}
+
+.wqr-hero-markers {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.wqr-marker {
+    display: inline-grid;
+    place-items: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    font-family: var(--wqr-font-display);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #fff;
+    box-shadow: var(--wqr-shadow);
+    animation: wqr-bounce 2.4s ease-in-out infinite;
+}
+
+.wqr-marker-a { background: var(--wqr-player-a); }
+.wqr-marker-b { background: var(--wqr-player-b); animation-delay: 0.6s; }
+.wqr-marker-destination { background: var(--wqr-destination); animation-delay: 0.3s; }
+
+@keyframes wqr-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-0.5rem); }
+}
+
+/* ---------- Boutons ---------- */
+.wqr-btn-primary {
+    padding: 0.85rem 2.5rem;
+    border: none;
+    border-radius: var(--wqr-radius-pill);
+    background: linear-gradient(135deg, var(--wqr-player-a), var(--wqr-destination));
+    color: #fff;
+    font-family: var(--wqr-font-display);
+    font-weight: 800;
+    font-size: 1.35rem;
+    box-shadow: 0 0.4rem 0 rgba(43, 45, 66, 0.18);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.wqr-btn-primary:hover:not(:disabled),
+.wqr-btn-primary:focus-visible {
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 0.55rem 0 rgba(43, 45, 66, 0.18);
+}
+
+.wqr-btn-primary:disabled {
+    color: #fff;
+    opacity: 0.75;
+    cursor: not-allowed;
+}
+
+.btn:focus-visible {
+    outline: 3px solid var(--wqr-player-b);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .wqr-marker { animation: none; }
+    .wqr-btn-primary { transition: none; }
+}

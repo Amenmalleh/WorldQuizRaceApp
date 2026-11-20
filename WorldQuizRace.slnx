@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/WorldQuizRace.Application/WorldQuizRace.Application.csproj" />
+    <Project Path="src/WorldQuizRace.Domain/WorldQuizRace.Domain.csproj" />
+    <Project Path="src/WorldQuizRace.Infrastructure/WorldQuizRace.Infrastructure.csproj" />
+    <Project Path="src/WorldQuizRace.Web/WorldQuizRace.Web.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/WorldQuizRace.Tests/WorldQuizRace.Tests.csproj" />
+  </Folder>
+</Solution>

@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@(ViewData["Title"] is string title ? $"{title} · World Quiz Race" : "World Quiz Race")</title>
+    <script type="importmap"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;600;700;800&display=swap" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="wqr-header">
+        <nav class="navbar navbar-expand container">
+            <a class="navbar-brand wqr-brand" asp-controller="Home" asp-action="Index">
+                <span class="wqr-brand-globe" aria-hidden="true">🌍</span> World Quiz Race
+            </a>
+        </nav>
+    </header>
+
+    <main role="main" class="container wqr-main">
+        @RenderBody()
+    </main>
+
+    <footer class="wqr-footer">
+        <div class="container text-center">Apprendre en s'amusant · World Quiz Race</div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
