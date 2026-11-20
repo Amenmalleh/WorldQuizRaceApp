@@ -10,7 +10,7 @@ public static class DependencyInjection
 {
     public const string ConnectionStringName = "WorldQuizRaceDb";
 
-    /// <summary>Enregistre la persistance (EF Core / SQL Server) et les services d'infrastructure.</summary>
+    /// <summary>Registers persistence (EF Core / SQL Server) and infrastructure services.</summary>
     public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
         var connectionString = configuration.GetConnectionString(ConnectionStringName)

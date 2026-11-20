@@ -6,7 +6,7 @@ namespace WorldQuizRace.Application;
 
 public static class DependencyInjection
 {
-    /// <summary>Enregistre les services et options de la couche Application.</summary>
+    /// <summary>Registers the Application layer services and options.</summary>
     public static IServiceCollection AddApplication(this IServiceCollection services)
     {
         services.AddOptions<GameSettings>()

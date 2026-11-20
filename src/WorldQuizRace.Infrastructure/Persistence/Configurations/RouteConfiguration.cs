@@ -20,7 +20,7 @@ internal sealed class RouteConfiguration : IEntityTypeConfiguration<Route>
         builder.Property(r => r.IsActive).HasDefaultValue(true);
         builder.HasIndex(r => r.Code).IsUnique();
 
-        // Les checkpoints n'existent pas sans leur route.
+        // Checkpoints do not exist without their route.
         builder.HasMany(r => r.Checkpoints)
             .WithOne(c => c.Route)
             .HasForeignKey(c => c.RouteId)

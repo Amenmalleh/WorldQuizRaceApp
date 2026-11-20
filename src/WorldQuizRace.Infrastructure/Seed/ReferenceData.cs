@@ -1,6 +1,6 @@
 namespace WorldQuizRace.Infrastructure.Seed;
 
-/// <summary>Données de référence courtes et stables, gardées dans le code.</summary>
+/// <summary>Short, stable reference data kept in code.</summary>
 public static class ReferenceData
 {
     public static IReadOnlyList<AgeGroupSeed> AgeGroups { get; } =

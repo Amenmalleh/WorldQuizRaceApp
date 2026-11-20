@@ -4,8 +4,8 @@ using WorldQuizRace.Domain.Enums;
 namespace WorldQuizRace.Application.Options;
 
 /// <summary>
-/// Valide la cohérence de <see cref="GameSettings"/>. Exécuté au démarrage (ValidateOnStart) :
-/// une configuration invalide empêche l'application de démarrer plutôt que de produire une partie incohérente.
+/// Validates the consistency of <see cref="GameSettings"/>. Runs at startup (ValidateOnStart):
+/// an invalid configuration stops the application instead of producing an inconsistent match.
 /// </summary>
 public sealed class GameSettingsValidator : IValidateOptions<GameSettings>
 {
@@ -65,7 +65,7 @@ public sealed class GameSettingsValidator : IValidateOptions<GameSettings>
             }
         }
 
-        // Chaque position 1..N doit être couverte par exactement une règle (ni trou, ni chevauchement).
+        // Every position 1..N must be covered by exactly one rule (no gap, no overlap).
         for (var position = 1; position <= options.CheckpointsPerRoute; position++)
         {
             var matches = options.DifficultyRules.Count(r => position >= r.FromPosition && position <= r.ToPosition);

@@ -18,7 +18,7 @@ internal sealed class PlayerConfiguration : IEntityTypeConfiguration<Player>
         builder.Property(p => p.Avatar).HasMaxLength(Player.AvatarMaxLength);
         builder.Property(p => p.CreatedAt).IsRequired();
 
-        // Une tranche d'âge référencée ne doit jamais disparaître avec ses joueurs.
+        // A referenced age group must never disappear together with its players.
         builder.HasOne(p => p.AgeGroup)
             .WithMany(a => a.Players)
             .HasForeignKey(p => p.AgeGroupId)

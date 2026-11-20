@@ -1,6 +1,6 @@
 namespace WorldQuizRace.Domain.Entities;
 
-/// <summary>Récompense déblocable (système extensible : étoiles et pièces sont portées par MatchPlayer).</summary>
+/// <summary>Unlockable reward (extensible system: stars and coins are stored on MatchPlayer).</summary>
 public class Badge
 {
     public const int CodeMaxLength = 30;
@@ -16,7 +16,7 @@ public class Badge
 
     public string Description { get; set; } = string.Empty;
 
-    /// <summary>Emoji ou clé d'icône.</summary>
+    /// <summary>Emoji or icon key.</summary>
     public string Icon { get; set; } = string.Empty;
 
     public ICollection<PlayerBadge> Awards { get; set; } = [];

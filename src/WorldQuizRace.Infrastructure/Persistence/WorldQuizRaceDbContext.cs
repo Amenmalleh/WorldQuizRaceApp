@@ -3,7 +3,7 @@ using WorldQuizRace.Domain.Entities;
 
 namespace WorldQuizRace.Infrastructure.Persistence;
 
-/// <summary>Contexte EF Core de l'application. Le mapping est décrit dans Persistence/Configurations.</summary>
+/// <summary>Application EF Core context. The mapping lives in Persistence/Configurations.</summary>
 public sealed class WorldQuizRaceDbContext(DbContextOptions<WorldQuizRaceDbContext> options) : DbContext(options)
 {
     public DbSet<AgeGroup> AgeGroups => Set<AgeGroup>();

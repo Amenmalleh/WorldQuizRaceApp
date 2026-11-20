@@ -21,9 +21,9 @@ internal sealed class MatchPlayerConfiguration : IEntityTypeConfiguration<MatchP
         builder.Property(mp => mp.Slot).HasConversion<string>().HasMaxLength(SchemaConstants.EnumMaxLength);
         builder.Property(mp => mp.RowVersion).IsRowVersion();
 
-        // Un joueur ne participe qu'une fois à une partie : clé alternative ciblée par PlayerChallenge.
+        // A player joins a match only once: alternate key targeted by PlayerChallenge.
         builder.HasAlternateKey(mp => new { mp.MatchId, mp.PlayerId });
-        // Un seul joueur A et un seul joueur B par partie.
+        // Exactly one player A and one player B per match.
         builder.HasIndex(mp => new { mp.MatchId, mp.Slot }).IsUnique();
 
         builder.HasOne(mp => mp.Player)

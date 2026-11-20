@@ -27,7 +27,7 @@ internal sealed class ChallengeConfiguration : IEntityTypeConfiguration<Challeng
         builder.Property(c => c.IsActive).HasDefaultValue(true);
 
         builder.HasIndex(c => c.Code).IsUnique();
-        // Index de la requête de sélection : défis actifs d'une tranche et d'une difficulté.
+        // Index for the selection query: active challenges of an age group and difficulty.
         builder.HasIndex(c => new { c.AgeGroupId, c.Difficulty, c.IsActive });
 
         builder.HasOne(c => c.AgeGroup)

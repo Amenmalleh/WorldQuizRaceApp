@@ -482,7 +482,7 @@ $RECYCLE.BIN/
 *.swp
 
 # --- Ajouts World Quiz Race ---
-# Configuration locale de Claude Code
+# Local assistant settings
 .claude/
 
 # Secrets et configuration locale
@@ -495,3 +495,5 @@ secrets.json
 .vscode/*
 !.vscode/launch.json
 !.vscode/tasks.json
+
+CLAUDE.md

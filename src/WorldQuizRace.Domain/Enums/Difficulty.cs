@@ -1,6 +1,6 @@
 namespace WorldQuizRace.Domain.Enums;
 
-/// <summary>Niveau de difficulté d'un défi, relatif à la tranche d'âge du joueur.</summary>
+/// <summary>Difficulty of a challenge, relative to the player's age group.</summary>
 public enum Difficulty
 {
     Easy = 1,

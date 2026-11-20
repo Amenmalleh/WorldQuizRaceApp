@@ -1,7 +1,7 @@
 namespace WorldQuizRace.Domain.Entities;
 
 /// <summary>
-/// Joueur identifié par un pseudo et un âge uniquement : aucune donnée personnelle superflue (public enfant).
+/// Player identified only by a nickname and an age: no unnecessary personal data (children audience).
 /// </summary>
 public class Player
 {
@@ -12,7 +12,7 @@ public class Player
 
     public int Id { get; set; }
 
-    /// <summary>Pseudo (pas de nom réel exigé).</summary>
+    /// <summary>Nickname (no real name required).</summary>
     public string Name { get; set; } = string.Empty;
 
     public int Age { get; set; }
@@ -21,7 +21,7 @@ public class Player
 
     public AgeGroup AgeGroup { get; set; } = null!;
 
-    /// <summary>Clé de l'avatar choisi (ex. "fox"), optionnelle.</summary>
+    /// <summary>Key of the chosen avatar (e.g. "fox"), optional.</summary>
     public string? Avatar { get; set; }
 
     public DateTimeOffset CreatedAt { get; set; }

@@ -1,6 +1,6 @@
 namespace WorldQuizRace.Domain.Entities;
 
-/// <summary>Tranche d'âge (5–7, 8–10, 11–12, 13–15) qui détermine le catalogue de défis d'un joueur.</summary>
+/// <summary>Age group (5–7, 8–10, 11–12, 13–15) that determines which challenges a player receives.</summary>
 public class AgeGroup
 {
     public const int NameMaxLength = 30;

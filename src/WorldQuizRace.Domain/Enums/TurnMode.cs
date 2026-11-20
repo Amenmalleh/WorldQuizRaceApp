@@ -1,8 +1,8 @@
 namespace WorldQuizRace.Domain.Enums;
 
 /// <summary>
-/// Mode d'enchaînement des tours. Seul le mode alterné existe en V1 ;
-/// d'autres modes (simultané…) pourront être ajoutés sans casser la configuration.
+/// How turns follow each other. Only the alternating mode exists in V1;
+/// other modes (simultaneous…) can be added later without breaking the configuration.
 /// </summary>
 public enum TurnMode
 {

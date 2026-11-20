@@ -5,7 +5,7 @@ using WorldQuizRace.Infrastructure.Persistence;
 
 namespace WorldQuizRace.Tests.Infrastructure;
 
-/// <summary>Tests d'intégration sur une vraie base SQL Server (LocalDB) : migrations, seed et contraintes.</summary>
+/// <summary>Integration tests against a real SQL Server database (LocalDB): migrations, seed and constraints.</summary>
 [Collection(LocalDbCollection.Name)]
 public class DatabaseSchemaTests(LocalDbFixture fixture)
 {
@@ -111,7 +111,7 @@ public class DatabaseSchemaTests(LocalDbFixture fixture)
         a.CurrentPosition = 1;
         await first.SaveChangesAsync();
 
-        b.CurrentPosition = 1; // même tour soumis deux fois : la seconde écriture doit échouer
+        b.CurrentPosition = 1; // same turn submitted twice: the second write must fail
         await Assert.ThrowsAsync<DbUpdateConcurrencyException>(() => second.SaveChangesAsync());
     }
 

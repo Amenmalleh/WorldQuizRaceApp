@@ -48,7 +48,7 @@ public class GameSettingsValidatorTests
     public void Gap_in_difficulty_rules_fails()
     {
         var settings = ValidSettings();
-        settings.DifficultyRules[1].ToPosition = 9; // position 10 n'est plus couverte
+        settings.DifficultyRules[1].ToPosition = 9; // position 10 is no longer covered
 
         var result = _validator.Validate(null, settings);
 
@@ -60,7 +60,7 @@ public class GameSettingsValidatorTests
     public void Overlapping_difficulty_rules_fail()
     {
         var settings = ValidSettings();
-        settings.DifficultyRules[0].ToPosition = 6; // position 6 couverte deux fois
+        settings.DifficultyRules[0].ToPosition = 6; // position 6 covered twice
 
         Assert.True(_validator.Validate(null, settings).Failed);
     }

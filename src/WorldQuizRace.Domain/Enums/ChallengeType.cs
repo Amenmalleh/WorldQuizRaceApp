@@ -1,8 +1,8 @@
 namespace WorldQuizRace.Domain.Enums;
 
 /// <summary>
-/// Types de défis supportés (cahier des charges §6).
-/// Ajouter une valeur ici (et son temps limite dans GameSettings) suffit pour étendre le catalogue.
+/// Supported challenge types (specification §6).
+/// Adding a value here (plus its time limit in GameSettings and a validator) extends the catalog.
 /// </summary>
 public enum ChallengeType
 {

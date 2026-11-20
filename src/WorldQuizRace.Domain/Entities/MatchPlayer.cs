@@ -3,12 +3,12 @@ using WorldQuizRace.Domain.Enums;
 namespace WorldQuizRace.Domain.Entities;
 
 /// <summary>
-/// Participation d'un joueur à une partie : emplacement, route suivie, position et statistiques.
-/// Le temps écoulé n'est pas stocké : il se calcule à partir des dates de la partie et des tentatives.
+/// A player's participation in a match: slot, route, position and statistics.
+/// Elapsed time is not stored: it is computed from the match and attempt dates.
 /// </summary>
 public class MatchPlayer
 {
-    /// <summary>Position de départ, avant le premier checkpoint.</summary>
+    /// <summary>Starting position, before the first checkpoint.</summary>
     public const int StartPosition = 0;
 
     public int Id { get; set; }
@@ -27,7 +27,7 @@ public class MatchPlayer
 
     public Route Route { get; set; } = null!;
 
-    /// <summary>0 = départ, N = destination finale atteinte.</summary>
+    /// <summary>0 = start, N = final destination reached.</summary>
     public int CurrentPosition { get; set; } = StartPosition;
 
     public int CorrectAnswers { get; set; }

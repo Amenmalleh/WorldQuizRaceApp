@@ -5,8 +5,8 @@ using System.Text.Json.Serialization;
 namespace WorldQuizRace.Infrastructure.Seed;
 
 /// <summary>
-/// Lit les fichiers de seed embarqués comme ressources dans l'assembly Infrastructure :
-/// ils voyagent avec la DLL et fonctionnent donc aussi après publication.
+/// Reads the seed files embedded as resources in the Infrastructure assembly:
+/// they ship with the DLL and therefore also work after publishing.
 /// </summary>
 public static class SeedDataReader
 {

@@ -12,7 +12,7 @@ builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
-// Migrations + données initiales au démarrage (désactivable : "Database:InitializeOnStartup": false).
+// Migrations + seed data at startup (can be disabled with "Database:InitializeOnStartup": false).
 if (app.Configuration.GetValue("Database:InitializeOnStartup", defaultValue: true))
 {
     await app.Services.InitializeDatabaseAsync();
@@ -38,5 +38,5 @@ app.MapControllerRoute(
 
 await app.RunAsync();
 
-/// <summary>Exposé pour les tests d'intégration (WebApplicationFactory&lt;Program&gt;).</summary>
+/// <summary>Exposed for integration tests (WebApplicationFactory&lt;Program&gt;).</summary>
 public partial class Program;

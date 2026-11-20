@@ -1,37 +1,37 @@
 /* ==========================================================================
-   World Quiz Race — thème global
-   Toutes les couleurs du jeu passent par ces variables : les modifier ici
-   suffit à re-thémer l'application (carte, marqueurs, retours de réponse…).
+   World Quiz Race — global theme
+   Every game color goes through these variables: changing them here
+   re-themes the whole application (map, markers, answer feedback…).
    ========================================================================== */
 :root {
-    /* Joueurs et destination */
-    --wqr-player-a: #ff6b4a;        /* corail */
+    /* Players and destination */
+    --wqr-player-a: #ff6b4a;        /* coral */
     --wqr-player-a-soft: #ffe1d9;
-    --wqr-player-b: #3a86ff;        /* bleu vif */
+    --wqr-player-b: #3a86ff;        /* bright blue */
     --wqr-player-b-soft: #dbe8ff;
-    --wqr-destination: #ffbe0b;     /* or */
+    --wqr-destination: #ffbe0b;     /* gold */
 
-    /* Retours de réponse */
+    /* Answer feedback */
     --wqr-success: #2ec27e;
     --wqr-error: #e5484d;
 
-    /* Fond et texte */
+    /* Background and text */
     --wqr-bg: #fff8ec;
     --wqr-bg-accent: #e6f6ff;
     --wqr-surface: #ffffff;
     --wqr-text: #2b2d42;
     --wqr-text-muted: #6c6f85;
 
-    /* Formes */
+    /* Shapes */
     --wqr-radius: 1.25rem;
     --wqr-radius-pill: 999px;
     --wqr-shadow: 0 0.5rem 1.5rem rgba(43, 45, 66, 0.12);
 
-    /* Typographie : polices arrondies avec repli sur la police système */
+    /* Typography: rounded fonts with system font fallback */
     --wqr-font-body: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     --wqr-font-display: "Baloo 2", "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 
-    /* Alignement de Bootstrap sur la palette */
+    /* Align Bootstrap with the palette */
     --bs-body-font-family: var(--wqr-font-body);
     --bs-body-color: var(--wqr-text);
     --bs-body-bg: var(--wqr-bg);
@@ -58,7 +58,7 @@ h1, h2, h3, .wqr-title, .wqr-brand {
     font-weight: 800;
 }
 
-/* ---------- En-tête / pied de page ---------- */
+/* ---------- Header / footer ---------- */
 .wqr-header {
     padding: 0.75rem 0;
 }
@@ -83,7 +83,7 @@ h1, h2, h3, .wqr-title, .wqr-brand {
     font-size: 0.9rem;
 }
 
-/* ---------- Accueil ---------- */
+/* ---------- Home ---------- */
 .wqr-hero {
     max-width: 44rem;
     margin: 2rem auto;
@@ -139,7 +139,7 @@ h1, h2, h3, .wqr-title, .wqr-brand {
     50% { transform: translateY(-0.5rem); }
 }
 
-/* ---------- Boutons ---------- */
+/* ---------- Buttons ---------- */
 .wqr-btn-primary {
     padding: 0.85rem 2.5rem;
     border: none;

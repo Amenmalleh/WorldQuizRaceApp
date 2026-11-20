@@ -20,7 +20,7 @@ internal sealed class CheckpointConfiguration : IEntityTypeConfiguration<Checkpo
         builder.Property(c => c.Country).IsRequired().HasMaxLength(Checkpoint.CountryMaxLength);
         builder.Property(c => c.FunFact).IsRequired().HasMaxLength(Checkpoint.FunFactMaxLength);
 
-        // Une seule étape par position sur une route : impossible d'avoir un trou ou un doublon silencieux.
+        // One stop per position on a route: no silent duplicate.
         builder.HasIndex(c => new { c.RouteId, c.Position }).IsUnique();
     }
 }

@@ -1,6 +1,6 @@
 namespace WorldQuizRace.Domain.Entities;
 
-/// <summary>Badge obtenu par un joueur (une seule fois par badge).</summary>
+/// <summary>Badge earned by a player (at most once per badge).</summary>
 public class PlayerBadge
 {
     public int Id { get; set; }

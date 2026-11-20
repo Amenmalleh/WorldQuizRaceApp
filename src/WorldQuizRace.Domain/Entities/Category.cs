@@ -1,6 +1,6 @@
 namespace WorldQuizRace.Domain.Entities;
 
-/// <summary>Thème pédagogique d'un défi (Mathématiques, Géographie…).</summary>
+/// <summary>Educational topic of a challenge (Mathematics, Geography…).</summary>
 public class Category
 {
     public const int NameMaxLength = 50;

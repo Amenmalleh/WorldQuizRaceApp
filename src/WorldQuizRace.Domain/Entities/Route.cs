@@ -1,6 +1,6 @@
 namespace WorldQuizRace.Domain.Entities;
 
-/// <summary>Parcours prédéfini d'un joueur, de son point de départ jusqu'à la destination commune.</summary>
+/// <summary>Predefined path of a player, from the starting point to the shared destination.</summary>
 public class Route
 {
     public const int CodeMaxLength = 20;
@@ -9,7 +9,7 @@ public class Route
 
     public int Id { get; set; }
 
-    /// <summary>Identifiant stable dans routes.json (ex. "WEST"), utilisé pour la synchronisation idempotente.</summary>
+    /// <summary>Stable identifier in routes.json (e.g. "WEST"), used for idempotent synchronization.</summary>
     public string Code { get; set; } = string.Empty;
 
     public string Name { get; set; } = string.Empty;

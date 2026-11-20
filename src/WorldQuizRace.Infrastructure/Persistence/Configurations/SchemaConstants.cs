@@ -1,15 +1,15 @@
 namespace WorldQuizRace.Infrastructure.Persistence.Configurations;
 
-/// <summary>Constantes communes au schéma SQL.</summary>
+/// <summary>Constants shared by the SQL schema.</summary>
 internal static class SchemaConstants
 {
     /// <summary>
-    /// Position maximale autorisée par les contraintes CHECK (= nombre de checkpoints par route).
-    /// Changer GameSettings:CheckpointsPerRoute impose d'adapter cette valeur, routes.json et une migration :
-    /// le seeder refuse de démarrer si les deux divergent.
+    /// Maximum position allowed by the CHECK constraints (= checkpoints per route).
+    /// Changing GameSettings:CheckpointsPerRoute requires updating this value, routes.json and a migration:
+    /// the seeder refuses to start when they disagree.
     /// </summary>
     public const int MaxRoutePosition = 15;
 
-    /// <summary>Longueur des colonnes qui stockent un enum sous forme de texte.</summary>
+    /// <summary>Length of the columns that store an enum as text.</summary>
     public const int EnumMaxLength = 30;
 }

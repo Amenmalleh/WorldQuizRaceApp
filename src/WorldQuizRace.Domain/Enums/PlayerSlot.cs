@@ -1,6 +1,6 @@
 namespace WorldQuizRace.Domain.Enums;
 
-/// <summary>Emplacement d'un joueur dans une partie : A part d'une extrémité de la carte, B de l'autre.</summary>
+/// <summary>Player slot in a match: A starts at one end of the map, B at the other.</summary>
 public enum PlayerSlot
 {
     A = 1,

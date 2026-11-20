@@ -3,7 +3,7 @@ using WorldQuizRace.Domain.Enums;
 
 namespace WorldQuizRace.Tests.Seed;
 
-/// <summary>Garantit que le vérificateur de format détecte réellement les erreurs (il ne doit pas passer à vide).</summary>
+/// <summary>Ensures the format checker really detects errors (it must not pass vacuously).</summary>
 public class ChallengeFormatRulesTests
 {
     private static List<string> Check(ChallengeType type, string content, string answer) =>

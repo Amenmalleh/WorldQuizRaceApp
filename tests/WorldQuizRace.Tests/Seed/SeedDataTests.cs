@@ -8,7 +8,7 @@ using Xunit.Abstractions;
 
 namespace WorldQuizRace.Tests.Seed;
 
-/// <summary>Vérifie les fichiers de seed embarqués, sans base de données.</summary>
+/// <summary>Checks the embedded seed files, without a database.</summary>
 public partial class SeedDataTests(ITestOutputHelper output)
 {
     private const int CheckpointsPerRoute = 15;
@@ -94,7 +94,7 @@ public partial class SeedDataTests(ITestOutputHelper output)
         Assert.Equal((x, y), MapProjection.ToMap(lat, lon));
     }
 
-    // ---------- Défis ----------
+    // ---------- Challenges ----------
 
     [Fact]
     public void Each_age_group_has_enough_challenges_per_difficulty()

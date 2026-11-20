@@ -7,9 +7,9 @@ using WorldQuizRace.Domain.Enums;
 namespace WorldQuizRace.Tests.Seed;
 
 /// <summary>
-/// Contrat de format de Content / CorrectAnswer par ChallengeType, tel que décrit dans docs/CHALLENGE_FORMATS.md.
-/// Retourne la liste des violations (vide = défi valide), y compris des vérifications de justesse calculables
-/// (labyrinthe résoluble, résultats des calculs).
+/// Content / CorrectAnswer format contract per ChallengeType, as described in docs/CHALLENGE_FORMATS.md.
+/// Returns the list of violations (empty = valid challenge), including computable correctness checks
+/// (solvable maze, arithmetic results).
 /// </summary>
 internal static class ChallengeFormatRules
 {
@@ -173,7 +173,7 @@ internal static class ChallengeFormatRules
         return errors;
     }
 
-    /// <summary>Normalisation des réponses texte : NFKD, sans accents, minuscules, espaces réduits.</summary>
+    /// <summary>Text answer normalization: NFKD, no accents, lower case, collapsed spaces.</summary>
     public static string NormalizeText(string value)
     {
         var decomposed = value.Normalize(NormalizationForm.FormKD);
@@ -281,7 +281,7 @@ internal static class ChallengeFormatRules
         if (list.Count == 0) errors.Add($"'{key}' must be a non-empty array");
         var ids = list.Select(e => Str(e, "id") ?? "").ToList();
         if (ids.Any(string.IsNullOrEmpty) || ids.Distinct().Count() != ids.Count) errors.Add($"'{key}' ids must be present and unique");
-        // Chaque élément affiché doit avoir un libellé : "text" en général, "face" pour une carte, "shape" pour une forme.
+        // Every displayed item needs a label: "text" in general, "face" for a card, "shape" for a shape.
         if (list.Any(e => Str(e, "text") is null && Str(e, "face") is null && Str(e, "shape") is null))
         {
             errors.Add($"'{key}' entries need a text");

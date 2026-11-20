@@ -1,6 +1,6 @@
 namespace WorldQuizRace.Domain.Enums;
 
-/// <summary>Cycle de vie d'une partie.</summary>
+/// <summary>Lifecycle of a match.</summary>
 public enum MatchStatus
 {
     Created = 1,

@@ -1,8 +1,8 @@
 namespace WorldQuizRace.Domain.Enums;
 
 /// <summary>
-/// État d'une tentative de défi. Pending = défi actuellement présenté au joueur
-/// (au plus un par joueur et par partie, garanti par un index unique filtré).
+/// State of a challenge attempt. Pending = challenge currently shown to the player
+/// (at most one per player and match, enforced by a filtered unique index).
 /// </summary>
 public enum AttemptStatus
 {

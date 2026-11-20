@@ -12,23 +12,23 @@ using WorldQuizRace.Infrastructure.Persistence;
 namespace WorldQuizRace.Infrastructure.Seed;
 
 /// <summary>
-/// Synchronise les données de référence (tranches d'âge, catégories, badges, routes, défis) avec la base.
-/// Idempotent : chaque élément est retrouvé par sa clé naturelle puis inséré ou mis à jour ;
-/// une seconde exécution sans changement des fichiers n'écrit rien.
-/// Les défis et routes absents des fichiers sont désactivés, jamais supprimés (ils peuvent être référencés par des parties).
+/// Synchronizes reference data (age groups, categories, badges, routes, challenges) with the database.
+/// Idempotent: each item is matched on its natural key, then inserted or updated;
+/// a second run without file changes writes nothing.
+/// Challenges and routes missing from the files are deactivated, never deleted (matches may reference them).
 /// </summary>
 public sealed class DatabaseSeeder(
     WorldQuizRaceDbContext db,
     IOptions<GameSettings> gameSettings,
     ILogger<DatabaseSeeder> logger)
 {
-    // Garde les accents lisibles en base ; les caractères sensibles en HTML (<, >, &, ', ") restent échappés.
+    // Keeps accents readable in the database; HTML-sensitive characters (<, >, &, ', ") stay escaped.
     private static readonly JsonSerializerOptions CompactJson = new()
     {
         Encoder = JavaScriptEncoder.Create(UnicodeRanges.All)
     };
 
-    /// <summary>Exécute la synchronisation et retourne le nombre de lignes écrites.</summary>
+    /// <summary>Runs the synchronization and returns the number of rows written.</summary>
     public async Task<int> SeedAsync(CancellationToken cancellationToken = default)
     {
         var routes = SeedDataReader.ReadRoutes();
@@ -118,7 +118,7 @@ public sealed class DatabaseSeeder(
                 db.Routes.Add(route);
             }
 
-            // La destination commune est ajoutée en dernière position de chaque route : mêmes nom et coordonnées garantis.
+            // The shared destination is appended as the last stop of every route: same name and coordinates guaranteed.
             var stops = seed.Checkpoints
                 .Select(c => (c.Position, c.Name, c.Country, c.Latitude, c.Longitude, c.FunFact, IsFinal: false))
                 .Append((Position: seed.Checkpoints.Count + 1, file.Destination.Name, file.Destination.Country,
@@ -148,7 +148,7 @@ public sealed class DatabaseSeeder(
                 checkpoint.IsFinal = stop.IsFinal;
             }
 
-            // Étapes en trop (route raccourcie) : les checkpoints ne sont référencés par aucune autre table.
+            // Extra stops (shortened route): no other table references checkpoints.
             db.Checkpoints.RemoveRange(byPosition.Values);
         }
 
@@ -217,7 +217,7 @@ public sealed class DatabaseSeeder(
         return await db.SaveChangesAsync(ct);
     }
 
-    /// <summary>Refuse des routes incohérentes plutôt que de créer une course injuste.</summary>
+    /// <summary>Rejects inconsistent routes rather than creating an unfair race.</summary>
     internal static void ValidateRoutes(RouteSeedFile file, int checkpointsPerRoute)
     {
         if (file.Routes.Count < 2)
@@ -227,7 +227,7 @@ public sealed class DatabaseSeeder(
 
         foreach (var route in file.Routes)
         {
-            var total = route.Checkpoints.Count + 1; // + destination finale commune
+            var total = route.Checkpoints.Count + 1; // + shared final destination
             if (total != checkpointsPerRoute)
             {
                 throw new InvalidOperationException(

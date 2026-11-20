@@ -20,8 +20,8 @@ internal sealed class MatchConfiguration : IEntityTypeConfiguration<Match>
         builder.Property(m => m.RowVersion).IsRowVersion();
         builder.HasIndex(m => m.Status);
 
-        // Restrict (NO ACTION) : un joueur ne peut pas être supprimé tant qu'une partie le référence,
-        // et on évite ainsi plusieurs chemins de cascade Players -> Matches refusés par SQL Server.
+        // Restrict (NO ACTION): a player cannot be deleted while a match references it,
+        // which also avoids multiple Players -> Matches cascade paths rejected by SQL Server.
         builder.HasOne(m => m.CurrentTurnPlayer)
             .WithMany()
             .HasForeignKey(m => m.CurrentTurnPlayerId)
@@ -32,7 +32,7 @@ internal sealed class MatchConfiguration : IEntityTypeConfiguration<Match>
             .HasForeignKey(m => m.WinnerId)
             .OnDelete(DeleteBehavior.Restrict);
 
-        // Supprimer une partie supprime ses participations (et, par cascade, leurs tentatives).
+        // Deleting a match deletes its participations (and, by cascade, their attempts).
         builder.HasMany(m => m.Players)
             .WithOne(mp => mp.Match)
             .HasForeignKey(mp => mp.MatchId)

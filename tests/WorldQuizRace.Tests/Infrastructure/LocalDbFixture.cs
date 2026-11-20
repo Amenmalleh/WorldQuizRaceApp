@@ -7,14 +7,14 @@ using WorldQuizRace.Infrastructure.Seed;
 namespace WorldQuizRace.Tests.Infrastructure;
 
 /// <summary>
-/// Base LocalDB jetable (nom unique) : migrations réelles + seed, supprimée à la fin des tests.
+/// Throwaway LocalDB database (unique name): real migrations + seed, dropped after the tests.
 /// </summary>
 public sealed class LocalDbFixture : IAsyncLifetime
 {
     private readonly string _connectionString =
         $"Server=(localdb)\\MSSQLLocalDB;Database=WorldQuizRaceDb_Tests_{Guid.NewGuid():N};Trusted_Connection=True;TrustServerCertificate=True";
 
-    /// <summary>Lignes écrites par le premier seed.</summary>
+    /// <summary>Rows written by the first seed.</summary>
     public int FirstSeedRows { get; private set; }
 
     public WorldQuizRaceDbContext CreateContext() =>

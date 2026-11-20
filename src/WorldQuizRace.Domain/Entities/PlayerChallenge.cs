@@ -3,8 +3,8 @@ using WorldQuizRace.Domain.Enums;
 namespace WorldQuizRace.Domain.Entities;
 
 /// <summary>
-/// Défi présenté à un joueur pendant une partie. Une ligne <see cref="AttemptStatus.Pending"/>
-/// représente le défi en cours : au plus une par (MatchId, PlayerId), ce qui bloque les doubles soumissions.
+/// Challenge served to a player during a match. A <see cref="AttemptStatus.Pending"/> row
+/// is the current challenge: at most one per (MatchId, PlayerId), which blocks double submissions.
 /// </summary>
 public class PlayerChallenge
 {
@@ -16,24 +16,24 @@ public class PlayerChallenge
 
     public int PlayerId { get; set; }
 
-    /// <summary>Participation (MatchId, PlayerId) : garantit que le joueur fait bien partie de la partie.</summary>
+    /// <summary>Participation (MatchId, PlayerId): guarantees the player belongs to the match.</summary>
     public MatchPlayer MatchPlayer { get; set; } = null!;
 
     public int ChallengeId { get; set; }
 
     public Challenge Challenge { get; set; } = null!;
 
-    /// <summary>Checkpoint visé par ce défi (position actuelle + 1).</summary>
+    /// <summary>Checkpoint targeted by this challenge (current position + 1).</summary>
     public int CheckpointPosition { get; set; }
 
     public int TurnNumber { get; set; }
 
     public AttemptStatus Status { get; set; } = AttemptStatus.Pending;
 
-    /// <summary>null tant que le défi est en attente.</summary>
+    /// <summary>null while the challenge is pending.</summary>
     public bool? IsCorrect { get; set; }
 
-    /// <summary>Réponse soumise (JSON), null tant que le défi est en attente.</summary>
+    /// <summary>Submitted answer (JSON), null while the challenge is pending.</summary>
     public string? Answer { get; set; }
 
     public DateTimeOffset ServedAt { get; set; }

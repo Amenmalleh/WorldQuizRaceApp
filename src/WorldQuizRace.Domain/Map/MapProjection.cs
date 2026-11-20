@@ -3,8 +3,8 @@ using WorldQuizRace.Domain.Entities;
 namespace WorldQuizRace.Domain.Map;
 
 /// <summary>
-/// Projection équirectangulaire des coordonnées géographiques vers le viewBox SVG de la carte
-/// (<see cref="Checkpoint.MapWidth"/> × <see cref="Checkpoint.MapHeight"/>, origine en haut à gauche).
+/// Equirectangular projection of geographic coordinates onto the map SVG viewBox
+/// (<see cref="Checkpoint.MapWidth"/> × <see cref="Checkpoint.MapHeight"/>, origin at the top left).
 /// </summary>
 public static class MapProjection
 {

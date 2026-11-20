@@ -24,7 +24,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- Données initiales embarquées dans la DLL : disponibles aussi après dotnet publish. -->
+    <!-- Seed data embedded in the DLL: also available after dotnet publish. -->
     <EmbeddedResource Include="Seed\*.json" LogicalName="WorldQuizRace.Seed.%(Filename)%(Extension)" />
   </ItemGroup>
 
